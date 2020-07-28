@@ -103,6 +103,7 @@ body {
 }
 .banner {
   width: 6.84rem;
+  height: 3.4rem;
   margin: 0 auto;
   position: absolute;
   top: 3.16rem;
@@ -117,9 +118,7 @@ body {
   border-radius: 0.2rem;
 }
 .banner .swiper-pagination-banner {
-  /* position: fixed; */
-  /* bottom: 0; */
-  /* top: 6.27rem; */
+  bottom: 0rem;
 }
 .content {
   width: 6.84rem;
@@ -147,8 +146,8 @@ body {
   margin-bottom: 0;
 }
 .content .box .bg .video-box {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
 }
 .content .box .bg .video {
   width: 3.1rem;
@@ -195,7 +194,10 @@ body {
   border-bottom: 1px solid #aaaaaa;
 }
 .content .box .bg.article .news li:last-child {
-  /* border-bottom: 0; */
+  border-bottom: 0;
+}
+.content .box .bg.article .news li:first-child {
+  border-bottom: 1px solid #aaaaaa;
 }
 .content .box .bg.article .news li a {
   display: block;
@@ -209,8 +211,27 @@ body {
   top: 50%;
   margin-top: -0.3rem;
 }
-.content .box .bg.bg.product {
+.content .box .bg.product {
   min-height: 3.5rem;
+  padding: 0.8rem 0.74rem 0.35rem 0.35rem;
+}
+.content .box .bg.product .product-list {
+  display: none;
+}
+.content .box .bg.product .product-list.show {
+  display: flex;
+}
+.content .box .bg.product .product-list li a {
+  display: block;
+  width: 1.52rem;
+  text-align: center;
+}
+.content .box .bg.product .product-list li a img {
+  border-radius: 0.2rem;
+}
+.content .box .bg.product .product-list li a span {
+  margin-top: 5px;
+  display: inline-block;
 }
 .business-modal {
   width: 100%;
@@ -303,4 +324,5 @@ body {
   position: absolute;
   right: 0.38rem;
   top: 0.22rem;
+  z-index: 500;
 }

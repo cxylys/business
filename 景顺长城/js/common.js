@@ -7,15 +7,60 @@ function init() {
       el: '.swiper-pagination-banner',
     },
   })
-  // var myBannerSwiper = new Swiper('.ts-swiper', {
-  //   direction: 'vertical', // 垂直切换选项
-  //   slidesPerView: 3,
-  //   // spaceBetween: '20',
-  //   slidesOffsetBefore: 20,
-  //   slidesOffsetAfter: 20,
-  //   roundLengths: true,
-  //   watchOverflow: true, //因为仅有1个slide，swiper无效
-  //   // loop: true, // 循环模式选项
+  var mySwiper_1 = new Swiper('.video-swiper', {
+    direction: 'horizontal',
+    initialSlide: 0,
+    centeredSlides: true,
+    slidesPerView: '2',
+    loopedSlides: 4,
+    effect: 'coverflow', //切换效果
+    slideActiveClass: 'active',
+    coverflowEffect: {
+      //以3D界面的形式显示
+      rotate: 0, //slide做3d旋转时Y轴的旋转角度。默认50。
+      stretch: '0%', //每个slide之间的拉伸值，越大slide靠得越紧。 默认0。138
+      depth: 100, //slide的位置深度。值越大z轴距离越远，看起来越小。 默认100。
+      modifier: 1, //depth和rotate和stretch的倍率，相当于depth*modifier、rotate*modifier、stretch*modifier，值越大这三个参数的效果越明显。默认1。
+      slideShadows: true, //开启slide阴影。默认 true。
+    },
+    loop: true, //开启循环
+    on: {},
+  })
+
+  // var videoSwiper = new Swiper('.video-swiper', {
+  //   watchSlidesProgress: true,
+  //   slidesPerView: 'auto',
+  //   centeredSlides: true,
+  //   loop: true,
+  //   loopedSlides: 4,
+  //   // autoplay: true,
+  //   on: {
+  //     progress: function (progress) {
+  //       for (i = 0; i < this.slides.length; i++) {
+  //         var slide = this.slides.eq(i)
+  //         var slideProgress = this.slides[i].progress
+  //         modify = 1
+  //         if (Math.abs(slideProgress) > 1) {
+  //           modify = (Math.abs(slideProgress) - 1) * 0.3 + 1
+  //         }
+  //         translate = slideProgress * modify * 78 + 'px'
+  //         scale = 1 - Math.abs(slideProgress) / 5
+  //         zIndex = 999 - Math.abs(Math.round(10 * slideProgress))
+  //         slide.transform('translateX(' + translate + ') scale(' + scale + ')')
+  //         slide.css('zIndex', zIndex)
+  //         slide.css('opacity', 1)
+  //         if (Math.abs(slideProgress) > 3) {
+  //           slide.css('opacity', 0)
+  //         }
+  //       }
+  //     },
+  //     setTransition: function (transition) {
+  //       for (var i = 0; i < this.slides.length; i++) {
+  //         var slide = this.slides.eq(i)
+  //         slide.transition(transition)
+  //       }
+  //     },
+  //   },
   // })
 }
 $(function () {
@@ -32,8 +77,8 @@ $(function () {
   $('.product .tag-list .tag').click(function () {
     $(this).addClass('on').siblings().removeClass('on')
     var index = $(this).attr('data-index')
-    $('.product .news').hide()
-    $('.product .news-' + index).show()
+    $('.product .product-list').hide()
+    $('.product .product-list-' + index).show()
   })
 
   // 短视频播放
