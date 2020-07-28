@@ -59,9 +59,9 @@ body {
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0;
-  color: #000000;
+  color: #373737;
   background-color: #eff2f9;
   font-family: 'Microsoft Yahei', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans',
     Arial, 'Hiragino Sans GB', STHeiti, PingFangSC-Regular, sans-serif;
@@ -108,4 +108,199 @@ body {
   top: 3.16rem;
   left: 50%;
   margin-left: -3.42rem;
+  border-radius: 0.2rem;
+}
+.banner .swiper-slide {
+  border-radius: 0.2rem;
+}
+.banner .swiper-slide > img {
+  border-radius: 0.2rem;
+}
+.banner .swiper-pagination-banner {
+  /* position: fixed; */
+  /* bottom: 0; */
+  /* top: 6.27rem; */
+}
+.content {
+  width: 6.84rem;
+  margin: 1.26rem auto;
+}
+.content .box {
+  margin-bottom: 0.5rem;
+}
+.content .box h3 {
+  color: #1d449a;
+  font-size: 0.36rem;
+}
+.content .box .bg {
+  background-color: #ffffff;
+  padding: 0.35rem 0.25rem;
+  border-radius: 0.2rem;
+  margin: 0.2rem 0;
+  box-shadow: 0px 0px 10px #cccccc;
+  position: relative;
+}
+.content .box .bg .ts li {
+  margin-bottom: 0.2rem;
+}
+.content .box .bg .ts li:last-child {
+  margin-bottom: 0;
+}
+.content .box .bg .video-box {
+  display: flex;
+  justify-content: space-between;
+}
+.content .box .bg .video {
+  width: 3.1rem;
+}
+.content .box .bg .video img {
+  margin-top: 0.2rem;
+}
+.content .box .bg .video h4 {
+  border-bottom: 1px solid #bfbfbf;
+  color: #1d449a;
+  font-size: 0.32rem;
+}
+.content .box .bg.article {
+  padding: 0.35rem 0.74rem 0.35rem 0.35rem;
+  min-height: 4.7rem;
+}
+.content .box .bg .tag-list {
+  position: absolute;
+  right: 0;
+  top: 0.24rem;
+  width: 0.4rem;
+}
+.content .box .bg .tag-list .tag {
+  padding: 0.1rem 0;
+  color: #ffffff;
+  font-size: 0.24rem;
+  background-color: #9ba2b1;
+  border-top-left-radius: 0.1rem;
+  border-bottom-left-radius: 0.1rem;
+  text-align: center;
+  line-height: 0.28rem;
+  margin-bottom: 0.1rem;
+}
+.content .box .bg .tag-list .tag.on {
+  background-color: #1d449a;
+}
+.content .box .bg.article .news {
+  display: none;
+}
+.content .box .bg.article .news.show {
+  display: block;
+}
+.content .box .bg.article .news li {
+  border-bottom: 1px solid #aaaaaa;
+}
+.content .box .bg.article .news li:last-child {
+  /* border-bottom: 0; */
+}
+.content .box .bg.article .news li a {
+  display: block;
+  padding: 0.33rem 0 0.33rem 0.8rem;
+  position: relative;
+}
+.content .box .bg.article .news li a > img {
+  width: 0.6rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -0.3rem;
+}
+.content .box .bg.bg.product {
+  min-height: 3.5rem;
+}
+.business-modal {
+  width: 100%;
+  height: 100%;
+  padding: 0.4rem 0.3rem;
+  display: none;
+}
+.business-modal ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.business-modal ul li {
+  /* flex: 0 0 30%; */
+  flex-basis: 30%;
+  margin-bottom: 0.3rem;
+}
+.business-modal ul li a {
+  display: block;
+  text-align: center;
+  background-color: #ffffff;
+}
+.business-modal ul li a span {
+  font-size: 0.18rem;
+  color: #1147c3;
+  display: inline-block;
+  line-height: 0.5rem;
+}
+.video-modal {
+  background-color: #eff2f9;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0.4rem 0.3rem;
+  display: none;
+}
+
+.video-modal ul {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+}
+.video-modal h2 {
+  color: #1147c3;
+  font-size: 0.4rem;
+  text-align: center;
+}
+.video-modal .close {
+  width: 0.5rem;
+  position: absolute;
+  right: 0.38rem;
+  top: 0.22rem;
+}
+.video-modal ul li {
+  /* flex: 0 0 30%; */
+  flex-basis: 30%;
+  margin-right: 5%;
+  margin-bottom: 0.3rem;
+  margin-top: 0.5rem;
+}
+.video-modal ul li a {
+  display: block;
+  text-align: center;
+}
+.video-modal ul li a span {
+  font-size: 0.18rem;
+  color: #1147c3;
+  display: inline-block;
+  line-height: 0.5rem;
+}
+.video-wrapper {
+  display: none;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+.video-wrapper #video-play {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.video-wrapper .close {
+  width: 0.5rem;
+  position: absolute;
+  right: 0.38rem;
+  top: 0.22rem;
 }

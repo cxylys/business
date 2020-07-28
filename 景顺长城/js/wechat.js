@@ -1,5 +1,5 @@
-var descText = '收集年夜饭菜谱，赢取新年好礼，12个春节愿望，一次通通实现'
-var titleText = '新年添新意，抽签赢好礼'
+var descText = '景顺长城竞争优势 （008131）'
+var titleText = '北大学霸带你投资'
 var picUrl = ''
 var linkUrl = ''
 var $appId
