@@ -299,12 +299,14 @@ body {
 .video-modal ul li a {
   display: block;
   text-align: center;
-}
-.video-modal ul li a span {
-  font-size: 0.18rem;
   color: #1147c3;
-  display: inline-block;
-  line-height: 0.5rem;
+}
+.video-modal ul li a.download {
+  /* font-size: 0.18rem; */
+  color: #1147c3;
+  display: block;
+  line-height: 0.6rem;
+  text-align: center;
 }
 .video-wrapper {
   display: none;
@@ -325,4 +327,13 @@ body {
   right: 0.38rem;
   top: 0.22rem;
   z-index: 500;
+  background-color: #ffffff;
+  border-radius: 0.25rem;
+}
+.footer {
+  background-color: #ffffff;
+  padding: 0.4rem 0.33rem;
+  text-align: justify;
+  color: #999999;
+  margin-top: -0.5rem;
 }

@@ -1,4 +1,4 @@
-var descText = '景顺长城竞争优势 （008131）'
+var descText = '景顺长城竞争优势混合型基金（008131）'
 var titleText = '北大学霸带你投资'
 var picUrl = 'http://mp.at43.tech/c/jscc/images/share.png'
 var linkUrl = 'http://mp.at43.tech/c/jscc'
@@ -7,6 +7,7 @@ var $timestamp
 var $nonceStr
 var $signature
 var wxurl = location.href
+console.log(wxurl)
 $(function() {
     $.ajax({
         type: 'GET',

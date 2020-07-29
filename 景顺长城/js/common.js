@@ -12,14 +12,14 @@ function init() {
     initialSlide: 0,
     centeredSlides: true,
     slidesPerView: '2',
-    loopedSlides: 4,
+    loopedSlides: 5,
     effect: 'coverflow', //切换效果
     slideActiveClass: 'active',
     coverflowEffect: {
       //以3D界面的形式显示
       rotate: 0, //slide做3d旋转时Y轴的旋转角度。默认50。
-      stretch: '0%', //每个slide之间的拉伸值，越大slide靠得越紧。 默认0。138
-      depth: 100, //slide的位置深度。值越大z轴距离越远，看起来越小。 默认100。
+      stretch: '0', //每个slide之间的拉伸值，越大slide靠得越紧。 默认0。138
+      depth: 150, //slide的位置深度。值越大z轴距离越远，看起来越小。 默认100。
       modifier: 1, //depth和rotate和stretch的倍率，相当于depth*modifier、rotate*modifier、stretch*modifier，值越大这三个参数的效果越明显。默认1。
       slideShadows: true, //开启slide阴影。默认 true。
     },
@@ -63,6 +63,7 @@ function init() {
   //   },
   // })
 }
+
 $(function () {
   init()
   // 文章解读标签
