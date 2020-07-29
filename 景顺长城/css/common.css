@@ -161,28 +161,31 @@ body {
   font-size: 0.32rem;
 }
 .content .box .bg.article {
-  padding: 0.35rem 0.74rem 0.35rem 0.35rem;
-  min-height: 4.7rem;
+  padding: 0.25rem 0.4rem;
 }
 .content .box .bg .tag-list {
-  position: absolute;
-  right: 0;
-  top: 0.24rem;
-  width: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.3rem;
+  position: relative;
+}
+.content .box .bg .line {
+  background-color: #aaaaaa;
+  height: 1px;
+  margin-top: -1px;
 }
 .content .box .bg .tag-list .tag {
-  padding: 0.1rem 0;
-  color: #ffffff;
-  font-size: 0.24rem;
-  background-color: #9ba2b1;
-  border-top-left-radius: 0.1rem;
-  border-bottom-left-radius: 0.1rem;
-  text-align: center;
-  line-height: 0.28rem;
-  margin-bottom: 0.1rem;
+  padding-bottom: 0.1rem;
+  position: relative;
+  text-align: justify;
 }
 .content .box .bg .tag-list .tag.on {
-  background-color: #1d449a;
+  color: #1d449a;
+  border-bottom: 2px solid #1d449a;
+  font-size: 0.28rem;
+}
+.content .box .bg .tag-list .tag.hide {
+  visibility: hidden;
 }
 .content .box .bg.article .news {
   display: none;
@@ -212,12 +215,16 @@ body {
   margin-top: -0.3rem;
 }
 .content .box .bg.product {
-  min-height: 3.5rem;
-  padding: 0.8rem 0.74rem 0.35rem 0.35rem;
+  padding: 0.25rem 0.4rem;
+}
+.content .box .bg.product .tag-list {
+  padding: 0 0.15rem;
 }
 .content .box .bg.product .product-list {
   display: none;
+  padding: 0.3rem 0 0.1rem;
 }
+
 .content .box .bg.product .product-list.show {
   display: flex;
 }

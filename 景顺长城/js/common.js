@@ -82,7 +82,7 @@ $(function () {
     $('.product .product-list-' + index).show()
   })
 
-  // 短视频播放
+  // 业绩视频播放
   $('.short-btn').click(function () {
     $('.short-modal').show()
     $('body').scrollTop(0)
@@ -94,7 +94,7 @@ $(function () {
     $('body').css('overflow', '')
   })
 
-  // 短视频播放
+  // 业绩视频播放
   $('.short-modal ul li a').click(function () {
     var url = $(this).attr('data-url')
     $('#video-play').attr('src', url)
@@ -105,5 +105,24 @@ $(function () {
     $('.video-wrapper').hide()
     document.getElementById('video-play').pause()
     // document.getElementById('video-play').currentTime = 0
+  })
+
+  // 理念视频
+  $('.linian-btn').click(function () {
+    $('.linian-modal').show()
+    $('body').scrollTop(0)
+    $('body').css('overflow', 'hidden')
+  })
+  $('.linian-modal .close').click(function () {
+    $('.linian-modal').hide()
+    $('body').css('overflow', '')
+  })
+  $('.linian-modal ul li a').click(function () {
+    var url = $(this).attr('data-url')
+    if (url) {
+      $('#video-play').attr('src', url)
+      $('.video-wrapper').show()
+      document.getElementById('video-play').play()
+    }
   })
 })
