@@ -1,3 +1,5 @@
+var navSwiper
+var productSwiper
 function init() {
   var myBannerSwiper = new Swiper('.banner', {
     direction: 'horizontal', // 水平切换选项
@@ -25,6 +27,33 @@ function init() {
     },
     loop: true, //开启循环
     on: {},
+  })
+
+  navSwiper = new Swiper('.nav-swiper', {
+    initialSlide: 0,
+    // effect: 'cube',
+    on: {
+      slideChange: function () {
+        $('.article .tag-list .tag')
+          .eq(this.activeIndex)
+          .addClass('on')
+          .siblings()
+          .removeClass('on')
+      },
+    },
+  })
+  productSwiper = new Swiper('.product-swiper', {
+    initialSlide: 0,
+    // effect: 'cube',
+    on: {
+      slideChange: function () {
+        $('.product .tag-list .tag')
+          .eq(this.activeIndex)
+          .addClass('on')
+          .siblings()
+          .removeClass('on')
+      },
+    },
   })
 
   // var videoSwiper = new Swiper('.video-swiper', {
@@ -69,17 +98,16 @@ $(function () {
   // 文章解读标签
   $('.article .tag-list .tag').click(function () {
     $(this).addClass('on').siblings().removeClass('on')
-    var index = $(this).attr('data-index')
-    $('.article .news').hide()
-    $('.article .news-' + index).show()
+    navSwiper.slideTo($(this).index(), 500, false)
   })
 
   // 产品标签
   $('.product .tag-list .tag').click(function () {
     $(this).addClass('on').siblings().removeClass('on')
-    var index = $(this).attr('data-index')
-    $('.product .product-list').hide()
-    $('.product .product-list-' + index).show()
+    productSwiper.slideTo($(this).index(), 500, false)
+    // var index = $(this).attr('data-index')
+    // $('.product .product-list').hide()
+    // $('.product .product-list-' + index).show()
   })
 
   // 业绩视频播放
