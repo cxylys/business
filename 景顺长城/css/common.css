@@ -254,6 +254,12 @@ body {
   padding: 0.4rem 0.3rem;
   display: none;
 }
+.business-modal.product ul {
+  justify-content: flex-start;
+}
+.business-modal.product ul li {
+  margin-right: 3%;
+}
 .business-modal ul {
   display: flex;
   justify-content: space-between;
