@@ -193,6 +193,10 @@ body {
 /* .content .box .bg.article .news.show {
   display: block;
 } */
+.content .box .bg.article .swiper-slide {
+  overflow: hidden;
+  width: 100%;
+}
 .content .box .bg.article .news li {
   border-bottom: 1px solid #aaaaaa;
 }
@@ -210,9 +214,10 @@ body {
 .content .box .bg.article .news li a > img {
   width: 0.6rem;
   position: absolute;
-  left: 0;
+  left: 0.05rem;
   top: 50%;
   margin-top: -0.3rem;
+  border-radius: 0.1rem;
 }
 .content .box .bg.bg.article .news li a > span {
   display: block;

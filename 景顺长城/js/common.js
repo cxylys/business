@@ -30,7 +30,8 @@ function init() {
   })
 
   navSwiper = new Swiper('.nav-swiper', {
-    initialSlide: 0,
+    initialSlide: 1,
+    autoHeight: true, //高度随内容变化
     // effect: 'cube',
     on: {
       slideChange: function () {
@@ -44,6 +45,7 @@ function init() {
   })
   productSwiper = new Swiper('.product-swiper', {
     initialSlide: 0,
+    autoHeight: true, //高度随内容变化
     // effect: 'cube',
     on: {
       slideChange: function () {
