@@ -155,4 +155,23 @@ $(function () {
       document.getElementById('video-play').play()
     }
   })
+
+  // 产品特点视频
+  $('.product-btn').click(function () {
+    $('.product-modal').show()
+    $('body').scrollTop(0)
+    $('body').css('overflow', 'hidden')
+  })
+  $('.product-modal .close').click(function () {
+    $('.product-modal').hide()
+    $('body').css('overflow', '')
+  })
+  $('.product-modal ul li a').click(function () {
+    var url = $(this).attr('data-url')
+    if (url) {
+      $('#video-play').attr('src', url)
+      $('.video-wrapper').show()
+      document.getElementById('video-play').play()
+    }
+  })
 })
