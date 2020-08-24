@@ -1,6 +1,6 @@
 var descText = '景顺长城价值边际混合型基金（008060）'
 var titleText = '原则哥鲍无可全力掌舵'
-var picUrl = 'http://mp.at43.tech/c/jsccbwl/images/share.png'
+var picUrl = 'http://mp.at43.tech/c/jsccbwl/images/share.jpg'
 var linkUrl = 'http://mp.at43.tech/c/jsccbwl'
 var $appId
 var $timestamp
