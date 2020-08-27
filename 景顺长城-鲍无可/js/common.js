@@ -118,19 +118,17 @@ $(function () {
     $('body').scrollTop(0)
     $('body').css('overflow', 'hidden')
   })
-
   $('.product-video-modal .close').click(function () {
     $('.product-video-modal').hide()
     $('body').css('overflow', '')
   })
-
-  // 业绩视频播放
   $('.product-video-modal ul li a').click(function () {
     var url = $(this).attr('data-url')
     $('#video-play').attr('src', url)
     $('.video-wrapper').show()
     document.getElementById('video-play').play()
   })
+
   $('.video-wrapper .close').click(function () {
     $('.video-wrapper').hide()
     document.getElementById('video-play').pause()
