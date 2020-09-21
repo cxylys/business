@@ -15,7 +15,7 @@
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="expires" content="0" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/common.css?v=202008311015" />
+    <link rel="stylesheet" href="css/common.css" />
     <script type="text/javascript" src="js/resize.js"></script>
   </head>
 
@@ -48,7 +48,7 @@
             <video id="video-play-top" poster="images/box_1_content_1.png" src="images/test.mp4" controls="controls" webkit-playsinline="true" playsinline="true" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="false" x5-video-orientation="portrait" crossorigin="anonymous">您的浏览器不支持 video 标签。</video>
           </div>
           <div class="title">
-            视频标题视频标题视频标题视频标题视频标题视频标题
+            为了孩子的安全出行，我们还能做些什么？
           </div>
         </div>
         <div>
@@ -290,6 +290,9 @@
     <div id="ifeng_share_title" style="display: none"></div>
     <div id="ifeng_share_description" style="display: none"></div>
     <div id="ifeng_share_url" style="display: none"></div>
+    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
     <script>
       var shareIcon = document.getElementById('imgForShare').src
       var shareTitle = '齐心童行 共筑安全——2020米其林道路安全行动'
@@ -305,7 +308,6 @@
         'ifeng_share_description'
       ).innerHTML = shareContent
       document.getElementById('ifeng_share_url').innerHTML = shareLink
-      debugger
       if (/MicroMessenger/.test(navigator.userAgent)) {
         var wxConfigParams = {}
         $.ajax({
@@ -370,9 +372,6 @@
         })
       }
     </script>
-    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="js/common.js?v=202008311015"></script>
+    <script type="text/javascript" src="js/common.js"></script>
   </body>
 </html>
