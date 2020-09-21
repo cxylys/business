@@ -466,6 +466,48 @@ body {
 .content .news-list ul li a {
   color: #000000;
 }
+.content .news-box{
+  width: 7.04rem;
+  height: 2.06rem;
+  margin: 0 auto;
+  background-color: #f6da8c;
+  border-radius: 0.15rem;
+  border: 1px solid #efba2b;
+  padding: 0.3rem 0.18rem;
+  clear: both;
+  overflow: hidden;
+  display: block;
+}
+.content .news-box .news-img{
+  width: 2.64rem;
+  height: 1.48rem;
+  float: left;
+}
+.content .news-box .news-content{
+  height: 1.48rem;
+  position: relative;
+  color: #000000;
+  display: block;
+  font-size: 0.24rem;
+  text-align: justify;
+  width: 3.9rem;
+  float: right;
+}
+.content .news-box .news-content h5{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.content .news-box .news-content  .desc{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
 .content .box-video .video-4 {
   width: 6.24rem;
   height: 8.7rem;
