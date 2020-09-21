@@ -49,6 +49,12 @@ function init() {
   $('.swiper-button-next-4').click(function () {
     video4.slideNext()
   })
+  $('.swiper-button-prev-3').click(function () {
+    video3.slidePrev()
+  })
+  $('.swiper-button-next-3').click(function () {
+    video3.slideNext()
+  })
 }
 
 $(function () {
