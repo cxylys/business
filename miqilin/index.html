@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>米其林</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/common.css?v=202008311015" />
+    <script type="text/javascript" src="./js/resize.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="kv">
+        <img src="./images/kv.jpg" />
+        <div class="buttons">
+          <a href="javascript:" class="bg1 comm-desc-btn">活动简介</a>
+          <a href="javascript:" data-index="1" class="bg1">持续行动</a>
+          <a href="javascript:" class="bg2">敬请期待</a>
+        </div>
+      </div>
+      <div class="modal comm-desc-modal">
+        <div class="comm-rule-box">
+          <a href="javascript:" class="close-btn"
+            ><img src="./images/close_2.png"
+          /></a>
+          <h3>米其林交通安全校园行</h3>
+          <div class="line"><img src="./images/comm_rule_line.jpg" /></div>
+          <div class="desc">
+            <p>
+              今年，米其林中国延续和深化2018年道路安全活动的 成果，启动 其心同行
+              共筑安全——2019米其林道 路安全行动
+              。本次将目光聚焦于快递行业，关注快递小哥 寄递最后一公里的安全。
+            </p>
+            <p>
+              同时，结合米其林与国际汽联(FIA)共同倡导的 道 路安全黄金法则
+              ，编制《快递安全口诀》，结合线
+              上公益宣传视频、线下社会联动倡议，坚持用创新形式推广法则，共创更加安全的道路环境。
+            </p>
+            <p>
+              同时，结合米其林与国际汽联(FIA)共同倡导的 道 路安全黄金法则
+              ，编制《快递安全口诀》，结合线
+              上公益宣传视频、线下社会联动倡议，坚持用创新形式推广法则，共创更加安全的道路环境。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <!-- top 视频 -->
+        <div style="display: none" class="top-video">
+          <div class="video">
+            <video
+              id="video-play-top"
+              poster="./images/box_1_content_1.png"
+              src="./images/test.mp4"
+              controls="controls"
+              webkit-playsinline="true"
+              playsinline="true"
+              x-webkit-airplay="allow"
+              x5-video-player-type="h5"
+              x5-video-player-fullscreen="false"
+              x5-video-orientation="portrait"
+              crossorigin="anonymous"
+            >
+              您的浏览器不支持 video 标签。
+            </video>
+            <!-- <a href="javascript:" class="btn">
+              <img src="./images/play_btn.png" />
+            </a> -->
+          </div>
+          <div class="title">
+            视频标题视频标题视频标题视频标题视频标题视频标题
+          </div>
+        </div>
+        <div>
+          <!-- 安全小课堂 -->
+          <div style="display: none" class="box-video">
+            <div class="title"><img src="./images/box_1_title.png" /></div>
+            <div class="swiper-container video-1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <!-- <img src="./images/box_1_content_1.png?v=202008191415" />
+                  <a href="javascript:" class="btn">
+                    <img src="./images/play_btn.png" />
+                  </a> -->
+                  <video
+                    id="video-play-aq-1"
+                    poster="./images/box_1_content_1.png"
+                    src="./images/test.mp4"
+                    controls="controls"
+                    webkit-playsinline="true"
+                    playsinline="true"
+                    x-webkit-airplay="allow"
+                    x5-video-player-type="h5"
+                    x5-video-player-fullscreen="false"
+                    x5-video-orientation="portrait"
+                    crossorigin="anonymous"
+                  >
+                    您的浏览器不支持 video 标签。
+                  </video>
+                </div>
+                <div class="swiper-slide">
+                  <!-- <img src="./images/box_1_content_1.png?v=202008271056" />
+                  <a href="javascript:" class="btn">
+                    <img src="./images/play_btn.png" />
+                  </a> -->
+                  <video
+                    id="video-play-aq-2"
+                    poster="./images/box_1_content_1.png"
+                    src="./images/test.mp4"
+                    controls="controls"
+                    webkit-playsinline="true"
+                    playsinline="true"
+                    x-webkit-airplay="allow"
+                    x5-video-player-type="h5"
+                    x5-video-player-fullscreen="false"
+                    x5-video-orientation="portrait"
+                    crossorigin="anonymous"
+                  >
+                    您的浏览器不支持 video 标签。
+                  </video>
+                </div>
+                <div class="swiper-slide">
+                  <!-- <img src="./images/box_1_content_1.png?v=202008191415" />
+                  <a href="javascript:" class="btn">
+                    <img src="./images/play_btn.png" />
+                  </a> -->
+                  <video
+                    id="video-play-aq-3"
+                    poster="./images/box_1_content_1.png"
+                    src="./images/test.mp4"
+                    controls="controls"
+                    webkit-playsinline="true"
+                    playsinline="true"
+                    x-webkit-airplay="allow"
+                    x5-video-player-type="h5"
+                    x5-video-player-fullscreen="false"
+                    x5-video-orientation="portrait"
+                    crossorigin="anonymous"
+                  >
+                    您的浏览器不支持 video 标签。
+                  </video>
+                </div>
+              </div>
+              <!-- 如果需要分页器 -->
+              <div class="swiper-pagination swiper-pagination-video-1"></div>
+            </div>
+          </div>
+          <!-- 童话征集 -->
+          <div style="display: none" class="box-video">
+            <div class="title"><img src="./images/box_2_title.png" /></div>
+            <div class="search-box">
+              <div class="rule-btn">评比规则</div>
+              <div class="search-form">
+                <input
+                  type="text"
+                  placeholder="输入作者/编号"
+                  class="search-input"
+                />
+                <a href="javascript:" class="search-btn">搜索</a>
+              </div>
+            </div>
+            <div class="works-list">
+              <ul>
+                <li>
+                  <div class="work-img">
+                    <img src="./images/show_1.png" />
+                  </div>
+                  <div class="work-desc">
+                    <h4>参赛者作品名称</h4>
+                    <div class="author">
+                      <span>作者</span>
+                      <span>作品名称</span>
+                    </div>
+                    <div class="actions">
+                      <div class="zan-num">2333</div>
+                      <div class="zan-btn">点赞</div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="work-img">
+                    <img src="./images/show_1.png" />
+                  </div>
+                  <div class="work-desc">
+                    <h4>参赛者作品名称</h4>
+                    <div class="author">
+                      <span>作者</span>
+                      <span>作品名称</span>
+                    </div>
+                    <div class="actions">
+                      <div class="zan-num">2333</div>
+                      <div class="zan-btn">点赞</div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="work-img">
+                    <img src="./images/show_1.png" />
+                  </div>
+                  <div class="work-desc">
+                    <h4>参赛者作品名称</h4>
+                    <div class="author">
+                      <span>作者</span>
+                      <span>作品名称</span>
+                    </div>
+                    <div class="actions">
+                      <div class="zan-num">2333</div>
+                      <div class="zan-btn">点赞</div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="work-img">
+                    <img src="./images/show_1.png" />
+                  </div>
+                  <div class="work-desc">
+                    <h4>参赛者作品名称</h4>
+                    <div class="author">
+                      <span>作者</span>
+                      <span>作品名称</span>
+                    </div>
+                    <div class="actions">
+                      <div class="zan-num">2333</div>
+                      <div class="zan-btn">点赞</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="page">
+              <div class="page-btn prev-page">上一页</div>
+              <div class="index">
+                <span class="on">1</span>
+                <span>2</span>
+                <span>3</span>
+              </div>
+              <div class="page-btn next-page">下一页</div>
+            </div>
+          </div>
+          <div style="display: none" class="box-video">
+            <div class="title show-result-title">评选结果</div>
+            <div class="works-list works-list-result">
+              <ul>
+                <li>
+                  <div class="work-img result">
+                    <img src="./images/show_1.png" />
+                  </div>
+                  <div class="work-desc">
+                    <div class="sort">一等奖</div>
+                    <h4>参赛者作品名称</h4>
+                    <div class="author">
+                      <span>作者名字</span>
+                      <span>票数：123456</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="work-img result">
+                    <img src="./images/show_1.png" />
+                  </div>
+                  <div class="work-desc">
+                    <div class="sort">二等奖</div>
+                    <h4>参赛者作品名称</h4>
+                    <div class="author">
+                      <span>作者名字</span>
+                      <span>票数：123456</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="more-btn">
+                <a href="javascript:">查看更多</a>
+              </div>
+            </div>
+          </div>
+          <!-- 交通安全校园行 -->
+          <div style="display: none" class="box-video">
+            <div class="title"><img src="./images/box_3_title.png" /></div>
+            <div class="video-3">
+              <div class="swiper-container video-3-3">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./images/box_3_content_1.png" />
+                    <div class="tip">图片文字介绍图片文字介绍图片文字介绍</div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/box_3_content_1.png" />
+                    <div class="tip">图片文字介绍图片文字介绍图片文字介绍</div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/box_3_content_1.png" />
+                    <div class="tip">图片文字介绍图片文字介绍图片文字介绍</div>
+                  </div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination swiper-pagination-video-3"></div>
+              </div>
+              <div class="swiper-button-prev-3"></div>
+              <div class="swiper-button-next-3"></div>
+            </div>
+          </div>
+
+          <div style="display: none" class="box-video">
+            <div class="news-list">
+              <ul>
+                <li>
+                  <a href="javascript:">
+                    米其林走进上海实验小学 倡导可持续交通发展
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:">
+                    米其林走进上海实验小学 倡导可持续交通发展
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:">
+                    米其林走进上海实验小学 倡导可持续交通发展
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:">
+                    米其林走进上海实验小学 倡导可持续交通发展
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:">
+                    米其林走进上海实验小学 倡导可持续交通发展
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:">
+                    米其林走进上海实验小学 倡导可持续交通发展
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:">
+                    米其林走进上海实验小学 倡导可持续交通发展
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:">
+                    米其林走进上海实验小学 倡导可持续交通发展
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 童行者联盟 -->
+          <div style="display: none" class="box-video">
+            <div class="title"><img src="./images/box_4_title.png" /></div>
+            <div class="video-4">
+              <div class="swiper-container video-4-4">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./images/box_4_content_1.png" />
+                    <div class="name">某某某</div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/box_4_content_1.png" />
+                    <div class="name">某某某</div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/box_4_content_1.png" />
+                    <div class="name">某某某</div>
+                  </div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination swiper-pagination-video-4"></div>
+              </div>
+              <div class="swiper-button-prev-4"></div>
+              <div class="swiper-button-next-4"></div>
+            </div>
+          </div>
+          <!-- 持续行动 -->
+          <div id="nav-1" class="box-video">
+            <div class="title"><img src="./images/box_5_title.png" /></div>
+            <div class="news-list">
+              <ul>
+                <li>
+                  <a href="javascript:">
+                    米其林走进上海实验小学 倡导可持续交通发展
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:">
+                    米其林走进上海实验小学 倡导可持续交通发展
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:">
+                    米其林走进上海实验小学 倡导可持续交通发展
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:">
+                    米其林走进上海实验小学 倡导可持续交通发展
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:">
+                    米其林走进上海实验小学 倡导可持续交通发展
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:">
+                    米其林走进上海实验小学 倡导可持续交通发展
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:">
+                    米其林走进上海实验小学 倡导可持续交通发展
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:">
+                    米其林走进上海实验小学 倡导可持续交通发展
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <img src="./images/footer.png" />
+        </div>
+      </div>
+      <!-- <div class="video-wrapper">
+        <video
+          id="video-play"
+          src=""
+          controls="controls"
+          webkit-playsinline="true"
+          playsinline="true"
+          x-webkit-airplay="allow"
+          x5-video-player-type="h5"
+          x5-video-player-fullscreen="false"
+          x5-video-orientation="portrait"
+          crossorigin="anonymous"
+        >
+          您的浏览器不支持 video 标签。
+        </video>
+        <div class="close"><img src="./images/close.png" /></div>
+      </div> -->
+    </div>
+    <script type="text/javascript" src="./js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="./js/common.js?v=202008311015"></script>
+  </body>
+</html>
