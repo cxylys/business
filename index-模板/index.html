@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>信梦想 易成长</title> 
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=750,maximum-scale=1.0,user-scalable=no,target-densitydpi=device-dpi,minimal-ui" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<script type="text/javascript">
+		   paceOptions = {
+		    ajax: false, // disabled
+		    document: false, // disabled
+		    eventLag: false, // disabled
+		    elements: false
+		   };
+		  </script>
+		<script data-pace-options='{"ajax": false}' src="http://n.sinaimg.cn/sina_client/20191118a35l/Scripts/pace.js">
+		</script>
+		
+		<style type="text/css">
+			.pace {
+				-webkit-pointer-events: none;
+				pointer-events: none;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				user-select: none;
+			}
+			.pace.pace-inactive .pace-progress {
+				display: none;
+			}
+			.pace .pace-progress {
+				position: fixed;
+				z-index: 2000;
+				top: 0;
+				right: 0;
+				height: 100%;
+				width: 100%;
+				background: #000;
+				-webkit-transform: translate3d(0, 0, 0) !important;
+				-ms-transform: translate3d(0, 0, 0) !important;
+				transform: translate3d(0, 0, 0) !important;
+			}
+			
+			.pace-progress-img {
+				width: 200px;
+				height: 200px;
+				background: #000;
+				background-size: 250px auto;
+				position: absolute;
+				left: 50%;
+				top: 280px;
+				margin-left: -100px;
+			}
+			
+			.pace .pace-progress:after {
+				display: block;
+				position: absolute;
+				top: 490px;
+				left: 50%;
+				margin-left: -100px;
+				content: "loading "attr(data-progress-text);
+				font-family: "Helvetica Neue", sans-serif;
+				font-weight: 100;
+				font-size: 30px;
+				font-weight: bold;
+				line-height: 1;
+				text-align: center;
+				color: #fff;
+				vertical-align: bottom;
+			}
+		</style>
+		<link href="css/ph.css" rel="stylesheet" />
+	    <link href="css/swiper.min.css" rel="stylesheet" />
+		<link href="http://n1.sinaimg.cn/sina_client/20191118a35l/css/animate.css" rel="stylesheet" />
+		<script src="js/zepto.js"></script>
+		<script type="text/javascript">
+			var ua = navigator.userAgent;
+			if (/Android (\d+\.\d+)/.test(ua)) {
+				var version = parseFloat(RegExp.$1);
+				if (version > 2.3) {
+					document.write(
+						'<meta name="viewport" content="width=750,  user-scalable=no,target-densitydpi=device-dpi,minimal-ui">');
+				} else {
+					document.write('<meta name="viewport" content="width=750, target-densitydpi=device-dpi">');
+				}
+			} else {
+				document.write(
+					'<meta name="viewport" content="width=750,user-scalable=no, target-densitydpi=device-dpi,minimal-ui">');
+			}
+		</script>
+		<script>
+			//判断是用手机或pc打开
+			function browserRedirect() {
+			    var sUserAgent = navigator.userAgent.toLowerCase();
+			    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+			    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+			    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+			    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+			    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+			    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+			    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+			    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+			    if(!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM)) {
+			     window.location.href = ""; //pc链接
+			    }
+			}
+			//browserRedirect();
+		</script>
+	</head>
+	<body>
+		<div id="indexWrap">
+			<div class="navs">
+				<!-- 锚点对应下面版块的id，再在下面调用dclick_fn方法 -->
+				<ul>
+					<li class="xc_zb"> 现场直播</li>
+					<li class="news">热点新闻</li>
+					<li class="xc_imgs"> 领导致辞</li>
+					<li class="pinpai"> 品牌发布</li>
+					
+				</ul>
+				
+			</div>
+			<div class="box1">
+				<p>中信银行推出普惠金融全新品牌“中信易贷”。在甲骨文中，“易”像手捧着盛满水的器皿，寓意金融活水精准滴灌小微企业。 “易”者，轻松、亲近、变化也，中信易贷以更便捷、更温暖、更创新的服务惠及广大小微企业。</p>
+			</div>
+			<div class="box2" id="xc_zb"   >
+				<h3 class="bt">现场视频</h3>
+				<div id="playerDiv" class="playerDiv">
+					<img src="images/zb_img.jpg" alt="" />
+				</div>
+				<!--直播开始
+					<script src="https://x0.ifengimg.com/fe/lark/lark_comp/js/vendors~lark.361ff6fe.js"></script> 
+					<script src="https://x0.ifengimg.com/fe/lark/lark_comp/js/lark.1278d21e.js"></script>
+			        <script src="https://v.ifeng.com/mobile/include/live.js"></script>
+	               	<script>
+	                 new LivePlayer('playerDiv',{
+						playUrl:'//zb.ios.ifeng.com/live/04JT55IIUIO_271/index.m3u8', //直播流地址，必填 //zb.ios.ifeng.com/live/04ITKUNNA4G_271/index.m3u8
+						// channelId: '', //频道id, 可不填, 默认为''
+						poster: 'images/zb_img.jpg', //播放器默认图
+						width: 643, //播放器宽度, 可不填, 默认为 343
+						height: 468, //播放器高度, 可不填, 默认为 242
+						autoPlay: 'false', //是否自动播放, 可不填, 默认为 true
+						id: 'player' //video标签id, 可不填, 默认为 player
+	                 });
+	               	</script>-->
+	             	<!--直播结束-->
+	            <div class="b2_txt">
+					<p>2019中信财富论坛亦是中信第五年度竭诚举办。019中信财富论 坛亦是中信第五年度竭诚举办。</p>
+	            </div>
+			</div>
+			<div class="box3" id="ld_warp">
+				<h3 class="bt">热点新闻</h3>
+				<div id="img_1" class="heheda">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="http://x0.ifengimg.com/cmpp/2020/0920/657b746fac2f78csize11_w265_h150.jpg" alt="" />
+							<div class="n_r">
+								<h3>中信银行倾情奉献微电影《奋斗者的手》</h3>
+								<a href="https://ishare.ifeng.com/c/s/7zvTCjgfMlE" target="_blank">
+									<p>每一个奋斗者心里，不仅有理想，还有承诺和守护……</p>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="http://x0.ifengimg.com/cmpp/2020/0920/c54deb54cd869casize61_w265_h150.jpg" alt="" />
+							<div class="n_r">
+								<h3>“中信易贷”梦想加工厂，祝您美梦成真</h3>
+								<a href="https://ishare.ifeng.com/c/s/7zvS9fi0ih6" target="_blank">
+									<p>让梦不再是梦，9月22日，中信易贷品牌发布会，让梦想触手可及。</p>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="http://x0.ifengimg.com/cmpp/2020/0920/2d7409f6c5a37d0size30_w265_h150.jpg" alt="" />
+							<div class="n_r">
+								<h3>中信银行暖心微电影之《因为相信 所以看见》</h3>
+								<a href="https://ishare.ifeng.com/c/s/7zvSlAggNWK" target="_blank">
+									<p>因为相信所以看见，中信易贷，相信每一个奋斗的你。</p>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+			<div class="box4" id="xc_imgs"   >
+				<h3 class="bt">领导致辞</h3>
+				<div class="b4_cont">
+					<img src="images/b4_img.jpg" alt="" class="b4_img" />
+					<h3>中信银行副行长谢志斌致辞</h3>
+					<a href="javascript:;">
+						<p>2019中信财富论坛亦是中信第五年度竭诚举办。019中信财富论坛 亦是中信第五年度竭诚举办。2019中信财富论坛亦是中信第五年度竭诚举办。019中信财富论坛 亦是中信第五年度竭诚举办。2019中信财富论坛亦是中信第五年度竭诚举办。019中信财富论坛 亦是中信第五年度竭诚举办。2019中信财富论坛亦是中信第五年度竭诚举办。019中信财富论坛 亦是中信第五年度竭诚举办。&lt&lt详细</p>
+					</a>
+				</div>
+			</div>
+			<div class="box5" id="pinpai"  >
+				<h3 class="bt">品牌发布</h3>
+				<div class="b5_cont">
+					<img src="images/new_img.jpg" alt="" />
+					<div class="n_r">
+						<h3>2019中信财富论坛亦是中信第五</h3>
+						<a href="javascript:;">
+							<p>2019中信财富论坛亦是中信第五年度竭诚举办举办举办举办......&lt&lt详细</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="box6" id="chanpin"  >
+				<h3 class="bt">产品发布</h3>
+				<div class="b6_cont">
+					<img src="images/new_img.jpg" alt="" />
+					<div class="n_r">
+						<h3>2019中信财富论坛亦是中信第五</h3>
+						<a href="javascript:;">
+							<p>2019中信财富论坛亦是中信第五年度竭诚举办举办举办举办......&lt&lt详细</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="box7" id="xc_tj"  >
+				<h3 class="bt">现场图集</h3>
+				<div id="img_2" class="heheda">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="images/b7_img.jpg" alt="" />
+						</div>
+						<div class="swiper-slide">
+							<img src="images/b7_img.jpg" alt="" />
+						</div>
+						<div class="swiper-slide">
+							<img src="images/b7_img.jpg" alt="" />
+						</div>
+						<div class="swiper-slide">
+							<img src="images/b7_img.jpg" alt="" />
+						</div>
+					</div>
+					<!-- <div class="swiper-pagination"></div> -->
+				</div>
+				<div class="l"></div>
+		        <div class="r"></div>
+			</div>
+			<div class="box8" id="dh_yicheng"  >
+				<h3 class="bt">大会议程</h3>
+				<div class="b8_cont">
+					<img src="images/b8_img.jpg" alt="" />
+				</div>
+			</div>
+			<div class="box9" id="shipin">
+				<h3 class="bt">视频轮播</h3>
+				<div id="img_3" class="heheda">
+					<div class="swiper-wrapper">
+				            <div class="swiper-slide">
+				            	<video id="play_video1" poster="https://x0.ifengimg.com/cmpp/2020/0920/01.jpg"  playsinline="true" controls webkit-playsinline="true" x5-video-player-type="h5-page" src="https://ips.ifeng.com/video19.ifeng.com/video09/2020/09/19/p37278760-102-009-154437.mp4"></video>
+							</div>
+				            <div class="swiper-slide">
+				            	<video id="play_video2" poster="https://x0.ifengimg.com/cmpp/2020/0920/02.jpg"  playsinline="true" controls webkit-playsinline="true" x5-video-player-type="h5-page" src="https://ips.ifeng.com/video19.ifeng.com/video09/2020/09/19/p37318622-102-009-154525.mp4"></video>
+							</div>
+				            <div class="swiper-slide">
+				            	<video id="play_video3" poster="https://x0.ifengimg.com/cmpp/2020/0920/03.jpg"  playsinline="true" controls webkit-playsinline="true" x5-video-player-type="h5-page" src="https://ips.ifeng.com/video19.ifeng.com/video09/2020/09/19/p37318634-102-009-154637.mp4"></video>
+							</div>
+				            <div class="swiper-slide">
+				            	<video id="play_video4" poster="https://x0.ifengimg.com/cmpp/2020/0920/04.jpg"  playsinline="true" controls webkit-playsinline="true" x5-video-player-type="h5-page" src="https://ips.ifeng.com/video19.ifeng.com/video09/2020/09/19/p37318678-102-009-155125.mp4"></video>
+							</div>
+				            <div class="swiper-slide">
+				            	<video id="play_video5" poster="https://x0.ifengimg.com/cmpp/2020/0920/05.jpg"  playsinline="true" controls webkit-playsinline="true" x5-video-player-type="h5-page" src="https://ips.ifeng.com/video19.ifeng.com/video09/2020/09/19/p37318687-102-009-155137.mp4"></video>
+							</div>
+                            <div class="swiper-slide">
+				            	<video id="play_video5" poster="https://x0.ifengimg.com/cmpp/2020/0920/06.jpg"  playsinline="true" controls webkit-playsinline="true" x5-video-player-type="h5-page" src="https://ips.ifeng.com/video19.ifeng.com/video09/2020/09/19/p37318700-102-009-155237.mp4"></video>
+							</div>
+                            <div class="swiper-slide">
+				            	<video id="play_video5" poster="https://x0.ifengimg.com/cmpp/2020/0920/07.jpg"  playsinline="true" controls webkit-playsinline="true" x5-video-player-type="h5-page" src="https://ips.ifeng.com/video19.ifeng.com/video09/2020/09/19/p37318721-102-009-155437.mp4"></video>
+							</div>
+                            <div class="swiper-slide">
+				            	<video id="play_video5" poster="https://x0.ifengimg.com/cmpp/2020/0920/08.jpg"  playsinline="true" controls webkit-playsinline="true" x5-video-player-type="h5-page" src="https://ips.ifeng.com/video19.ifeng.com/video09/2020/09/16/p37241277-102-009-113337.mp4"></video>
+							</div>
+			          	</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+			<div class="box10" id="an_li">
+				<h3 class="bt">案例墙</h3>
+				<div id="img_4" class="heheda">
+					<div class="swiper-wrapper">
+				            <div class="swiper-slide">
+				            	<img src="https://x0.ifengimg.com/cmpp/2020/0920/1-1.jpg" width="750" alt="" />
+				            	<!--<div class="b10_txt">
+									<p>中信财富论坛 为 中信财富管理 年度最大活动， 2019中信财富论坛 亦是中信 第五年度竭诚举办。论坛以 传递温度 助力新生 为主题</p>
+				            	</div>-->
+							</div>
+				            <div class="swiper-slide">
+				            	<img src="https://x0.ifengimg.com/cmpp/2020/0920/1-2.jpg" width="750"  alt="" />
+				            	<!--<div class="b10_txt">
+									<p>中信财富论坛 为 中信财富管理 年度最大活动， 2019中信财富论坛 亦是中信 第五年度竭诚举办。论坛以 传递温度 助力新生 为主题</p>
+				            	</div>-->
+							</div>
+				            <div class="swiper-slide">
+				            	<img src="https://x0.ifengimg.com/cmpp/2020/0920/2-1.jpg" width="750"  alt="" />
+				            	<!--<div class="b10_txt">
+									<p>中信财富论坛 为 中信财富管理 年度最大活动， 2019中信财富论坛 亦是中信 第五年度竭诚举办。论坛以 传递温度 助力新生 为主题</p>
+				            	</div>-->
+							</div>
+                            <div class="swiper-slide">
+				            	<img src="https://x0.ifengimg.com/cmpp/2020/0920/2-2.jpg" width="750"  alt="" />
+				            	<!--<div class="b10_txt">
+									<p>中信财富论坛 为 中信财富管理 年度最大活动， 2019中信财富论坛 亦是中信 第五年度竭诚举办。论坛以 传递温度 助力新生 为主题</p>
+				            	</div>-->
+							</div>
+                            <div class="swiper-slide">
+				            	<img src="https://x0.ifengimg.com/cmpp/2020/0920/3-1.jpg"  width="750" alt="" />
+				            	<!--<div class="b10_txt">
+									<p>中信财富论坛 为 中信财富管理 年度最大活动， 2019中信财富论坛 亦是中信 第五年度竭诚举办。论坛以 传递温度 助力新生 为主题</p>
+				            	</div>-->
+							</div>
+                            <div class="swiper-slide">
+				            	<img src="https://x0.ifengimg.com/cmpp/2020/0920/3-2.jpg" width="750"  alt="" />
+				            	<!--<div class="b10_txt">
+									<p>中信财富论坛 为 中信财富管理 年度最大活动， 2019中信财富论坛 亦是中信 第五年度竭诚举办。论坛以 传递温度 助力新生 为主题</p>
+				            	</div>-->
+							</div>
+                            <div class="swiper-slide">
+				            	<img src="https://x0.ifengimg.com/cmpp/2020/0920/4-1.jpg" width="750"  alt="" />
+				            	<!--<div class="b10_txt">
+									<p>中信财富论坛 为 中信财富管理 年度最大活动， 2019中信财富论坛 亦是中信 第五年度竭诚举办。论坛以 传递温度 助力新生 为主题</p>
+				            	</div>-->
+							</div>
+                            <div class="swiper-slide">
+				            	<img src="https://x0.ifengimg.com/cmpp/2020/0920/4-2.jpg"  width="750" alt="" />
+				            	<!--<div class="b10_txt">
+									<p>中信财富论坛 为 中信财富管理 年度最大活动， 2019中信财富论坛 亦是中信 第五年度竭诚举办。论坛以 传递温度 助力新生 为主题</p>
+				            	</div>-->
+							</div>
+                            <div class="swiper-slide">
+				            	<img src="https://x0.ifengimg.com/cmpp/2020/0920/5-1.jpg" width="750"  alt="" />
+				            	<!--<div class="b10_txt">
+									<p>中信财富论坛 为 中信财富管理 年度最大活动， 2019中信财富论坛 亦是中信 第五年度竭诚举办。论坛以 传递温度 助力新生 为主题</p>
+				            	</div>-->
+							</div>
+                            <div class="swiper-slide">
+				            	<img src="https://x0.ifengimg.com/cmpp/2020/0920/5-2.jpg" width="750"  alt="" />
+				            	<!--<div class="b10_txt">
+									<p>中信财富论坛 为 中信财富管理 年度最大活动， 2019中信财富论坛 亦是中信 第五年度竭诚举办。论坛以 传递温度 助力新生 为主题</p>
+				            	</div>-->
+							</div>
+                            <div class="swiper-slide">
+				            	<img src="https://x0.ifengimg.com/cmpp/2020/0920/6-1.jpg" width="750"  alt="" />
+				            	<!--<div class="b10_txt">
+									<p>中信财富论坛 为 中信财富管理 年度最大活动， 2019中信财富论坛 亦是中信 第五年度竭诚举办。论坛以 传递温度 助力新生 为主题</p>
+				            	</div>-->
+							</div>
+                            <div class="swiper-slide">
+				            	<img src="https://x0.ifengimg.com/cmpp/2020/0920/6-2.jpg" width="750"  alt="" />
+				            	<!--<div class="b10_txt">
+									<p>中信财富论坛 为 中信财富管理 年度最大活动， 2019中信财富论坛 亦是中信 第五年度竭诚举办。论坛以 传递温度 助力新生 为主题</p>
+				            	</div>-->
+							</div>
+                            <div class="swiper-slide">
+				            	<img src="https://x0.ifengimg.com/cmpp/2020/0920/7-1.jpg" width="750"  alt="" />
+				            	<!--<div class="b10_txt">
+									<p>中信财富论坛 为 中信财富管理 年度最大活动， 2019中信财富论坛 亦是中信 第五年度竭诚举办。论坛以 传递温度 助力新生 为主题</p>
+				            	</div>-->
+							</div>
+                            <div class="swiper-slide">
+				            	<img src="https://x0.ifengimg.com/cmpp/2020/0920/7-2.jpg" width="750"  alt="" />
+				            	<!--<div class="b10_txt">
+									<p>中信财富论坛 为 中信财富管理 年度最大活动， 2019中信财富论坛 亦是中信 第五年度竭诚举办。论坛以 传递温度 助力新生 为主题</p>
+				            	</div>-->
+							</div>
+                            
+                            
+			          	</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+			<div class="box11" id="sd_zhanfang"  >
+				<h3 class="bt">深度专访</h3>
+				<div id="img_5" class="heheda">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="javascript:;">
+								<img src="images/b11_img.jpg" alt="" />
+								<div class="n_r">
+									<h3>2019中信财富论坛亦是中信第五</h3>
+									<p>2019中信财富论坛亦是中信第五年度竭诚举办举办举办举办......&lt&lt详细</p>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="javascript:;">
+								<img src="images/b11_img.jpg" alt="" />
+								<div class="n_r">
+									<h3>2019中信财富论坛亦是中信第五</h3>
+									<p>2019中信财富论坛亦是中信第五年度竭诚举办举办举办举办......&lt&lt详细</p>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="javascript:;">
+								<img src="images/b11_img.jpg" alt="" />
+								<div class="n_r">
+									<h3>2019中信财富论坛亦是中信第五</h3>
+									<p>2019中信财富论坛亦是中信第五年度竭诚举办举办举办举办......&lt&lt详细</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+
+			</div>
+		</div>
+	    <script src="js/swiper.min.js"></script>
+    	<script src="js/swiper.animate.min.js"></script>
+		<script>
+			//                          _oo0oo_
+			//                         088888880
+			//                         88" . "88
+			//                         (| -_- |)
+			//                         0\  =  /0
+			//                       ___/'---'\___
+			//                     .' \\|     |// '.
+			//                    / \\|||  :  |||// \
+			//                   / -||||| -:- |||||- \
+			//                  |   | \\\  -  /// |   |
+			//                  | \_|  ''\---/''  |_/ |
+			//                  \  .-\__  '-'  __/-.  /
+			//                ___'. .'  /--.--\  '. .'___
+			//             ."" '<  '.___\_<|>_/___.'  >' "".
+			//            | | :  '- \'.;'\ _ /';.'/ -'  : | |
+			//            \  \ '_.   \_ __\ /__ _/   ._' /  /
+			//        ====='-.____'.___ \_____/ ___.'____.-'=====
+			//                          '=---='
+			//
+			//        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			//
+			//                   佛祖保佑             永无BUG
+			//
+			//        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+			(function(wd) {
+				if (!wd.hehe) {
+					wd.hehe = {};
+				};
+				wd.hehe = {
+					dclick_fn:function(id) {
+						var inputsWrapperTop = Math.floor($(id).offset().top-70);//滚动的位置，70为跳到对应版块后距离上边距的距离，越大距离越高
+						window.scrollTo({top:inputsWrapperTop,behavior:"smooth"});
+					},
+					//初始化swp
+					initSwp: function() {
+						// 头部快速到达页面指定位置,dclick_fn的参数为版块的id
+						// 现场直播
+						$(".xc_zb").on("click",function(){
+							hehe.dclick_fn(xc_zb);
+						});
+						// 热点新闻
+						$(".news").on("click",function(){
+							hehe.dclick_fn(ld_warp);
+						});
+						// 品牌发布
+						$(".pinpai").on("click",function(){
+							hehe.dclick_fn(pinpai);
+						});
+						// 产品发布
+						$(".chanpin").on("click",function(){
+							hehe.dclick_fn(chanpin);
+						});
+						// 现场图集
+						$(".xc_tj").on("click",function(){
+							hehe.dclick_fn(xc_tj);
+						});
+						// 视频轮播
+						$(".shipin").on("click",function(){
+							hehe.dclick_fn(shipin);
+						});
+						// 大会议程
+						$(".dh_yicheng").on("click",function(){
+							hehe.dclick_fn(dahui);
+						});
+						// 案例墙
+						$(".an_li").on("click",function(){
+							hehe.dclick_fn(an_li);
+						});
+						// 深度专访
+						$(".sd_zhanfang").on("click",function(){
+							hehe.dclick_fn(sd_zhanfang);
+						});
+						var _this = this;
+						$("#indexWrap").show();
+						var swiperimg1 = new Swiper('#img_1', {
+			              grabCursor : true,
+			              navigation: {
+			                  nextEl: '.box1 .r',
+			                  prevEl: '.box1 .l',
+			              },
+			              pagination: {
+			                el: '#img_1 .swiper-pagination',
+			                clickable : true,
+			                paginationClickable: true,
+			              },
+			              paginationClickable: true
+			            });
+
+						var swiper2 = new Swiper('#img_2', {
+			              grabCursor : true,
+			              navigation: {
+			                  nextEl: '.box7 .r',
+			                  prevEl: '.box7 .l',
+			              },
+			              pagination: {
+			                el: '#img_2 .swiper-pagination',
+			                clickable : true,
+			                paginationClickable: true,
+			              },
+			              paginationClickable: true
+			            });
+
+						var swiper3 = new Swiper('#img_3', {
+			              	grabCursor : true,
+			              	navigation: {
+			                  	nextEl: '.box9 .r',
+			                  	prevEl: '.box9 .l',
+			              	},
+			              	pagination: {
+			                	el: '#img_3 .swiper-pagination',
+			                	clickable : true,
+			                	paginationClickable: true,
+			              	},
+			              	on: {
+							    slideChangeTransitionStart: function(){
+							    	var myVideo1 = document.getElementById("play_video1"); //视频1
+									var myVideo2 = document.getElementById("play_video2"); //视频2
+									var myVideo3 = document.getElementById("play_video3"); //视频3
+									var myVideo4 = document.getElementById("play_video4"); //视频4
+									var myVideo5 = document.getElementById("play_video5"); //视频5
+									var index=this.activeIndex;
+							      	if(index==0){
+							      		myVideo2.pause();
+							      	};
+							      	if(index==1){
+							      		myVideo1.pause();
+							      		myVideo3.pause();
+							      	};
+							      	if(index==2){
+							      		myVideo2.pause();
+							      		myVideo4.pause();
+							      	};
+							      	if(index==3){
+							      		myVideo3.pause();
+							      		myVideo5.pause();
+							      	};
+							      	if(index==4){
+							      		myVideo4.pause();
+							      	};
+							    },
+							},
+			              	paginationClickable: true
+			            });
+
+						var swiper4 = new Swiper('#img_4', {
+			              grabCursor : true,
+			              navigation: {
+			                  nextEl: '.box10 .r',
+			                  prevEl: '.box10 .l',
+			              },
+			              pagination: {
+			                el: '#img_4 .swiper-pagination',
+			                clickable : true,
+			                paginationClickable: true,
+			              },
+			              paginationClickable: true
+			            });
+
+						var swiper5 = new Swiper('#img_5', {
+			              grabCursor : true,
+			              navigation: {
+			                  nextEl: '.box11 .r',
+			                  prevEl: '.box11 .l',
+			              },
+			              pagination: {
+			                el: '#img_5 .swiper-pagination',
+			                clickable : true,
+			                paginationClickable: true,
+			              },
+			              paginationClickable: true
+			            });
+
+					}
+				}
+			})(this);
+			hehe.initSwp();
+		</script>
+
+ <!--分享--> <img id="imgForShare" style="position: fixed; left: -1000%; top: -1000%;" src="https://x0.ifengimg.com/cmpp/2020/0920/00.jpg" alt="分享缩略图" /> <div id="ifeng_share_thumbnail" style="display:none"></div> <div id="ifeng_share_title" style="display:none"></div> <div id="ifeng_share_description" style="display:none"></div> <div id="ifeng_share_url" style="display:none"></div> <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script> <script>var shareIcon = document.getElementById('imgForShare').src,
+    shareTitle = '信梦想·易成长暨中信易贷品牌发布会',
+        shareContent = document.querySelector('meta[name=description]') ? document.querySelector(
+            'meta[name=description]').getAttribute('content') : '',
+        shareLink = window.location.href;
+    document.getElementById("ifeng_share_title").innerHTML = shareTitle;
+    document.getElementById("ifeng_share_thumbnail").innerHTML = shareIcon;
+    document.getElementById("ifeng_share_description").innerHTML = shareContent;
+    document.getElementById("ifeng_share_url").innerHTML = shareLink;
+    if (/MicroMessenger/.test(navigator.userAgent)) {
+        var wxConfigParams = {};
+        $.ajax({
+            type:'get',
+             url:'http://api.cmpp.v.ifeng.com/api/Secert',
+             dataType:'jsonp',
+             jsonpCallback:'wxshareInfoCallback',
+             data:{
+                 url: window.location.href,
+                 rt: 'jsonp'
+             },
+            success: function (data) {
+                wxConfigParams.debug = false;
+                wxConfigParams.appId = data.data.appId;
+                wxConfigParams.timestamp = data.data.timestamp;
+                wxConfigParams.nonceStr = data.data.nonceStr;
+                wxConfigParams.signature = data.data.signature;
+                wxConfigParams.jsApiList = ['onMenuShareAppMessage', 'onMenuShareTimeline', 'onMenuShareQQ',
+                    'onMenuShareQZone'
+                ];
+                wx.config(wxConfigParams);
+                wx.ready(function () {
+                    wx.onMenuShareAppMessage({
+                        title: shareTitle,
+                        desc: shareContent,
+                        link: shareLink,
+                        imgUrl: shareIcon,
+                        success: function () {
+                            setpage.src =
+                                'http://sapp.d.ifeng.com/stat.html?site=spring5&dtfrom=message&dateline=' +
+                                (new Date).getTime();
+                        }
+                    });
+                    wx.onMenuShareQZone({
+                        title: shareTitle,
+                        desc: shareContent,
+                        link: shareLink,
+                        imgUrl: shareIcon
+                    });
+                    wx.onMenuShareQQ({
+                        title: shareTitle,
+                        desc: shareContent,
+                        link: shareLink,
+                        imgUrl: shareIcon
+                    });
+                    wx.onMenuShareTimeline({
+                        title: shareTitle,
+                        link: shareLink,
+                        imgUrl: shareIcon,
+                        success: function () {
+                            setpage.src =
+                                'http://sapp.d.ifeng.com/stat.html?site=spring5&dtfrom=timeline&dateline=' +
+                                (new Date).getTime();
+                        },
+                    });
+                });
+            },
+            error: function (data) {}
+        });
+    }</script>
+
+	</body>
+
+</html>

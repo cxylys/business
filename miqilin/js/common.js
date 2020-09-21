@@ -1,7 +1,7 @@
 function init() {
   var video1 = new Swiper('.video-1', {
     direction: 'horizontal', // 水平切换选项
-    loop: true, // 循环模式选项
+    // loop: true, // 循环模式选项
     // autoplay: true,
     pagination: {
       el: '.swiper-pagination-video-1',
@@ -9,6 +9,24 @@ function init() {
       // type: 'custom',
       bulletClass: 'my-bullet', //需设置.my-bullet样式
       bulletActiveClass: 'my-bullet-active',
+    },
+    on: {
+      slideChangeTransitionStart: function () {
+        var myVideo1 = document.getElementById('video-play-aq-1') //视频1
+        var myVideo2 = document.getElementById('video-play-aq-2') //视频2
+        var myVideo3 = document.getElementById('video-play-aq-3') //视频3
+        var index = this.activeIndex
+        if (index == 0) {
+          myVideo2.pause()
+        }
+        if (index == 1) {
+          myVideo1.pause()
+          myVideo3.pause()
+        }
+        if (index == 2) {
+          myVideo2.pause()
+        }
+      },
     },
   })
   var video3 = new Swiper('.video-3-3', {

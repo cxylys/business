@@ -2,7 +2,8 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
-    <title>米其林</title>
+    <title>齐心童行 共筑安全——2020米其林道路安全行动</title>
+    <meta content="" name="description" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
@@ -59,7 +60,7 @@
       </div>
       <div class="content">
         <!-- top 视频 -->
-        <div style="display: none" class="top-video">
+        <div class="top-video">
           <div class="video">
             <video
               id="video-play-top"
@@ -456,6 +457,97 @@
         <div class="close"><img src="./images/close.png" /></div>
       </div> -->
     </div>
+    <!--分享-->
+    <img
+      id="imgForShare"
+      style="position: fixed; left: -1000%; top: -1000%"
+      src="./images/share.jpg"
+      alt="分享缩略图"
+    />
+    <div id="ifeng_share_thumbnail" style="display: none"></div>
+    <div id="ifeng_share_title" style="display: none"></div>
+    <div id="ifeng_share_description" style="display: none"></div>
+    <div id="ifeng_share_url" style="display: none"></div>
+    <script>
+      var shareIcon = document.getElementById('imgForShare').src
+      var shareTitle = '齐心童行 共筑安全——2020米其林道路安全行动'
+      var shareContent = document.querySelector('meta[name=description]')
+        ? document
+            .querySelector('meta[name=description]')
+            .getAttribute('content')
+        : ''
+      var shareLink = window.location.href
+      document.getElementById('ifeng_share_title').innerHTML = shareTitle
+      document.getElementById('ifeng_share_thumbnail').innerHTML = shareIcon
+      document.getElementById(
+        'ifeng_share_description'
+      ).innerHTML = shareContent
+      document.getElementById('ifeng_share_url').innerHTML = shareLink
+      if (/MicroMessenger/.test(navigator.userAgent)) {
+        var wxConfigParams = {}
+        $.ajax({
+          type: 'get',
+          url: 'http://api.cmpp.v.ifeng.com/api/Secert',
+          dataType: 'jsonp',
+          jsonpCallback: 'wxshareInfoCallback',
+          data: {
+            url: window.location.href,
+            rt: 'jsonp',
+          },
+          success: function (data) {
+            wxConfigParams.debug = false
+            wxConfigParams.appId = data.data.appId
+            wxConfigParams.timestamp = data.data.timestamp
+            wxConfigParams.nonceStr = data.data.nonceStr
+            wxConfigParams.signature = data.data.signature
+            wxConfigParams.jsApiList = [
+              'onMenuShareAppMessage',
+              'onMenuShareTimeline',
+              'onMenuShareQQ',
+              'onMenuShareQZone',
+            ]
+            wx.config(wxConfigParams)
+            wx.ready(function () {
+              wx.onMenuShareAppMessage({
+                title: shareTitle,
+                desc: shareContent,
+                link: shareLink,
+                imgUrl: shareIcon,
+                success: function () {
+                  setpage.src =
+                    'http://sapp.d.ifeng.com/stat.html?site=spring5&dtfrom=message&dateline=' +
+                    new Date().getTime()
+                },
+              })
+              wx.onMenuShareQZone({
+                title: shareTitle,
+                desc: shareContent,
+                link: shareLink,
+                imgUrl: shareIcon,
+              })
+              wx.onMenuShareQQ({
+                title: shareTitle,
+                desc: shareContent,
+                link: shareLink,
+                imgUrl: shareIcon,
+              })
+              wx.onMenuShareTimeline({
+                title: shareTitle,
+                link: shareLink,
+                imgUrl: shareIcon,
+                success: function () {
+                  setpage.src =
+                    'http://sapp.d.ifeng.com/stat.html?site=spring5&dtfrom=timeline&dateline=' +
+                    new Date().getTime()
+                },
+              })
+            })
+          },
+          error: function (data) {},
+        })
+      }
+    </script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
     <script type="text/javascript" src="./js/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="./js/common.js?v=202008311015"></script>
