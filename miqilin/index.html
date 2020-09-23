@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
@@ -15,6 +15,7 @@
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="expires" content="0" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/kkpager_orange.css" />
     <link rel="stylesheet" href="css/common.css" />
     <script type="text/javascript" src="js/resize.js"></script>
   </head>
@@ -24,7 +25,8 @@
       <div class="kv">
         <img src="images/kv.jpg" />
         <div class="buttons">
-          <a href="javascript:" class="bg1 comm-desc-btn">活动简介</a>
+          <a href="javascript:" class="bg1 comm-desc-btn">活动介绍</a>
+          <a href="javascript:" data-index="2" class="bg1">童话征集</a>
           <a href="javascript:" data-index="1" class="bg1">持续行动</a>
           <a href="javascript:" class="bg2">敬请期待</a>
         </div>
@@ -32,20 +34,111 @@
       <div class="modal comm-desc-modal">
         <div class="comm-rule-box">
           <a href="javascript:" class="close-btn"><img src="images/close_2.png"/></a>
-          <h3>米其林交通安全校园行</h3>
+          <h3>活动介绍</h3>
           <div class="line"><img src="images/comm_rule_line.jpg" /></div>
           <div class="desc">
-            <p>今年，米其林中国延续和深化2018年道路安全活动的 成果，启动 其心同行共筑安全——2019米其林道 路安全行动。本次将目光聚焦于快递行业，关注快递小哥 寄递最后一公里的安全。</p>
-            <p>同时，结合米其林与国际汽联(FIA)共同倡导的 道 路安全黄金法则，编制《快递安全口诀》，结合线上公益宣传视频、线下社会联动倡议，坚持用创新形式推广法则，共创更加安全的道路环境。</p>
-            <p>同时，结合米其林与国际汽联(FIA)共同倡导的 道 路安全黄金法则，编制《快递安全口诀》，结合线上公益宣传视频、线下社会联动倡议，坚持用创新形式推广法则，共创更加安全的道路环境。</p>
+            <p>近日，“齐心童行 共筑安全——2020米其林道路安全行动”正式启动。</p>
+            <p>今年将目光聚焦于儿童出行。开展安全小课堂、童画征集、交通安全校园行等寓教于乐的公益行动。米其林中国特别策划拍摄了安全小课堂短视频节目，积极倡导家长与孩子共同学习；走进全国多地校园传播交通安全知识；呼吁全社会关注儿童出行，为祖国的未来营造安全有序的交通环境，培养孩子独立出行的能力。</p>
+            <p>20年来，米其林中国致力于通过道路安全行动，提高公众的安全意识，维护道路安全环境。作为联合国道路安全十年行动（2011-2020）的重要力量，米其林与国际汽联于2015年携手将“道路安全黄金法则”带到中国，并坚持用创新形式推广法则。未来，米其林将和更多志同道合的伙伴同行，共创更加安全的道路环境。</p>
           </div>
+        </div>
+      </div>
+      <div class="modal preview-modal">
+        <div class="preview-box">
+          <a href="javascript:" class="close-btn"><img src="images/close_2.png"/></a>
+          <img src="images/show/show_01.jpg" id="preview-img" />
+        </div>
+      </div>
+      <div class="modal show-result-modal">
+        <div class="show-result-box works-list">
+          <a href="javascript:" class="close-btn"><img src="images/close_2.png"/></a>
+          <ul>
+            <li>
+              <div class="work-img result">
+                <img src="images/show_1.png" />
+              </div>
+              <div class="work-desc">
+                <div class="sort">一等奖</div>
+                <h4>参赛者作品名称</h4>
+                <div class="author">
+                  <span>作者名字</span>
+                  <span>票数：123456</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="work-img result">
+                <img src="images/show_1.png" />
+              </div>
+              <div class="work-desc">
+                <div class="sort">二等奖</div>
+                <h4>参赛者作品名称</h4>
+                <div class="author">
+                  <span>作者名字</span>
+                  <span>票数：123456</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="work-img result">
+                <img src="images/show_1.png" />
+              </div>
+              <div class="work-desc">
+                <div class="sort">三等奖</div>
+                <h4>参赛者作品名称</h4>
+                <div class="author">
+                  <span>作者名字</span>
+                  <span>票数：123456</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="work-img result">
+                <img src="images/show_1.png" />
+              </div>
+              <div class="work-desc">
+                <div class="sort hide">三等奖</div>
+                <h4>参赛者作品名称</h4>
+                <div class="author">
+                  <span>作者名字</span>
+                  <span>票数：123456</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="work-img result">
+                <img src="images/show_1.png" />
+              </div>
+              <div class="work-desc">
+                <div class="sort hide">三等奖</div>
+                <h4>参赛者作品名称</h4>
+                <div class="author">
+                  <span>作者名字</span>
+                  <span>票数：123456</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="work-img result">
+                <img src="images/show_1.png" />
+              </div>
+              <div class="work-desc">
+                <div class="sort hide">三等奖</div>
+                <h4>参赛者作品名称</h4>
+                <div class="author">
+                  <span>作者名字</span>
+                  <span>票数：123456</span>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="content">
         <!-- top 视频 -->
         <div class="top-video">
           <div class="video">
-            <video id="video-play-top" poster="images/box_1_content_1.png" src="images/test.mp4" controls="controls" webkit-playsinline="true" playsinline="true" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="false" x5-video-orientation="portrait" crossorigin="anonymous">您的浏览器不支持 video 标签。</video>
+            <video id="video-play-top" poster="http://x0.ifengimg.com/cmpp/2020/0922/pic11.png" src="http://ips.ifeng.com/video19.ifeng.com/video09/2020/09/22/p37328258-102-009-120037.mp4" controls="controls" webkit-playsinline="true" playsinline="true" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="false" x5-video-orientation="portrait" crossorigin="anonymous">您的浏览器不支持 video 标签。</video>
           </div>
           <div class="title">
             为了孩子的安全出行，我们还能做些什么？
@@ -53,7 +146,7 @@
         </div>
         <div>
           <!-- 安全小课堂 -->
-          <div style="display: none" class="box-video">
+          <div style="display:none"  class="box-video">
             <div class="title"><img src="images/box_1_title.png" /></div>
             <div class="swiper-container video-1">
               <div class="swiper-wrapper">
@@ -72,7 +165,7 @@
             </div>
           </div>
           <!-- 童话征集 -->
-          <div style="display: none" class="box-video">
+          <div  id="nav-2"  class="box-video">
             <div class="title"><img src="images/box_2_title.png" /></div>
             <div class="search-box">
               <div class="rule-btn">评比规则</div>
@@ -81,85 +174,14 @@
                 <a href="javascript:" class="search-btn">搜索</a>
               </div>
             </div>
-            <div class="works-list">
+            <div class="works-list zan-works-list">
               <ul>
-                <li>
-                  <div class="work-img">
-                    <img src="images/show_1.png" />
-                  </div>
-                  <div class="work-desc">
-                    <h4>参赛者作品名称</h4>
-                    <div class="author">
-                      <span>作者</span>
-                      <span>作品名称</span>
-                    </div>
-                    <div class="actions">
-                      <div class="zan-num">2333</div>
-                      <div class="zan-btn">点赞</div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="work-img">
-                    <img src="images/show_1.png" />
-                  </div>
-                  <div class="work-desc">
-                    <h4>参赛者作品名称</h4>
-                    <div class="author">
-                      <span>作者</span>
-                      <span>作品名称</span>
-                    </div>
-                    <div class="actions">
-                      <div class="zan-num">2333</div>
-                      <div class="zan-btn">点赞</div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="work-img">
-                    <img src="images/show_1.png" />
-                  </div>
-                  <div class="work-desc">
-                    <h4>参赛者作品名称</h4>
-                    <div class="author">
-                      <span>作者</span>
-                      <span>作品名称</span>
-                    </div>
-                    <div class="actions">
-                      <div class="zan-num">2333</div>
-                      <div class="zan-btn">点赞</div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="work-img">
-                    <img src="images/show_1.png" />
-                  </div>
-                  <div class="work-desc">
-                    <h4>参赛者作品名称</h4>
-                    <div class="author">
-                      <span>作者</span>
-                      <span>作品名称</span>
-                    </div>
-                    <div class="actions">
-                      <div class="zan-num">2333</div>
-                      <div class="zan-btn">点赞</div>
-                    </div>
-                  </div>
-                </li>
               </ul>
             </div>
-            <div class="page">
-              <div class="page-btn prev-page">上一页</div>
-              <div class="index">
-                <span class="on">1</span>
-                <span>2</span>
-                <span>3</span>
-              </div>
-              <div class="page-btn next-page">下一页</div>
+            <div id="kkpager" class="page">
             </div>
           </div>
-          <div style="display: none" class="box-video">
+          <div style="display:none"  class="box-video">
             <div class="title show-result-title">评选结果</div>
             <div class="works-list works-list-result">
               <ul>
@@ -196,7 +218,7 @@
             </div>
           </div>
           <!-- 交通安全校园行 -->
-          <div style="display: none" class="box-video">
+          <div style="display:none" class="box-video">
             <div class="title"><img src="images/box_3_title.png" /></div>
             <div class="video-3">
               <div class="swiper-container video-3-3">
@@ -222,7 +244,7 @@
             </div>
           </div>
 
-          <div style="display: none" class="box-video">
+          <div style="display:none"  class="box-video">
             <div class="news-list">
               <ul>
                 <li> <a href="javascript:"> 米其林走进上海实验小学 倡导可持续交通发展 </a> </li>
@@ -237,7 +259,7 @@
             </div>
           </div>
           <!-- 童行者联盟 -->
-          <div style="display: none" class="box-video">
+          <div style="display:none"  class="box-video">
             <div class="title"><img src="images/box_4_title.png" /></div>
             <div class="video-4">
               <div class="swiper-container video-4-4">
@@ -265,13 +287,13 @@
           <!-- 持续行动 -->
           <div id="nav-1" class="box-video">
             <div class="title"><img src="images/box_5_title.png" /></div>
-            <a class="news-box" href="javascript:">
+            <a class="news-box" href="https://corporate.michelin.com.cn/road.html">
               <div class="news-img">
-                <img src="images/news_01.png" />
+                <img src="https://x0.ifengimg.com/cmpp/2020/0922/picba.jpg" />
               </div>
               <div class="news-content">
-                  <h5>米其林米其林米其林米其林</h5>
-                  <div class="desc">米其林米其林米其林米其林米其林米其林米其林米其林<<详细<<详细<<详细<<详细</div>
+                  <h5>道路安全，米其林时时在线</h5>
+                  <div class="desc">米其林将和更多志同道合的伙伴同行，共创更加安全的道路环境。<<详细<<详细<<详细<<详细</div>
               </div>
             </a>
           </div>
@@ -287,9 +309,10 @@
     <div id="ifeng_share_title" style="display: none"></div>
     <div id="ifeng_share_description" style="display: none"></div>
     <div id="ifeng_share_url" style="display: none"></div>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
     <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="js/kkpager.min.js"></script>
     <script>
       var shareIcon = document.getElementById('imgForShare').src
       var shareTitle = '齐心童行 共筑安全——2020米其林道路安全行动'
