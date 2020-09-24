@@ -48,23 +48,18 @@ textarea {
   -webkit-appearance: none;
 }
 
-html {
-  font-size: 50px;
-}
 
 html,
 body {
-  height: 100%;
-  width: 100%;
-  /* max-width: 750px; */
   margin: 0 auto;
 }
 
 body {
-  overflow-x: hidden;
   margin: 0;
-  color: #373737;
-  background-color: #bab5b2;
+  color: #000000;
+  background: url(../images/bg.jpg) no-repeat center top;
+  background-size: 100% auto;
+  background-color: #d8dad9;
   font-family: 'Microsoft Yahei', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans',
     Arial, 'Hiragino Sans GB', STHeiti, PingFangSC-Regular, sans-serif;
   cursor: default;
@@ -73,7 +68,7 @@ body {
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: auto !important;
-  font-size: 0.24rem;
+  font-size: 14px;
   -webkit-overflow-scrolling: touch;
 }
 .modal {
@@ -119,4 +114,3 @@ body {
   background: url(../images/btn_2.png) no-repeat center top;
   background-size: 100% auto;
 }
-
