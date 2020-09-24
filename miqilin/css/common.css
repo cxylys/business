@@ -262,7 +262,9 @@ body {
   margin-left: 0.1rem;
 }
 .works-list {
-  padding: 0 0.35rem;
+  /* padding: 0 0.35rem; */
+  margin: 0 0.35rem;
+  position: relative;
 }
 .works-list ul {
   display: flex;
@@ -698,5 +700,66 @@ overflow: hidden;
 }
 #preview-img{
   border: 3px solid #548309;
-    border-radius: 0.15rem;
+  border-radius: 0.15rem;
+}
+.loading-box{
+  position: absolute;
+  width: 100%;
+  height:calc(100% - 0.5rem);
+  background-color: rgba(255,255,255,0.75);
+  border-radius: 0.15rem;
+}
+.loading{
+  width: 1rem;
+  height: 0.8rem;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -0.4rem;
+  margin-left: -0.5rem;
+}
+.loading span{
+    width:0.1rem;
+    height:100%;
+    display:inline-block;
+    background:#efda3d;;
+    animation: mymove 1.2s infinite ease-in-out;
+    -webkit-animation:mymove 1.2s infinite ease-in-out;
+     /*
+        mymove代表动画名字
+        1.2s代表执行时间
+        infinite表示一直循环执行
+        ease-in-out表示先慢后快的缓动
+    */
+}
+.loading >span:nth-child(2){
+    -webkit-animation-delay:-1.0s;
+    animation-delay:-1.0s;
+}
+.loading >span:nth-child(3){
+    -webkit-animation-delay:-0.9s;
+    animation-delay:-0.9s;
+}
+.loading >span:nth-child(4){
+    -webkit-animation-delay:-0.8s;
+    animation-delay:-0.8s;
+}
+.loading >span:nth-child(5){
+    -webkit-animation-delay:-0.7s;
+    animation-delay:-0.7s;
+}
+@keyframes mymove{
+    0%{transform:scaleY(0.4);}
+    25%{transform:scaleY(1.0);}
+    50%{transform:scaleY(0.4);}
+    75%{transform:scaleY(0.4);}
+    100%{transform:scaleY(0.4);}
+}
+@-webkit-keyframes mymove{
+    0%{transform:scaleY(0.4);}
+    25%{transform:scaleY(1.0);}
+    50%{transform:scaleY(0.4);}
+    75%{transform:scaleY(0.4);}
+    100%{transform:scaleY(0.4);}
 }

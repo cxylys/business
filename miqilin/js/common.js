@@ -77,7 +77,9 @@ function init() {
 var searchParams = '';
 var isZan = true;
 var pageNo = 1;
-function page(pageNo,totalPage,totalRecords){
+var totalPage = 0;
+var totalRecords = 0;
+function page(isInit){
   //生成分页
   //有些参数是可选的，比如lang，若不传有默认值
   kkpager.generPageHtml({
@@ -102,11 +104,12 @@ function page(pageNo,totalPage,totalRecords){
       this.selectPage(n);
       return false;
     }
-  });
+  },isInit);
 }
 
 // type == 1 点赞列表 type == 2 评选结果
-function getData(pageIndex,key,type){
+function getData(pageIndex,key,type,isSearch){
+  $('.loading-box').show();
   $.ajax({
       type: 'post',
       async: false,
@@ -122,15 +125,19 @@ function getData(pageIndex,key,type){
       success: function(obj) {
         if (obj.state === 200) {
           var data = obj.data;
-          var totalPage = data.totalPage;
+          if(isSearch){
+            totalPage = data.totalPage;
+            pageNo = pageIndex;
+            page(true);
+          }
           isZan = data.isZan;
           var elms = ''
           for (var i = 0; i < data.lists.length; i++) {
             var item = data.lists[i];
             elms += '<li><div class="work-img"><img src='+item.pic+' /></div><div class="work-desc"><h4>'+item.name+'</h4><div class="author"><span>'+item.author+'</span><span>'+item.number+'</span></div><div class="actions"><div class="zan-num">'+item.zan_count+'</div><div class="zan-btn" data-id='+item.id+'>点赞</div></div></div></li>'
           }
-          page(pageNo,totalPage,data.lists.length)
           $('.zan-works-list ul').empty().append(elms)
+          $('.loading-box').hide();
         }else{
           alert('服务器繁忙')
         }
@@ -143,7 +150,7 @@ function getData(pageIndex,key,type){
 
 $(function () {
   init();
-  getData(1,'',1);
+  getData(1,'',1,true);
   // $('.top-video .video .btn').click(function () {
   //   // var url = $(this).attr('data-url')
   //   $('#video-play').attr('src', 'images/video_1.mp4')
@@ -238,7 +245,7 @@ $(function () {
   // 查询
   $('.search-btn').click(function(){
     searchParams = $('.search-input').val().trim()
-    getData(1,searchParams,1);
+    getData(1,searchParams,1,true);
   })
 
 })

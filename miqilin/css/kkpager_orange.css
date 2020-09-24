@@ -5,8 +5,9 @@
 #kkpager a{
 	float: left;
 	border: 1px solid #ccc;
-	display: inline;
-	padding: 0.05rem 0.2rem 0.05rem 0.2rem;
+	display: inline-block;
+	padding: 0 0.2rem;
+	line-height: 0.48rem;
 	margin-right: 0.1rem;
 	border-radius: 0.06rem;
 	cursor: pointer;
@@ -17,8 +18,9 @@
 
 #kkpager span.disabled{
 	float: left;
-	display: inline;
-	padding: 0.05rem 0.2rem 0.05rem 0.2rem;
+	display: inline-block;
+	padding: 0 0.2rem;
+	line-height: 0.48rem;
 	margin-right: 0.1rem;
 	border-radius: 0.06rem;
 	border:1px solid #DFDFDF;
@@ -28,8 +30,9 @@
 #kkpager span.curr{
 	float: left;
 	border: 1px solid #FF6600;
-	display: inline;
-	padding: 0.05rem 0.2rem 0.05rem 0.2rem;
+	display: inline-block;
+	padding: 0 0.2rem;
+	line-height: 0.48rem;
 	margin-right: 0.1rem;
 	border-radius: 0.06rem;
 	background: #FFEEE5;
