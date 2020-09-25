@@ -113,7 +113,7 @@ function getData(pageIndex,key,type,isSearch){
   $.ajax({
       type: 'post',
       async: false,
-      url: 'http://shyuming.com.cn:8001/rearend/action/index.php?m=home&c=index&a=productionLists',
+      url: '//ifengad.3g.ifeng.com/miqilin/index.php/Home/Index/productionLists',
       data: {
         pagesize:4,
         page:pageIndex,
@@ -177,12 +177,21 @@ $(function () {
   })
   // 活动规则
   $('.kv .buttons .comm-desc-btn').click(function () {
-    $('.comm-desc-modal').show()
+    $('.comm-modal').show()
     $('body').css({ overflow: 'hidden' })
   })
   //关闭 活动规则
-  $('.comm-desc-modal .comm-rule-box .close-btn').click(function () {
-    $('.comm-desc-modal').hide()
+  $('.comm-modal .comm-rule-box .close-btn').click(function () {
+    $('.comm-modal').hide()
+    $('body').css({ overflow: '' })
+  })
+
+  $('.search-box .rule-btn').click(function(){
+    $('.comm-pk-modal').show()
+    $('body').css({ overflow: 'hidden' })
+  })
+  $('.comm-pk-modal .comm-rule-box .close-btn').click(function () {
+    $('.comm-pk-modal').hide()
     $('body').css({ overflow: '' })
   })
 
@@ -207,7 +216,7 @@ $(function () {
     $.ajax({
         type: 'post',
         async: false,
-        url: 'http://shyuming.com.cn:8001/rearend/action/index.php?m=home&c=index&a=doZan',
+        url: '//ifengad.3g.ifeng.com/miqilin/index.php/Home/Index/doZan',
         data: {
           production_id:id
         },

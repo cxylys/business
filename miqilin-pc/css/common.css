@@ -30,7 +30,6 @@ button {
 button {
   color: inherit;
   font: inherit;
-  margin: 0;
   border: none;
   text-transform: none;
   -webkit-appearance: button;
@@ -48,17 +47,17 @@ textarea {
   -webkit-appearance: none;
 }
 
-
 html,
 body {
   margin: 0 auto;
+  max-width: 1920px;
 }
 
 body {
   margin: 0;
-  color: #000000;
+  color: #3e3e3e;
   background: url(../images/bg.jpg) no-repeat center top;
-  background-size: 100% auto;
+  /* background-size: 100% auto; */
   background-color: #d8dad9;
   font-family: 'Microsoft Yahei', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans',
     Arial, 'Hiragino Sans GB', STHeiti, PingFangSC-Regular, sans-serif;
@@ -84,33 +83,96 @@ body {
 }
 .kv {
   width: 100%;
+  height: 740px;
   position: relative;
 }
 .kv .buttons {
   position: absolute;
-  bottom: 0.55rem;
+  bottom: 20px;
   width: 100%;
-  padding: 0 0.55rem;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  text-align: center;
 }
 .kv .buttons a {
   display: inline-block;
-  width: 1.97rem;
-  height: 0.53rem;
-  font-size: 0.26rem;
+  width: 156px;
+  height: 43px;
+  font-size: 20px;
   color: #ffffff;
-  font-weight: bold;
   text-align: center;
-  line-height: 0.48rem;
-  margin-bottom: 0.2rem;
+  line-height: 43px;
+  margin: 0 7px;
 }
 .kv .buttons .bg1 {
-  background: url(../images/btn_1.png) no-repeat center top;
+  background: url(../images/btn_bg.png) no-repeat center top;
   background-size: 100% auto;
 }
 .kv .buttons .bg2 {
-  background: url(../images/btn_2.png) no-repeat center top;
+  background: url(../images/btn_bg_2.png) no-repeat center top;
   background-size: 100% auto;
+}
+.content {
+  width: 1166px;
+  margin: 0 auto;
+}
+.top {
+  background: url(../images/box_bg_1.png) no-repeat center top;
+  background-size: 100% auto;
+  height: 681px;
+  margin-top: 50px;
+  padding: 0 110px 0 100px;
+}
+.top .comm-desc {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 24px 30px;
+  position: relative;
+  top: -30px;
+}
+.top .comm-desc h3 {
+  font-size: 24px;
+  color: #7fa83e;
+  text-align: center;
+  padding-left: 20px;
+}
+.top .comm-desc .line {
+  margin: 10px 0 15px;
+}
+.top .comm-desc .text {
+  text-align: justify;
+  font-size: 16px;
+  height: 150px;
+  overflow-y: scroll;
+  padding-right: 20px;
+}
+.top .comm-desc .text > p {
+  text-indent: 50px;
+}
+.top .comm-desc .text::-webkit-scrollbar {
+  width: 8px;
+  height: 1px;
+}
+.top .comm-desc .text::-webkit-scrollbar-thumb {
+  background-color: #548309;
+  border-radius: 5px;
+}
+.top .comm-desc .text::-webkit-scrollbar-track {
+  background-color: #b4d37a;
+  border-radius: 5px;
+}
+.top .top-video {
+  width: 879px;
+  margin: 0 auto;
+}
+.top .top-video video {
+  width: 100%;
+}
+.top .top-video .title {
+  background: url(../images/text_bg.png) no-repeat center top;
+  background-size: 100% auto;
+  width: 879px;
+  height: 46px;
+  font-size: 16px;
+  margin-top: 20px;
+  line-height: 46px;
+  padding: 0 20px;
 }
