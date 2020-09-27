@@ -209,8 +209,7 @@ $(function () {
     $.ajax({
       type: 'post',
       async: false,
-      url:
-        '//shyuming.com.cn:8001/rearend/action/index.php?m=home&c=index&a=doZan',
+      url: '//ifengad.3g.ifeng.com/miqilin/index.php/Home/Index/doZan',
       data: {
         production_id: id,
       },
