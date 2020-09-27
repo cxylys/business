@@ -177,15 +177,15 @@ $(function () {
     $(this).hide()
   })
   // 活动规则
-  $('.kv .buttons .comm-desc-btn').click(function () {
-    $('.comm-desc-modal').show()
-    $('body').css({ overflow: 'hidden' })
-  })
-  //关闭 活动规则
-  $('.comm-desc-modal .comm-rule-box .close-btn').click(function () {
-    $('.comm-desc-modal').hide()
-    $('body').css({ overflow: '' })
-  })
+  // $('.kv .buttons .comm-desc-btn').click(function () {
+  //   $('.comm-desc-modal').show()
+  //   $('body').css({ overflow: 'hidden' })
+  // })
+  // //关闭 活动规则
+  // $('.comm-desc-modal .comm-rule-box .close-btn').click(function () {
+  //   $('.comm-desc-modal').hide()
+  //   $('body').css({ overflow: '' })
+  // })
 
   // 结果列表 更多
   $('.works-list-result .more-btn').click(function () {

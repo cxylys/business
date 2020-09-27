@@ -210,7 +210,7 @@ $(function () {
     var id = $(this).attr('data-id');
     var numDom = $(this).parent().find('.zan-num');
     if(!isZan){
-      alert('点赞次数已用完');
+      alert('今日点赞次数已用完');
       return
     }
     $.ajax({
@@ -228,6 +228,7 @@ $(function () {
             $(numDom).text(data.zan_count);
           }else if(obj.state == 203){
             isZan = false;
+            alert('今日点赞次数已用完');
           }else{
             alert('服务器繁忙')
           }

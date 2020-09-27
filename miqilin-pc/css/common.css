@@ -449,9 +449,11 @@ body {
   min-height: 681px;
 }
 .box .m3 {
-  background: url(../images/box_bg_3.png) no-repeat center top;
+  /* background: url(../images/box_bg_3.png) no-repeat center top; */
+  background: url(../images/box_bg_1.png) no-repeat center top;
   background-size: 100% auto;
-  min-height: 1021px;
+  /* min-height: 1021px; */
+  min-height: 681px;
 }
 .jt-box {
   position: relative;
@@ -589,11 +591,14 @@ body {
   bottom: 50px;
 }
 .old-box {
-  /* margin-top: -320px; */
+  /* margin-top: -120px; */
+  position: relative;
+  top: -150px;
 }
 .old-news {
   width: 880px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin: -100px auto 0;
 }
 .pb-result {
   position: absolute;
