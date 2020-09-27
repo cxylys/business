@@ -194,7 +194,6 @@ $(function () {
   // 活动规则
   $('.kv .buttons .comm-desc-btn').click(function () {
     $('.comm-modal').show()
-    $('.comm-modal .comm-rule-box>h3').text('活动介绍')
     $('body').css({ overflow: 'hidden' })
   })
   //关闭 活动规则
@@ -204,16 +203,11 @@ $(function () {
   })
 
   $('.search-box .rule-btn').click(function () {
-    // $('.comm-pk-modal').show()
-    // $('body').css({ overflow: 'hidden' })
-    $('.comm-modal').show()
-    $('.comm-modal .comm-rule-box>h3').text('评比规则')
+    $('.comm-pk-modal').show()
     $('body').css({ overflow: 'hidden' })
   })
   $('.comm-pk-modal .comm-rule-box .close-btn').click(function () {
-    // $('.comm-pk-modal').hide()
-    // $('body').css({ overflow: '' })
-    $('.comm-modal').hide()
+    $('.comm-pk-modal').hide()
     $('body').css({ overflow: '' })
   })
 
