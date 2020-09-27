@@ -192,9 +192,11 @@ body {
   padding: 0 100px 0 80px;
 }
 .box .m1 {
-  background: url(../images/box_bg_2.png) no-repeat center top;
+  /* background: url(../images/box_bg_2.png) no-repeat center top; */
+  background: url(../images/box_bg_1.png) no-repeat center top;
   background-size: 100% auto;
-  min-height: 1429px;
+  /* min-height: 1429px; */
+  min-height: 681px;
 }
 .box .m1 .aq-box {
   position: relative;
@@ -265,9 +267,10 @@ body {
   border-radius: 10px;
 }
 .box .m1 .tg-box {
-  margin-top: -70px;
+  /* margin-top: -70px; */
   padding: 0 30px;
   position: relative;
+  top: -180px;
 }
 .box .m1 .tg-box .search-box {
   clear: both;
