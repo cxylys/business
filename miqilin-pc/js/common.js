@@ -105,7 +105,7 @@ function getData(pageIndex, key, type, isSearch) {
         var elms = ''
         for (var i = 0; i < data.lists.length; i++) {
           var item = data.lists[i]
-          if (i % 3 === 0 && i !== 0) {
+          if ((i+1) % 4 === 0 && i !== 0) {
             elms +=
               '<li style="margin-right:0"><div class="work-img"><img src=' +
               item.pic +
