@@ -102,7 +102,7 @@ function page(isInit) {
       isWrapedInfoTextAndGoPageBtn: false, //是否用span包裹住分页信息和跳转按钮
       click: function (n) {
         getData(n, searchParams)
-        this.selectPage(n)
+        this.selectPage(n,totalPage)
         return false
       },
     },
