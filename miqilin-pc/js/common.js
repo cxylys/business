@@ -204,6 +204,24 @@ function getResult() {
   })
 }
 
+// function repeat (func, times, wait) {
+//   let num = 0
+//   let time = null
+//   return function (text) {
+//     func(text)
+//     num++
+//     time = setInterval(() => {
+//       num++
+//       func(text)
+//       if (num === times) {
+//         clearInterval(time)
+//       }
+//     }, wait);
+//   }
+// }
+// const repeatFunc = repeat(alert, 4, 3000)
+// repeatFunc('helloword')
+
 $(function () {
   init()
   getData(1, '', 1, true)
