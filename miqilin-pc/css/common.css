@@ -643,11 +643,12 @@ body {
 .pb-result .pb-box .list {
   padding: 20px;
   height: 470px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .pb-result .pb-box .list > p {
   text-indent: 28px;
   text-align: justify;
+  margin-bottom: 28px;
 }
 .pb-result .pb-box .list::-webkit-scrollbar {
   width: 15px;
@@ -685,6 +686,7 @@ body {
 .pb-result .pb-box .list .sort-item .img {
   background-color: #dddddd;
   height: 95px;
+  overflow: hidden;
 }
 .pb-result .pb-box .list .sort-item .product-name {
   margin: 5px 0 0;

@@ -70,7 +70,7 @@ function page(isInit) {
       isWrapedInfoTextAndGoPageBtn: false, //是否用span包裹住分页信息和跳转按钮
       click: function (n) {
         getData(n, searchParams)
-        this.selectPage(n,totalPage)
+        this.selectPage(n, totalPage)
         return false
       },
     },
@@ -105,7 +105,7 @@ function getData(pageIndex, key, type, isSearch) {
         var elms = ''
         for (var i = 0; i < data.lists.length; i++) {
           var item = data.lists[i]
-          if ((i+1) % 4 === 0 && i !== 0) {
+          if ((i + 1) % 4 === 0 && i !== 0) {
             elms +=
               '<li style="margin-right:0"><div class="work-img"><img src=' +
               item.pic +
@@ -149,9 +149,65 @@ function getData(pageIndex, key, type, isSearch) {
   })
 }
 
+function getResult() {
+  $.ajax({
+    type: 'post',
+    async: false,
+    url: '//ifengad.3g.ifeng.com/miqilin/index.php/Home/Index/productionLists',
+    data: {
+      pagesize: 999,
+      page: 1,
+    },
+    dataType: 'jsonp',
+    jsonp: 'jsoncallback',
+    success: function (obj) {
+      if (obj.state === 200) {
+        var data = obj.data
+
+        var rData = []
+        var tempNum = 0
+        var index = -1
+        for (var i = 0; i < data.lists.length; i++) {
+          var item = data.lists[i]
+          if (tempNum === item.zan_count) {
+            if (rData[index].length === 10) {
+              continue
+            }
+            rData[index].push(item)
+          } else {
+            tempNum = item.zan_count
+            index++
+            if (index > 2) {
+              break
+            }
+            rData.push([])
+            rData[index].push(item)
+          }
+        }
+        // var list = []
+        // list = list.concat(rData[0], rData[1], rData[2])
+        var elms = ''
+        var CN = ['一','二','三']
+        for (var j = 0; j < rData.length; j++) {
+          for (var k = 0; k < rData[j].length; k++) {
+            elms += '<li><div class="sort-item"><div class="sort">'+CN[j]+'等奖</div><div class="img"><img src='+rData[j][k].pic+' /></div><div class="product-name">'+rData[j][k].name+'</div><div class="desc"><span class="name">'+rData[j][k].author+'</span><span class="count">'+rData[j][k].zan_count+'</span></div></div></li>'
+          }
+        }
+        $('.pb-result .list ul').empty().append(elms)
+      } else {
+        alert('服务器繁忙')
+      }
+    },
+    error: function (XHR, textStatus, errorThrown) {
+      console.log(XHR)
+    },
+  })
+}
+
 $(function () {
   init()
   getData(1, '', 1, true)
+  getResult()
   // $('.top-video .video .btn').click(function () {
   //   // var url = $(this).attr('data-url')
   //   $('#video-play').attr('src', 'images/video_1.mp4')
