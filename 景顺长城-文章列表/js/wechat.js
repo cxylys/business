@@ -1,7 +1,7 @@
-var descText = '景顺长城价值边际混合型基金（008060）'
-var titleText = '原则哥鲍无可全力掌舵'
-var picUrl = 'http://shyuming.com.cn/h5/jsccbwl/images/share.jpg'
-var linkUrl = 'http://shyuming.com.cn/h5/jsccbwl/'
+var descText = '基金经理倾情开讲，固收知识尽收囊中！'
+var titleText = '景顺长城｜一天一堂固收课'
+var picUrl = 'http://shyuming.com.cn/h5/jsccgsk/images/share.jpg'
+var linkUrl = 'http://shyuming.com.cn/h5/jsccgsk/'
 var $appId
 var $timestamp
 var $nonceStr

@@ -62,7 +62,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   color: #373737;
-  background-color: #eff2f9;
+  background: url(../images/bg.jpg) repeat-y center top;
   font-family: 'Microsoft Yahei', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans',
     Arial, 'Hiragino Sans GB', STHeiti, PingFangSC-Regular, sans-serif;
   cursor: default;
@@ -98,6 +98,38 @@ body {
   background: url(../images/kv.jpg?v=202008271056) no-repeat center top;
   background-size: 100% auto;
   width: 100%;
-  height: 5.52rem;
+  height: 7.77rem;
   position: relative;
+}
+.box{
+  margin-bottom: 0.5rem;
+}
+.box .content{
+  background-color: #fdfaf4;
+  width: 7rem;
+  border-radius: 0.1rem;
+  padding: 0 0.5rem;
+  margin:  0.2rem auto;
+}
+.box .content ul li{
+  border-bottom: 1px dashed #565656;
+}
+.box .content ul li:last-child{
+  border: 0;
+}
+.box .content ul li a{
+  font-size: 0.32rem;
+  font-weight: 600;
+  color: #565656;
+  display: block;
+  background: url(../images/icon.png) no-repeat left center;
+  background-size: 0.32rem 0.32rem;
+  padding: 0.3rem 0 0.3rem 0.42rem;
+}
+.tips{
+  color: #ffffff;
+  width: 7rem;
+  margin: 0.2rem auto 0.6rem;
+  line-height: 0.4rem;
+  text-align: justify;
 }
