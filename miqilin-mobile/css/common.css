@@ -100,6 +100,11 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.kv .buttons::after {
+  content: '';
+  width: 1.97rem;
+  height: 0.53rem;
+}
 .kv .buttons a {
   display: inline-block;
   width: 1.97rem;
@@ -297,7 +302,7 @@ body {
   border-radius: 0.15rem;
   margin: 0 auto;
   height: 2.15rem;
-overflow: hidden;
+  overflow: hidden;
 }
 .works-list ul li .work-img.result {
   border: 3px solid #48a6f6;
@@ -315,7 +320,7 @@ overflow: hidden;
   margin: 0.12rem auto;
   font-size: 0.24rem;
 }
-.works-list ul li .work-desc .sort.hide{
+.works-list ul li .work-desc .sort.hide {
   visibility: hidden;
 }
 .works-list ul li .work-desc h4 {
@@ -480,7 +485,7 @@ overflow: hidden;
 .content .news-list ul li a {
   color: #000000;
 }
-.content .news-box{
+.content .news-box {
   width: 7.04rem;
   height: 2.06rem;
   margin: 0 auto;
@@ -492,12 +497,12 @@ overflow: hidden;
   overflow: hidden;
   display: block;
 }
-.content .news-box .news-img{
+.content .news-box .news-img {
   width: 2.64rem;
   height: 1.48rem;
   float: left;
 }
-.content .news-box .news-content{
+.content .news-box .news-content {
   height: 1.48rem;
   position: relative;
   color: #000000;
@@ -507,13 +512,13 @@ overflow: hidden;
   width: 3.9rem;
   float: right;
 }
-.content .news-box .news-content h5{
+.content .news-box .news-content h5 {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
 }
-.content .news-box .news-content  .desc{
+.content .news-box .news-content .desc {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -630,32 +635,31 @@ overflow: hidden;
   text-align: justify;
   text-indent: 0.3rem;
 }
-.comm-rule-box .award{
+.comm-rule-box .award {
   font-size: 0.24rem;
   margin-top: 0.2rem;
 }
-.comm-rule-box .award ul{
+.comm-rule-box .award ul {
   display: flex;
   justify-content: space-between;
-
 }
-.comm-rule-box .award ul li{
+.comm-rule-box .award ul li {
   width: 1.65rem;
 }
-.comm-rule-box .award ul li .award-img{
+.comm-rule-box .award ul li .award-img {
   height: 0.9rem;
   overflow: hidden;
 }
-.comm-rule-box .award ul li .rank{
+.comm-rule-box .award ul li .rank {
   line-height: 0.3rem;
   position: relative;
-  color:#ffffff;
+  color: #ffffff;
   text-align: center;
   background-color: #f0bb02;
   margin-top: 0.1rem;
   margin-bottom: 0.1rem;
 }
-.comm-rule-box .award ul li .rank::after{
+.comm-rule-box .award ul li .rank::after {
   content: '';
   width: 0.3rem;
   height: 0.3rem;
@@ -665,7 +669,7 @@ overflow: hidden;
   top: 0;
   transform: rotate(45deg);
 }
-.comm-rule-box .award ul li .rank::before{
+.comm-rule-box .award ul li .rank::before {
   content: '';
   width: 0.3rem;
   height: 0.3rem;
@@ -675,7 +679,7 @@ overflow: hidden;
   top: 0;
   transform: rotate(45deg);
 }
-.comm-rule-box .award ul li .award-name{
+.comm-rule-box .award ul li .award-name {
   text-align: justify;
 }
 
@@ -694,10 +698,10 @@ overflow: hidden;
 .comm-desc-modal {
   display: none;
 }
-.show-result-modal{
+.show-result-modal {
   display: none;
 }
-.show-result-modal .show-result-box{
+.show-result-modal .show-result-box {
   width: 7.1rem;
   height: 100%;
   position: absolute;
@@ -708,7 +712,7 @@ overflow: hidden;
   border-radius: 0.2rem;
   padding: 0;
 }
-.show-result-modal .show-result-box ul{
+.show-result-modal .show-result-box ul {
   overflow-y: auto;
   height: 80%;
   padding: 0 0.23rem;
@@ -732,13 +736,13 @@ overflow: hidden;
   border-radius: 0.1rem;
 }
 
-.preview-modal{
+.preview-modal {
   display: none;
 }
-.preview-modal .preview-box{
+.preview-modal .preview-box {
   padding: 2.5rem 0.5rem;
   position: absolute;
-  top: 0
+  top: 0;
 }
 .preview-modal .preview-box .close-btn {
   width: 0.5rem;
@@ -746,18 +750,18 @@ overflow: hidden;
   top: 1.5rem;
   right: 0.5rem;
 }
-#preview-img{
+#preview-img {
   border: 3px solid #548309;
   border-radius: 0.15rem;
 }
-.loading-box{
+.loading-box {
   position: absolute;
   width: 100%;
-  height:calc(100% - 0.5rem);
-  background-color: rgba(255,255,255,0.75);
+  height: calc(100% - 0.5rem);
+  background-color: rgba(255, 255, 255, 0.75);
   border-radius: 0.15rem;
 }
-.loading{
+.loading {
   width: 1rem;
   height: 0.8rem;
   text-align: center;
@@ -767,47 +771,67 @@ overflow: hidden;
   margin-top: -0.4rem;
   margin-left: -0.5rem;
 }
-.loading span{
-    width:0.1rem;
-    height:100%;
-    display:inline-block;
-    background:#efda3d;;
-    animation: mymove 1.2s infinite ease-in-out;
-    -webkit-animation:mymove 1.2s infinite ease-in-out;
-     /*
+.loading span {
+  width: 0.1rem;
+  height: 100%;
+  display: inline-block;
+  background: #efda3d;
+  animation: mymove 1.2s infinite ease-in-out;
+  -webkit-animation: mymove 1.2s infinite ease-in-out;
+  /*
         mymove代表动画名字
         1.2s代表执行时间
         infinite表示一直循环执行
         ease-in-out表示先慢后快的缓动
     */
 }
-.loading >span:nth-child(2){
-    -webkit-animation-delay:-1.0s;
-    animation-delay:-1.0s;
+.loading > span:nth-child(2) {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
 }
-.loading >span:nth-child(3){
-    -webkit-animation-delay:-0.9s;
-    animation-delay:-0.9s;
+.loading > span:nth-child(3) {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
 }
-.loading >span:nth-child(4){
-    -webkit-animation-delay:-0.8s;
-    animation-delay:-0.8s;
+.loading > span:nth-child(4) {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
 }
-.loading >span:nth-child(5){
-    -webkit-animation-delay:-0.7s;
-    animation-delay:-0.7s;
+.loading > span:nth-child(5) {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
 }
-@keyframes mymove{
-    0%{transform:scaleY(0.4);}
-    25%{transform:scaleY(1.0);}
-    50%{transform:scaleY(0.4);}
-    75%{transform:scaleY(0.4);}
-    100%{transform:scaleY(0.4);}
+@keyframes mymove {
+  0% {
+    transform: scaleY(0.4);
+  }
+  25% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  75% {
+    transform: scaleY(0.4);
+  }
+  100% {
+    transform: scaleY(0.4);
+  }
 }
-@-webkit-keyframes mymove{
-    0%{transform:scaleY(0.4);}
-    25%{transform:scaleY(1.0);}
-    50%{transform:scaleY(0.4);}
-    75%{transform:scaleY(0.4);}
-    100%{transform:scaleY(0.4);}
+@-webkit-keyframes mymove {
+  0% {
+    transform: scaleY(0.4);
+  }
+  25% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  75% {
+    transform: scaleY(0.4);
+  }
+  100% {
+    transform: scaleY(0.4);
+  }
 }

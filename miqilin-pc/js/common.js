@@ -187,10 +187,21 @@ function getResult() {
         // var list = []
         // list = list.concat(rData[0], rData[1], rData[2])
         var elms = ''
-        var CN = ['一','二','三']
+        var CN = ['一', '二', '三']
         for (var j = 0; j < rData.length; j++) {
           for (var k = 0; k < rData[j].length; k++) {
-            elms += '<li><div class="sort-item"><div class="sort">'+CN[j]+'等奖</div><div class="img"><img src='+rData[j][k].pic+' /></div><div class="product-name">'+rData[j][k].name+'</div><div class="desc"><span class="name">'+rData[j][k].author+'</span><span class="count">'+rData[j][k].zan_count+'</span></div></div></li>'
+            elms +=
+              '<li><div class="sort-item"><div class="sort">' +
+              CN[j] +
+              '等奖</div><div class="img"><img src=' +
+              rData[j][k].pic +
+              ' /></div><div class="product-name">' +
+              rData[j][k].name +
+              '</div><div class="desc"><span class="name">' +
+              rData[j][k].author +
+              '</span><span class="count">' +
+              rData[j][k].zan_count +
+              '</span></div></div></li>'
           }
         }
         $('.pb-result .list ul').empty().append(elms)
@@ -329,6 +340,7 @@ $(function () {
     var url = $(this).attr('data-url')
     var text = $(this).attr('data-text')
     $('.aq-video .video video').attr('src', url)
+    $('.aq-video .video .title').text(text)
     $('.aq-video .video video')[0].play()
   })
 

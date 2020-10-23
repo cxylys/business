@@ -15,16 +15,38 @@ function init() {
         var myVideo1 = document.getElementById('video-play-aq-1') //视频1
         var myVideo2 = document.getElementById('video-play-aq-2') //视频2
         var myVideo3 = document.getElementById('video-play-aq-3') //视频3
+        var myVideo4 = document.getElementById('video-play-aq-4') //视频3
+        var myVideo5 = document.getElementById('video-play-aq-5') //视频3
         var index = this.activeIndex
         if (index == 0) {
           myVideo2.pause()
+          myVideo3.pause()
+          myVideo4.pause()
+          myVideo5.pause()
         }
         if (index == 1) {
           myVideo1.pause()
           myVideo3.pause()
+          myVideo4.pause()
+          myVideo5.pause()
         }
         if (index == 2) {
+          myVideo1.pause()
           myVideo2.pause()
+          myVideo4.pause()
+          myVideo5.pause()
+        }
+        if (index == 3) {
+          myVideo1.pause()
+          myVideo2.pause()
+          myVideo3.pause()
+          myVideo5.pause()
+        }
+        if (index == 4) {
+          myVideo1.pause()
+          myVideo2.pause()
+          myVideo3.pause()
+          myVideo4.pause()
         }
       },
     },
@@ -102,7 +124,7 @@ function page(isInit) {
       isWrapedInfoTextAndGoPageBtn: false, //是否用span包裹住分页信息和跳转按钮
       click: function (n) {
         getData(n, searchParams)
-        this.selectPage(n,totalPage)
+        this.selectPage(n, totalPage)
         return false
       },
     },
