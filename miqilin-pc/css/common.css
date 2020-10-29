@@ -221,6 +221,7 @@ body {
   line-height: 46px;
   padding: 0 20px;
   margin-top: 8px;
+  text-align: center;
 }
 .box .m1 .aq-video .video-list {
   float: right;
