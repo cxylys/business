@@ -1,5 +1,5 @@
-var descText = '景顺长城竞争优势混合型基金（008131）'
-var titleText = '北大学霸带你投资'
+var descText = '景顺长城描述'
+var titleText = '景顺长城'
 var picUrl = 'http://shyuming.com.cn/jsccyg/images/share.png'
 var linkUrl = 'http://shyuming.com.cn/jsccyg/'
 var $appId
@@ -12,7 +12,7 @@ $(function () {
     type: 'GET',
     async: false,
     url:
-      'http://shyuming.com.cn/weixin_basic/index.php?m=home&c=WeiXin&a=share_params',
+      'http://api.shyuming.com.cn/weixin_basic/index.php?m=home&c=WeiXin&a=share_params',
     data: {
       url: wxurl,
     },
@@ -62,7 +62,7 @@ function ShareTimeline() {
     desc: descText, //分享内容
     imgUrl: picUrl, // 分享图标
     success: function () {
-      share_add(openid)
+      myListener(level1, level2, level3, 2, '')
     },
     cancel: function () {
       // 用户取消分享后执行的回调函数
@@ -84,7 +84,7 @@ function ShareAppMessage() {
     type: '', // 分享类型,music、video或link，不填默认为link
     dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
     success: function () {
-      share_add(openid)
+      myListener(level1, level2, level3, 2, '')
     },
     cancel: function () {
       // 用户取消分享后执行的回调函数
@@ -99,7 +99,9 @@ function ShareQQ() {
     link: linkUrl, // 分享链接
     desc: descText, //分享内容
     imgUrl: picUrl, // 分享图标
-    success: function () {},
+    success: function () {
+      myListener(level1, level2, level3, 2, '')
+    },
     cancel: function () {
       // 用户取消分享后执行的回调函数
     },
@@ -113,7 +115,9 @@ function ShareWeibo() {
     link: linkUrl, // 分享链接
     desc: descText, //分享内容
     imgUrl: picUrl, // 分享图标
-    success: function () {},
+    success: function () {
+      myListener(level1, level2, level3, 2, '')
+    },
     cancel: function () {
       // 用户取消分享后执行的回调函数
     },

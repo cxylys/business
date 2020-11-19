@@ -2,7 +2,7 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
-    <title>北大学霸带你投资</title>
+    <title>景顺长城</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
@@ -16,7 +16,7 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="expires" content="0" />
-    <link rel="stylesheet" href="./css/common.css?v=202008031054" />
+    <link rel="stylesheet" href="./css/common.css?v=202011200016" />
     <script type="text/javascript" src="./js/resize.js"></script>
   </head>
 
@@ -29,19 +29,21 @@
       src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"
     ></script>
     <script type="text/javascript" src="./js/zepto.min.js"></script>
-    <script type="text/javascript" src="./js/wechat.js?v=202008031054"></script>
+    <script
+      type="text/javascript"
+      src="./js/authWeiXin.js?v=202011200016"
+    ></script>
+    <script type="text/javascript" src="./js/wechat.js?v=202011200016"></script>
 
     <script type="text/javascript">
-      function getQueryString(name) {
-        var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i')
-        var r = window.location.search.substr(1).match(reg)
-        if (r != null) return unescape(r[2])
-        return null
-      }
       $(function () {
         var code = getQueryString('code')
+        level1 = decodeURI(getQueryString('level1'))
+        level2 = decodeURI(getQueryString('level2'))
+        level3 = decodeURI(getQueryString('level3'))
+        myListener(level1, level2, level3, 1)
         var path = code.replace(/X/g, '/').replace(/P/g, '.')
-        $('#hb-img').attr('src', path + '?v=202008031054')
+        $('#hb-img').attr('src', path + '?v=202011200016')
       })
     </script>
   </body>

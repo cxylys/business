@@ -1,5 +1,6 @@
 var navSwiper
 var productSwiper
+
 function init() {
   var myBannerSwiper = new Swiper('.banner', {
     direction: 'horizontal', // 水平切换选项
@@ -97,6 +98,14 @@ function init() {
 
 $(function () {
   init()
+
+  $('.news li a').click(function () {
+    var name = $(this).attr('data-name')
+    var url = $(this).attr('data-url')
+    var level1 = $(this).attr('data-parent')
+    var level2 = $(this).attr('data-child')
+    myListener(level1, level2, name, 1, url)
+  })
   // 文章解读标签
   $('.article .tag-list .tag').click(function () {
     $(this).addClass('on').siblings().removeClass('on')
