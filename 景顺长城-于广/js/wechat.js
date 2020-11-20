@@ -1,5 +1,5 @@
-var descText = '景顺长城描述'
-var titleText = '景顺长城'
+var descText = '景顺长城核心中景一年持有期基金：010027'
+var titleText = '十年长跑健将余广新基来袭'
 var picUrl = 'http://shyuming.com.cn/jsccyg/images/share.png'
 var linkUrl = 'http://shyuming.com.cn/jsccyg/'
 var $appId

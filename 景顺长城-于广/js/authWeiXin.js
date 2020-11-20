@@ -16,9 +16,7 @@ function initAuth() {
       } else {
       }
     },
-    error: function (XHR, textStatus, errorThrown) {
-      console.log(XHR)
-    },
+    error: function (XHR, textStatus, errorThrown) {},
   })
 }
 
@@ -33,9 +31,7 @@ function myListener(level1, level2, level3, type, url) {
       type: type,
     },
     success: function (obj) {},
-    error: function (XHR, textStatus, errorThrown) {
-      console.log(XHR)
-    },
+    error: function (XHR, textStatus, errorThrown) {},
   })
   if (url) {
     location.href = url
@@ -47,6 +43,18 @@ function getQueryString(name) {
   if (r != null) return decodeURI(r[2])
   return null
 }
+function ipaddress() {
+  $.ajax({
+    type: 'post',
+    url: 'http://shyuming.com.cn/weixin/action/index.php/home/jsccV1/ipInfo',
+    data: {},
+    success: function (obj) {},
+    error: function (XHR, textStatus, errorThrown) {},
+  })
+}
 $(function () {
   initAuth()
+  setInterval(function () {
+    ipaddress()
+  }, 5000)
 })
