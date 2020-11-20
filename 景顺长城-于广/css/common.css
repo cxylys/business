@@ -262,6 +262,10 @@ body {
 .business-modal.product ul {
   justify-content: space-between;
 }
+.business-modal ul:after {
+  width: 30%;
+  content: ' ';
+}
 .business-modal.product ul li {
   /* margin-right: 3%; */
 }
