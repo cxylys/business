@@ -104,15 +104,17 @@ body {
   position: relative;
 }
 .content {
-  display: flex;
-  /* top: 3rem;
-  position: absolute; */
+  top: 3rem;
+  position: absolute;
   height: 100%;
-  justify-content: space-between;
+  width: 100%;
 }
 .content .left {
   width: 30%;
+  position: absolute;
+  left: 0;
   background-color: #ffffff;
+  height: 100%;
 }
 .content .left .menu-list li {
   padding: 0.3rem;
@@ -132,6 +134,8 @@ body {
 }
 .content .right {
   width: 70%;
+  position: absolute;
+  right: 0;
   height: 100%;
 }
 .content .right .list-data {
