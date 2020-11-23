@@ -145,8 +145,8 @@ body {
   display: none;
   height: 100%;
   overflow-y: scroll;
-  /* padding: 0.43rem 0.77rem; */
-  padding: 0.43rem 0.77rem 3.43rem;
+  padding: 0.43rem 0.77rem;
+  /* padding: 0.43rem 0.77rem 3.43rem; */
 }
 .content .right .list-data .item ul {
   margin-bottom: 0.4rem;
