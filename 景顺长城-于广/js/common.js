@@ -151,6 +151,7 @@ $(function () {
     $('.linian-modal').show()
     $('body').scrollTop(0)
     $('body').css('overflow', 'hidden')
+    myListener('视频集锦', '理念&观点', '', 1)
   })
   $('.linian-modal .close').click(function () {
     $('.linian-modal').hide()
@@ -158,6 +159,10 @@ $(function () {
   })
   $('.linian-modal ul li a').click(function () {
     var url = $(this).attr('data-url')
+    var level1 = $(this).attr('data-parent')
+    var level2 = $(this).attr('data-child')
+    var name = $(this).attr('data-name')
+    myListener(level1, level2, name, 1)
     if (url) {
       $('#video-play').attr('src', url)
       $('.video-wrapper').show()
