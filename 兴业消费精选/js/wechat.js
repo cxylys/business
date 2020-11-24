@@ -1,6 +1,6 @@
-var descText = '兴业消费精选'
-var titleText = '兴业消费精选'
-var picUrl = 'http://shyuming.com.cn/xyjx/images/share.png'
+var descText = '12月1日起盛大首发'
+var titleText = '【营销资料包】兴业基金消费精选基金'
+var picUrl = 'http://shyuming.com.cn/xyjx/images/share.jpg'
 var linkUrl = 'http://shyuming.com.cn/xyjx/'
 var $appId
 var $timestamp

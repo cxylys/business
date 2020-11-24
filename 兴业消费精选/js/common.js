@@ -26,4 +26,17 @@ $(function () {
     $('.list-data').find('.item').hide()
     $('.list-data .item').eq(index).show()
   })
+
+  // 视频播放
+  $('.video ul li a').click(function () {
+    var url = $(this).attr('data-url')
+    $('#video-play').attr('src', url)
+    $('.video-wrapper').show()
+    document.getElementById('video-play').play()
+  })
+  $('.video-wrapper .close').click(function () {
+    $('.video-wrapper').hide()
+    document.getElementById('video-play').pause()
+    // document.getElementById('video-play').currentTime = 0
+  })
 })
