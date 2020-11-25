@@ -116,14 +116,14 @@ body {
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding-bottom: 2.2rem;
+  padding-bottom: 2rem;
 }
 .content .left {
   width: 30%;
   /* position: absolute;
   left: 0; */
   background-color: #ffffff;
-  /* height: 100%; */
+  height: 100%;
 }
 .content .left .menu-list li {
   padding: 0.3rem;

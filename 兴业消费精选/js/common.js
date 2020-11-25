@@ -11,13 +11,25 @@ function init() {
   }
   bodyHeigth = $('body').height()
   kvHeight = $('.kv').height()
+  tipsHeight = $('.content .tips').height()
   $('.content').height(bodyHeigth - kvHeight)
+  $('.content').css('paddingBottom', tipsHeight + 'px')
   console.log(bodyHeigth)
   console.log(kvHeight)
 }
 
 $(function () {
   init()
+  $(window).resize(function () {
+    bodyHeigth = $('body').height()
+    kvHeight = $('.kv').height()
+    tipsHeight = $('.content .tips').height()
+    $('.content').height(bodyHeigth - kvHeight)
+    $('.content').css('paddingBottom', tipsHeight + 'px')
+    console.log(bodyHeigth)
+    console.log(kvHeight)
+    console.log(bodyHeigth - kvHeight)
+  })
   $('.menu-list li').click(function () {
     var index = $(this).index()
     console.log(index)
