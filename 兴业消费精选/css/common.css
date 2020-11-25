@@ -115,6 +115,8 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  padding-bottom: 2.2rem;
 }
 .content .left {
   width: 30%;
@@ -166,9 +168,14 @@ body {
   height: 0.9rem;
   position: relative;
 }
-.content .right .list-data .tips {
+.content .tips {
   color: #999999;
   text-align: justify;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.2rem;
+  background-color: #e2e2e2;
 }
 .content .right .list-data .item ul li a {
   display: block;
