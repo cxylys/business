@@ -309,6 +309,10 @@ body {
   flex-wrap: wrap;
   margin-top: 0.5rem;
 }
+.video-modal ul::after {
+  content: '';
+  width: 30%;
+}
 .video-modal h2 {
   color: #1147c3;
   font-size: 0.4rem;
