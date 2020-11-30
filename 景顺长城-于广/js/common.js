@@ -122,19 +122,23 @@ $(function () {
   })
 
   // 业绩视频播放
-  $('.short-btn').click(function () {
-    $('.short-modal').show()
+  $('.touzi-btn').click(function () {
+    $('.touzi-modal').show()
     $('body').scrollTop(0)
     $('body').css('overflow', 'hidden')
   })
 
-  $('.short-modal .close').click(function () {
-    $('.short-modal').hide()
+  $('.touzi-modal .close').click(function () {
+    $('.touzi-modal').hide()
     $('body').css('overflow', '')
   })
 
   // 业绩视频播放
-  $('.short-modal ul li a').click(function () {
+  $('.touzi-modal ul li a').click(function () {
+    var type = $(this).attr('data-type')
+    if (type) {
+      return
+    }
     var url = $(this).attr('data-url')
     $('#video-play').attr('src', url)
     $('.video-wrapper').show()

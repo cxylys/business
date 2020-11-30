@@ -39,6 +39,38 @@
             <span>业绩&获奖2</span>
           </a>
         </li>
+        <li>
+          <a
+            href="hb.html?code=imagesXshowXshow1Xlist_3Pjpg&level1=图说核心中景&level2=新基特点&level3=业绩获奖3"
+          >
+            <img src="./images/show/show1/list_3.jpg" />
+            <span>业绩&获奖3</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="hb.html?code=imagesXshowXshow2Xrecord_6Pjpg&level1=图说核心中景&level2=新基特点&level3=业绩获奖4"
+          >
+            <img src="./images/show/show2/record_6.jpg" />
+            <span>业绩&获奖4</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="hb.html?code=imagesXshowXshow2Xrecord_7Pjpg&level1=图说核心中景&level2=新基特点&level3=业绩获奖5"
+          >
+            <img src="./images/show/show2/record_7.jpg" />
+            <span>业绩&获奖5</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="hb.html?code=imagesXshowXshow2Xrecord_7Pjpg&level1=图说核心中景&level2=新基特点&level3=业绩获奖6"
+          >
+            <img src="./images/show/show2/record_8.jpg" />
+            <span>业绩&获奖6</span>
+          </a>
+        </li>
       </ul>
     </div>
     <div class="business-modal yulu">
@@ -141,14 +173,6 @@
             <span>语录5</span>
           </a>
         </li>
-        <li>
-          <a
-            href="hb.html?code=imagesXshowXshow1Xlist_3Pjpg&level1=图说核心中景&level2=新基特点&level3=语录6"
-          >
-            <img src="./images/show/show1/list_3.jpg" />
-            <span>语录6</span>
-          </a>
-        </li>
       </ul>
     </div>
     <div class="business-modal product">
@@ -197,6 +221,19 @@
         </li>
       </ul>
     </div>
+
+    <div class="business-modal show5">
+      <ul>
+        <li>
+          <a
+            href="hb.html?code=imagesXshowXshow5Xlist_1Pjpg&level1=图说核心中景&level2=一年持有期&level3=倒计时7"
+          >
+            <img src="./images/show/show5/list_1.jpg" />
+            <span>倒计时7</span>
+          </a>
+        </li>
+      </ul>
+    </div>
     <script
       type="text/javascript"
       src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"
@@ -231,6 +268,12 @@
             $('.show4').show()
             level1 = '图说核心中景'
             level2 = '中长期策略'
+            myListener(level1, level2, level3, 1)
+            break
+          case '50':
+            $('.show5').show()
+            level1 = '图说核心中景'
+            level2 = '一年持有期'
             myListener(level1, level2, level3, 1)
             break
         }
