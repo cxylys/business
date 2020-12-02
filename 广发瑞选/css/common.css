@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  border: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+button {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  border: none;
+  text-transform: none;
+  -webkit-appearance: button;
+}
+
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
+  -webkit-appearance: none;
+}
+
+textarea {
+  -webkit-appearance: none;
+}
+
+html {
+  font-size: 50px;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  /* max-width: 750px; */
+  margin: 0 auto;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  color: #373737;
+  background-color: #f9f5f0;
+  font-family: 'Microsoft Yahei', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans',
+    Arial, 'Hiragino Sans GB', STHeiti, PingFangSC-Regular, sans-serif;
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: auto !important;
+  font-size: 0.24rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.container {
+  display: block;
+}
+.message {
+  padding: 0.3rem 0.4rem;
+  font-size: 0.3rem;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0.15rem;
+  position: absolute;
+  top: 40%;
+  width: 4.6rem;
+  left: 50%;
+  margin-left: -2.3rem;
+  text-align: center;
+  display: none;
+  z-index: 400;
+  border-radius: 0.15rem;
+}

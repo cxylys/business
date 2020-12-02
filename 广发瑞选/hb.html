@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>十年长跑健将余广新基来袭</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <link rel="stylesheet" href="./css/common.css?v=202011200016" />
+    <script type="text/javascript" src="./js/resize.js"></script>
+  </head>
+
+  <body>
+    <div class="hb">
+      <img src="" id="hb-img" />
+    </div>
+    <script
+      type="text/javascript"
+      src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"
+    ></script>
+    <script type="text/javascript" src="./js/zepto.min.js"></script>
+    <script type="text/javascript" src="./js/wechat.js?v=202011200016"></script>
+
+    <script type="text/javascript">
+      $(function () {
+        var code = getQueryString('code')
+        level1 = decodeURI(getQueryString('level1'))
+        level2 = decodeURI(getQueryString('level2'))
+        level3 = decodeURI(getQueryString('level3'))
+        var path = code.replace(/X/g, '/').replace(/P/g, '.')
+        $('#hb-img').attr('src', path + '?v=202011200016')
+      })
+    </script>
+  </body>
+</html>
