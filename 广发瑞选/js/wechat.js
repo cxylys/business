@@ -1,7 +1,7 @@
-var descText = '景顺长城核心中景一年持有期基金：010027'
-var titleText = '十年长跑健将余广新基来袭'
-var picUrl = 'http://shyuming.com.cn/jsccyg/images/share.png'
-var linkUrl = 'http://shyuming.com.cn/jsccyg/'
+var descText = '发行期：12月14日-18日'
+var titleText = '广发睿选营销材料包'
+var picUrl = 'http://shyuming.com.cn/gfrx/images/share.jpg'
+var linkUrl = 'http://shyuming.com.cn/gfrx/'
 var $appId
 var $timestamp
 var $nonceStr
