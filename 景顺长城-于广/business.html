@@ -219,14 +219,16 @@
         </li>
       </ul>
     </div>
-    <div class="business-modal product">
+    <div class="business-modal show3">
       <ul>
-        <!-- <li>
-          <a href="./hb.html?code=imagesXproduct_4Pjpg">
-            <img src="./images/product_4.jpg" />
-            <span>景顺长城竞争优势</span>
+        <li>
+          <a
+            href="hb.html?code=imagesXshowXshow3Xlist_1Pjpg&level1=图说核心中景&level2=实业眼光&level3=心系列1"
+          >
+            <img src="./images/show/show3/list_1.jpg" />
+            <span>心系列1</span>
           </a>
-        </li> -->
+        </li>
       </ul>
     </div>
     <div class="business-modal show4">
@@ -292,6 +294,14 @@
             <span>倒计时5</span>
           </a>
         </li>
+        <li>
+          <a
+            href="hb.html?code=imagesXshowXshow5Xlist_4Pjpg&level1=图说核心中景&level2=一年持有期&level3=倒计时4"
+          >
+            <img src="./images/show/show5/list_4.jpg" />
+            <span>倒计时4</span>
+          </a>
+        </li>
       </ul>
     </div>
     <script
@@ -322,7 +332,10 @@
             myListener(level1, level2, level3, 1)
             break
           case '30':
-            $('.product').show()
+            $('.show3').show()
+            level1 = '图说核心中景'
+            level2 = '实业眼光'
+            myListener(level1, level2, level3, 1)
             break
           case '40':
             $('.show4').show()

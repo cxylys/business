@@ -24,6 +24,23 @@
     <div class="hb">
       <img src="" id="hb-img" />
     </div>
+    <!-- <div class="video-wrapper">
+      <video
+        id="video-play"
+        src=""
+        controls="controls"
+        webkit-playsinline="true"
+        playsinline="true"
+        x-webkit-airplay="allow"
+        x5-video-player-type="h5"
+        x5-video-player-fullscreen="false"
+        x5-video-orientation="portrait"
+        crossorigin="anonymous"
+      >
+        您的浏览器不支持 video 标签。
+      </video>
+      <div class="close"><img src="./images/close.png" /></div>
+    </div> -->
     <script
       type="text/javascript"
       src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"
@@ -32,12 +49,20 @@
     <script type="text/javascript" src="./js/wechat.js?v=202011200016"></script>
 
     <script type="text/javascript">
+      function getQueryString(name) {
+        var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i')
+        var r = window.location.search.substr(1).match(reg)
+        if (r != null) return decodeURI(r[2])
+        return null
+      }
       $(function () {
-        var code = getQueryString('code')
-        level1 = decodeURI(getQueryString('level1'))
-        level2 = decodeURI(getQueryString('level2'))
-        level3 = decodeURI(getQueryString('level3'))
-        var path = code.replace(/X/g, '/').replace(/P/g, '.')
+        var url = decodeURI(getQueryString('url'))
+        var name = decodeURI(getQueryString('name'))
+        var path = url.replace(/X/g, '/').replace(/P/g, '.')
+        var isDoc = path.split('.')[1].includes('docx')
+        // if (isDoc) {
+        //   $('#hb-img').hide()
+        // }
         $('#hb-img').attr('src', path + '?v=202011200016')
       })
     </script>
