@@ -174,18 +174,23 @@ $(function () {
     }
   })
 
-  // 产品特点视频
-  $('.product-btn').click(function () {
-    $('.product-modal').show()
+  // 新基来袭视频
+  $('.xinji-btn').click(function () {
+    $('.xinji-modal').show()
     $('body').scrollTop(0)
     $('body').css('overflow', 'hidden')
+    myListener('视频集锦', '新基来袭', '', 1)
   })
-  $('.product-modal .close').click(function () {
-    $('.product-modal').hide()
+  $('.xinji-modal .close').click(function () {
+    $('.xinji-modal').hide()
     $('body').css('overflow', '')
   })
-  $('.product-modal ul li a').click(function () {
+  $('.xinji-modal ul li a').click(function () {
     var url = $(this).attr('data-url')
+    var level1 = $(this).attr('data-parent')
+    var level2 = $(this).attr('data-child')
+    var name = $(this).attr('data-name')
+    myListener(level1, level2, name, 1)
     if (url) {
       $('#video-play').attr('src', url)
       $('.video-wrapper').show()
