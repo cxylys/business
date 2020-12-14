@@ -1,5 +1,5 @@
-var descText = '1月7日重磅发售'
-var titleText = '广发均衡优选资料包'
+var descText = '发行日期：1月7日至1月13日'
+var titleText = '广发均衡优选营销材料包'
 var picUrl = 'http://shyuming.com.cn/gfjhyx/images/share.jpg'
 var linkUrl = 'http://shyuming.com.cn/gfjhyx/'
 var $appId

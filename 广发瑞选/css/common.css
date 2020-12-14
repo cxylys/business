@@ -147,7 +147,6 @@ body {
 .content-swiper .swiper-slide ul li a {
   display: block;
   height: 100%;
-  background-color: #ffffff;
 }
 .content-swiper .swiper-slide .rows {
   display: flex;
@@ -158,12 +157,16 @@ body {
   content: '';
   width: 31%;
 }
+
 .content-swiper .swiper-slide .rows li {
   width: 31%;
-  height: 3rem;
+  height: 2.8rem;
   overflow: hidden;
   position: relative;
   font-size: 0.2rem;
+}
+.content-swiper .swiper-slide .rows li.ch {
+  height: auto;
 }
 .content-swiper .swiper-slide .rows li a .text-bg {
   background: url(../images/btn_bg.png) no-repeat center bottom;
@@ -185,6 +188,7 @@ body {
 }
 .content-swiper .swiper-slide .news li {
   width: 100%;
+  font-size: 0.2rem;
 }
 .content-swiper .swiper-slide .news li a {
   border: 2px solid #a95c33;
