@@ -3,10 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>广发均衡优选营销材料包</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-    />
+    <meta id="viewport" name="viewport" content="" />
     <meta name="apple-touch-fullscreen" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -17,7 +14,7 @@
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="expires" content="0" />
     <link rel="stylesheet" href="./css/common.css?v=202011200016" />
-    <script type="text/javascript" src="./js/resize.js"></script>
+    <!-- <script type="text/javascript" src="./js/resize.js"></script> -->
   </head>
 
   <body>
@@ -66,6 +63,10 @@
         var path = url.replace(/X/g, '/').replace(/P/g, '.')
         // var isDoc = path.split('.')[1].includes('docx')
         if (type === 'video') {
+          $('#viewport').attr(
+            'content',
+            'width=device-width,user-scalable=yes,initial-scale=1,maximum-scale=5,minimum-scale=1'
+          )
           $('.hb').hide()
           $('.video-wrapper video').attr('src', path)
           document.addEventListener(
