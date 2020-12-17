@@ -62,7 +62,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   color: #ffffff;
-  background-color: #f4f8fd;
+  background-color: #ffffff;
   font-family: 'Microsoft Yahei', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans',
     Arial, 'Hiragino Sans GB', STHeiti, PingFangSC-Regular, sans-serif;
   cursor: default;
@@ -203,16 +203,63 @@ body {
   align-content: center;
   padding: 0 0.1rem;
 }
+.contents .item .news {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* padding: 0 0.2rem; */
+}
+.contents .item .news:after {
+  content: '';
+  width: 2.21rem;
+}
+.contents .item .news li {
+  margin-bottom: 0.3rem;
+  width: 2.21rem;
+}
+.contents .item .news li a {
+  background: url(../images/btn_bg.png) no-repeat center top;
+  background-size: 100% auto;
+  width: 2.21rem;
+  line-height: 1rem;
+  height: 0.93rem;
+  color: #ffffff;
+  text-align: center;
+  display: block;
+  font-size: 0.2rem;
+}
+.contents .item .article {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.contents .item .article li {
+  width: 100%;
+  font-size: 0.2rem;
+  margin-bottom: 0.3rem;
+}
+.contents .item .article li a {
+  border: 2px solid #c30d24;
+  background: #ffffff url(../images/icon-article.png) no-repeat 0.2rem center;
+  background-size: 0.22rem auto;
+  /* line-height: 0.6rem; */
+  line-height: normal;
+  color: #c30d24;
+  padding: 0.1rem 0.2rem 0.1rem 0.6rem;
+  font-size: 0.28rem;
+  display: block;
+}
 .footer {
   /* background-color: #c30d24; */
   color: #ffffff;
   padding: 0.2rem 0.1rem;
   text-align: justify;
-  font-size: 0.17rem;
+  font-size: 0.164rem;
   background: url(../images/footer.png) no-repeat center top;
   background-size: 100% auto;
   width: 7rem;
   height: 1.76rem;
+  line-height: 1.5;
 }
 #hb-pdf {
   width: 100%;
