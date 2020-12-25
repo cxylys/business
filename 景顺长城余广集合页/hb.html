@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>广发成长精选营销材料包</title>
+    <meta id="viewport" name="viewport" content="" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <link rel="stylesheet" href="./css/common.css?v=202011200016" />
+    <!-- <script type="text/javascript" src="./js/resize.js"></script> -->
+  </head>
+
+  <body>
+    <div class="hb">
+      <img src="" id="hb-img" />
+      <embed src="" type="application/pdf" id="hb-pdf" />
+    </div>
+    <div class="video-wrapper">
+      <video
+        id="video-play"
+        src=""
+        controls="controls"
+        webkit-playsinline="true"
+        playsinline="true"
+        x-webkit-airplay="allow"
+        x5-video-player-type="h5"
+        x5-video-player-fullscreen="false"
+        x5-video-orientation="portrait"
+        crossorigin="anonymous"
+        preload="auto"
+        autoplay="autoplay"
+      >
+        您的浏览器不支持 video 标签。
+      </video>
+      <!-- <div class="close"><img src="./images/close.png" /></div> -->
+    </div>
+    <script
+      type="text/javascript"
+      src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"
+    ></script>
+    <!-- <script type="text/javascript" src="./js/zepto.min.js"></script> -->
+    <script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="./js/wechat.js?v=202011200016"></script>
+
+    <script type="text/javascript">
+      function getQueryString(name) {
+        var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i')
+        var r = window.location.search.substr(1).match(reg)
+        if (r != null) return decodeURI(r[2])
+        return null
+      }
+      $(function () {
+        var url = decodeURI(getQueryString('url'))
+        var name = decodeURI(getQueryString('name'))
+        var type = decodeURI(getQueryString('type'))
+        var path = url.replace(/X/g, '/').replace(/P/g, '.')
+        // var isDoc = path.split('.')[1].includes('docx')
+        if (type === 'video') {
+          $('#viewport').attr(
+            'content',
+            'width=device-width,user-scalable=yes,initial-scale=1,maximum-scale=5,minimum-scale=1'
+          )
+          $('.hb').hide()
+          $('.video-wrapper video').attr('src', path)
+          document.addEventListener(
+            'WeixinJSBridgeReady',
+            function () {
+              document.getElementById('video-play').play()
+            },
+            false
+          )
+          $('.video-wrapper').show()
+        } else if (type === 'pdf') {
+          $('#hb-img').hide()
+          $('#hb-pdf').attr('src', path + '?v=202012101730')
+        } else {
+          $('#hb-pdf').hide()
+          $('#hb-img').attr('src', path + '?v=202012101730')
+        }
+      })
+    </script>
+  </body>
+</html>
