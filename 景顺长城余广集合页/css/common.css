@@ -240,10 +240,13 @@ body {
 .content .item .list li {
   width: 1.93rem;
 }
+.content .item .list li a {
+  display: block;
+}
 .content .item .list li .img {
   overflow: hidden;
   height: 2.58rem;
-  background-color: #1c45ad;
+  /* background-color: #1c45ad; */
   border-radius: 0.1rem;
 }
 .content .item .list li .text {
