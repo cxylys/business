@@ -59,6 +59,35 @@ $(function () {
     // document.getElementById('video-play').currentTime = 0
   })
 
+  // 业绩视频播放
+  $('.touzi-btn').click(function () {
+    $('.touzi-modal').show()
+    $('body').scrollTop(0)
+    $('body').css('overflow', 'hidden')
+  })
+
+  $('.touzi-modal .close').click(function () {
+    $('.touzi-modal').hide()
+    $('body').css('overflow', '')
+  })
+
+  // 业绩视频播放
+  $('.touzi-modal ul li a').click(function () {
+    var type = $(this).attr('data-type')
+    if (type) {
+      return
+    }
+    var url = $(this).attr('data-url')
+    $('#video-play').attr('src', url)
+    $('.video-wrapper').show()
+    document.getElementById('video-play').play()
+  })
+  $('.video-wrapper .close').click(function () {
+    $('.video-wrapper').hide()
+    document.getElementById('video-play').pause()
+    // document.getElementById('video-play').currentTime = 0
+  })
+
   // 理念视频
   $('.linian-btn').click(function () {
     $('.linian-modal').show()
@@ -71,6 +100,31 @@ $(function () {
   })
   $('.linian-modal ul li a').click(function () {
     var url = $(this).attr('data-url')
+    var level1 = $(this).attr('data-parent')
+    var level2 = $(this).attr('data-child')
+    var name = $(this).attr('data-name')
+    if (url) {
+      $('#video-play').attr('src', url)
+      $('.video-wrapper').show()
+      document.getElementById('video-play').play()
+    }
+  })
+
+  // 新基来袭视频
+  $('.xinji-btn').click(function () {
+    $('.xinji-modal').show()
+    $('body').scrollTop(0)
+    $('body').css('overflow', 'hidden')
+  })
+  $('.xinji-modal .close').click(function () {
+    $('.xinji-modal').hide()
+    $('body').css('overflow', '')
+  })
+  $('.xinji-modal ul li a').click(function () {
+    var url = $(this).attr('data-url')
+    var level1 = $(this).attr('data-parent')
+    var level2 = $(this).attr('data-child')
+    var name = $(this).attr('data-name')
     if (url) {
       $('#video-play').attr('src', url)
       $('.video-wrapper').show()

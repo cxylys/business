@@ -267,7 +267,7 @@ body {
 .content .item .article .tag-list {
   display: flex;
   justify-content: space-between;
-  padding: 0 0.3rem;
+  padding: 0 1rem;
   position: relative;
 }
 .content .item .article .line {
@@ -313,9 +313,11 @@ body {
 .content .item .article .news li .img {
   width: 0.6rem;
   height: 0.6rem;
-  background-color: #d4d4d4;
-  border-radius: 0.1rem;
   margin-right: 0.2rem;
+  border-radius: 0.1rem;
+}
+.content .item .article .news li .img img {
+  border-radius: 0.1rem;
 }
 .content .item .article .news li .text {
   font-size: 0.24rem;
