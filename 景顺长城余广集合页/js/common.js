@@ -58,63 +58,12 @@ $(function () {
     document.getElementById('video-play').pause()
     // document.getElementById('video-play').currentTime = 0
   })
-
-  // 业绩视频播放
-  $('.touzi-btn').click(function () {
-    $('.touzi-modal').show()
-    $('body').scrollTop(0)
-    $('body').css('overflow', 'hidden')
-  })
-
-  $('.touzi-modal .close').click(function () {
-    $('.touzi-modal').hide()
-    $('body').css('overflow', '')
-  })
-
-  // 业绩视频播放
-  $('.touzi-modal ul li a').click(function () {
-    var type = $(this).attr('data-type')
-    if (type) {
-      return
-    }
-    var url = $(this).attr('data-url')
-    $('#video-play').attr('src', url)
-    $('.video-wrapper').show()
-    document.getElementById('video-play').play()
-  })
-  $('.video-wrapper .close').click(function () {
-    $('.video-wrapper').hide()
-    document.getElementById('video-play').pause()
-    // document.getElementById('video-play').currentTime = 0
-  })
-
-  // 理念视频
-  $('.linian-btn').click(function () {
-    $('.linian-modal').show()
-    $('body').scrollTop(0)
-    $('body').css('overflow', 'hidden')
-  })
-  $('.linian-modal .close').click(function () {
-    $('.linian-modal').hide()
-    $('body').css('overflow', '')
-  })
-  $('.linian-modal ul li a').click(function () {
-    var url = $(this).attr('data-url')
-    var level1 = $(this).attr('data-parent')
-    var level2 = $(this).attr('data-child')
-    var name = $(this).attr('data-name')
-    if (url) {
-      $('#video-play').attr('src', url)
-      $('.video-wrapper').show()
-      document.getElementById('video-play').play()
-    }
-  })
-
   // 新基来袭视频
   $('.xinji-btn').click(function () {
     $('.xinji-modal').show()
     $('body').scrollTop(0)
     $('body').css('overflow', 'hidden')
+    myListener('余广专区', '视频集锦', '新基来袭', 1)
   })
   $('.xinji-modal .close').click(function () {
     $('.xinji-modal').hide()
@@ -125,10 +74,28 @@ $(function () {
     var level1 = $(this).attr('data-parent')
     var level2 = $(this).attr('data-child')
     var name = $(this).attr('data-name')
+    myListener(level1, level2, name, 1)
     if (url) {
       $('#video-play').attr('src', url)
       $('.video-wrapper').show()
       document.getElementById('video-play').play()
     }
+  })
+
+  //监测
+  $('.content .item .list li a').click(function () {
+    var url = $(this).attr('data-url')
+    var l1 = $(this).attr('data-level1')
+    var l2 = $(this).attr('data-level2')
+    var l3 = $(this).attr('data-level3')
+    myListener(l1, l2, l3, 1, url)
+  })
+
+  $('.content .item .news li a').click(function () {
+    var url = $(this).attr('data-url')
+    var l1 = $(this).attr('data-level1')
+    var l2 = $(this).attr('data-level2')
+    var l3 = $(this).attr('data-level3')
+    myListener(l1, l2, l3, 1, url)
   })
 })

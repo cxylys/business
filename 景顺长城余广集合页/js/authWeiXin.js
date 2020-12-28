@@ -12,7 +12,7 @@ function initAuth() {
       if (obj.state === 201) {
         // 请求授权
         location.href =
-          'http://shyuming.com.cn/weixin/action/index.php/auth/index/index?action_id=100&auth_status=2&url=http://shyuming.com.cn/jsccyg/'
+          'http://shyuming.com.cn/weixin/action/index.php/auth/index/index?action_id=200&auth_status=2&url=http://shyuming.com.cn/jsccygnew/'
       } else {
       }
     },
@@ -29,8 +29,8 @@ function myListener(level1, level2, level3, type, url) {
       column_content: level2,
       content: level3,
       type: type,
-      action_id: 100,
-      action_name: '景顺长城余广',
+      action_id: 200,
+      action_name: '景顺长城余广集合页',
     },
     success: function (obj) {},
     error: function (XHR, textStatus, errorThrown) {},

@@ -61,7 +61,9 @@ function ShareTimeline() {
     link: linkUrl, // 分享链接
     desc: descText, //分享内容
     imgUrl: picUrl, // 分享图标
-    success: function () {},
+    success: function () {
+      myListener(level1, level2, level3, 2, '')
+    },
     cancel: function () {
       // 用户取消分享后执行的回调函数
     },
@@ -81,7 +83,9 @@ function ShareAppMessage() {
     imgUrl: picUrl, // 分享图标
     type: '', // 分享类型,music、video或link，不填默认为link
     dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-    success: function () {},
+    success: function () {
+      myListener(level1, level2, level3, 2, '')
+    },
     cancel: function () {
       // 用户取消分享后执行的回调函数
     },
@@ -95,7 +99,9 @@ function ShareQQ() {
     link: linkUrl, // 分享链接
     desc: descText, //分享内容
     imgUrl: picUrl, // 分享图标
-    success: function () {},
+    success: function () {
+      myListener(level1, level2, level3, 2, '')
+    },
     cancel: function () {
       // 用户取消分享后执行的回调函数
     },
@@ -109,7 +115,9 @@ function ShareWeibo() {
     link: linkUrl, // 分享链接
     desc: descText, //分享内容
     imgUrl: picUrl, // 分享图标
-    success: function () {},
+    success: function () {
+      myListener(level1, level2, level3, 2, '')
+    },
     cancel: function () {
       // 用户取消分享后执行的回调函数
     },

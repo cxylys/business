@@ -20,7 +20,6 @@
   <body>
     <div class="hb">
       <img src="" id="hb-img" />
-      <embed src="" type="application/pdf" id="hb-pdf" />
     </div>
     <div class="video-wrapper">
       <video
@@ -47,21 +46,17 @@
     ></script>
     <!-- <script type="text/javascript" src="./js/zepto.min.js"></script> -->
     <script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="./js/authWeiXin.js"></script>
     <script type="text/javascript" src="./js/wechat.js?v=202011200016"></script>
 
     <script type="text/javascript">
-      function getQueryString(name) {
-        var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i')
-        var r = window.location.search.substr(1).match(reg)
-        if (r != null) return decodeURI(r[2])
-        return null
-      }
       $(function () {
         var url = decodeURI(getQueryString('url'))
-        var name = decodeURI(getQueryString('name'))
         var type = decodeURI(getQueryString('type'))
+        level1 = decodeURI(getQueryString('level1'))
+        level2 = decodeURI(getQueryString('level2'))
+        level3 = decodeURI(getQueryString('level3'))
         var path = url.replace(/X/g, '/').replace(/P/g, '.')
-        // var isDoc = path.split('.')[1].includes('docx')
         if (type === 'video') {
           $('#viewport').attr(
             'content',
@@ -77,9 +72,6 @@
             false
           )
           $('.video-wrapper').show()
-        } else if (type === 'pdf') {
-          $('#hb-img').hide()
-          $('#hb-pdf').attr('src', path + '?v=202012101730')
         } else {
           $('#hb-pdf').hide()
           $('#hb-img').attr('src', path + '?v=202012101730')

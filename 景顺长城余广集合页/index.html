@@ -27,8 +27,12 @@
       <div class="bg">
         <img src="images/bg.jpg" />
         <div class="btns">
-          <a href="yg.html">余广专区</a>
-          <a href="product.html">产品专区</a>
+          <a href="javascript:" data-url="yg.html" data-name="余广专区"
+            >余广专区</a
+          >
+          <a href="javascript:" data-url="product.html" data-name="产品专区"
+            >产品专区</a
+          >
         </div>
       </div>
     </div>
@@ -40,8 +44,19 @@
     <script type="text/javascript" src="./js/swiper-bundle.min.js"></script>
     <!-- <script type="text/javascript" src="./js/zepto.min.js"></script> -->
     <script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="./js/authWeiXin.js"></script>
     <script type="text/javascript" src="./js/wechat.js?v=202011200016"></script>
     <script type="text/javascript" src="./js/common.js?v=202011200016"></script>
-    <script></script>
+    <script>
+      $(function () {
+        myListener(level1, level2, level3, 3)
+        $('.btns a').click(function () {
+          var url = $(this).attr('data-url')
+          var name = $(this).attr('data-name')
+          myListener(level1, name, level3, 1)
+          window.location.href = url
+        })
+      })
+    </script>
   </body>
 </html>
