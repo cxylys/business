@@ -100,7 +100,7 @@ body {
 .bg .btns {
   position: absolute;
   width: 100%;
-  bottom: 1.4rem;
+  bottom: 3.4rem;
   padding: 0 0.65rem;
   display: flex;
   justify-content: space-between;
@@ -189,7 +189,7 @@ body {
 .content .item .title {
   width: 6.23rem;
   height: 1rem;
-  color: #1c45ad;
+  color: #ffffff;
   padding: 0.1rem 0.25rem;
 }
 .content .item .title p {
@@ -200,7 +200,7 @@ body {
 }
 .content .item .title p:last-child {
   font-size: 0.3rem;
-  color: #4864ab;
+  color: #ffffff;
 }
 .content .item .title.title-1 {
   background: url(../images/title_bg_1.png) no-repeat center top;
@@ -235,23 +235,23 @@ body {
 }
 .content .item .list::after {
   content: '';
-  width: 1.93rem;
+  width: 1.4rem;
 }
 .content .item .list li {
-  width: 1.93rem;
+  width: 1.4rem;
 }
 .content .item .list li a {
   display: block;
 }
 .content .item .list li .img {
   overflow: hidden;
-  height: 2.58rem;
+  height: 1.6rem;
   /* background-color: #1c45ad; */
   border-radius: 0.1rem;
 }
 .content .item .list li .text {
   text-align: center;
-  font-size: 0.28rem;
+  font-size: 0.22rem;
   line-height: 0.6rem;
 }
 .content .item .video-swiper {
