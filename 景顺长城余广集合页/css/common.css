@@ -267,7 +267,7 @@ body {
 .content .item .article .tag-list {
   display: flex;
   justify-content: space-between;
-  padding: 0 1rem;
+  padding: 0 0.3rem;
   position: relative;
 }
 .content .item .article .line {

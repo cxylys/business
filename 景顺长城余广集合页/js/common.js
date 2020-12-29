@@ -82,6 +82,64 @@ $(function () {
     }
   })
 
+  // 投资方法论视频
+  $('.touzi-btn').click(function () {
+    $('.touzi-modal').show()
+    $('body').scrollTop(0)
+    $('body').css('overflow', 'hidden')
+    myListener('余广专区', '视频集锦', '投资方法论', 1)
+  })
+  $('.touzi-modal .close').click(function () {
+    $('.touzi-modal').hide()
+    $('body').css('overflow', '')
+  })
+  $('.touzi-modal ul li a').click(function () {
+    var url = $(this).attr('data-url')
+    var level1 = $(this).attr('data-parent')
+    var level2 = $(this).attr('data-child')
+    var name = $(this).attr('data-name')
+    var link = $(this).attr('data-link')
+    myListener(level1, level2, name, 1)
+    if (url) {
+      if (link) {
+        location.href = url
+      } else {
+        $('#video-play').attr('src', url)
+        $('.video-wrapper').show()
+        document.getElementById('video-play').play()
+      }
+    }
+  })
+
+  // 理念观点视频
+  $('.linian-btn').click(function () {
+    $('.linian-modal').show()
+    $('body').scrollTop(0)
+    $('body').css('overflow', 'hidden')
+    myListener('余广专区', '视频集锦', '理念观点', 1)
+  })
+  $('.linian-modal .close').click(function () {
+    $('.linian-modal').hide()
+    $('body').css('overflow', '')
+  })
+  $('.linian-modal ul li a').click(function () {
+    var url = $(this).attr('data-url')
+    var level1 = $(this).attr('data-parent')
+    var level2 = $(this).attr('data-child')
+    var name = $(this).attr('data-name')
+    var link = $(this).attr('data-link')
+    myListener(level1, level2, name, 1)
+    if (url) {
+      if (link) {
+        location.href = url
+      } else {
+        $('#video-play').attr('src', url)
+        $('.video-wrapper').show()
+        document.getElementById('video-play').play()
+      }
+    }
+  })
+
   //监测
   $('.content .item .list li a').click(function () {
     var url = $(this).attr('data-url')
