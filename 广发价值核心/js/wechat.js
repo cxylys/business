@@ -1,7 +1,7 @@
-var descText = '发行日期：1月18日-1月22日'
-var titleText = '广发成长精选营销材料包'
-var picUrl = 'http://shyuming.com.cn/gfczjx/images/share.jpg'
-var linkUrl = 'http://shyuming.com.cn/gfczjx/'
+var descText = '发行期：1月20日-1月29日'
+var titleText = '广发价值核心营销材料包'
+var picUrl = 'http://shyuming.com.cn/gfjzhx/images/share.jpg'
+var linkUrl = 'http://shyuming.com.cn/gfjzhx/'
 var $appId
 var $timestamp
 var $nonceStr
