@@ -245,7 +245,7 @@ body {
   margin-bottom: 0.3rem;
 }
 .contents .item .article li a {
-  border: 2px solid #c30d23;
+  border: 1px solid #c30d23;
   background: #ffffff url(../images/icon-article.png) no-repeat 0.2rem center;
   background-size: 0.22rem auto;
   /* line-height: 0.6rem; */
