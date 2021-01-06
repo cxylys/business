@@ -12,7 +12,7 @@ $(function () {
     type: 'GET',
     async: false,
     url:
-      'http://api.shyuming.com.cn:8001/rearend/weixin_basic/index.php?m=home&c=WeiXin&a=share_params',
+      'http://api.shyuming.com.cn/weixin_basic/index.php?m=home&c=WeiXin&a=share_params',
     data: {
       url: wxurl,
     },

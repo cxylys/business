@@ -1,7 +1,7 @@
 var descText = '景顺长城价值边际混合型基金（008060）'
 var titleText = '原则哥鲍无可全力掌舵'
-var picUrl = 'http://shyuming.com.cn/h5/jsccbwl/images/share.jpg'
-var linkUrl = 'http://shyuming.com.cn/h5/jsccbwl/'
+var picUrl = 'http://shyuming.com.cn/jsccbwl/images/share.jpg'
+var linkUrl = 'http://shyuming.com.cn/jsccbwl/'
 var $appId
 var $timestamp
 var $nonceStr
@@ -12,7 +12,7 @@ $(function () {
     type: 'GET',
     async: false,
     url:
-      'http://api.shyuming.com.cn:8001/rearend/weixin_basic/index.php?m=home&c=WeiXin&a=share_params',
+      'http://api.shyuming.com.cn/weixin_basic/index.php?m=home&c=WeiXin&a=share_params',
     data: {
       url: wxurl,
     },

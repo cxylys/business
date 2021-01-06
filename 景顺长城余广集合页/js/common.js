@@ -63,7 +63,7 @@ $(function () {
     $('.xinji-modal').show()
     $('body').scrollTop(0)
     $('body').css('overflow', 'hidden')
-    myListener('余广专区', '视频集锦', '新基来袭', 1)
+    myListener('产品专区', '视频集锦', '新基来袭', 1)
   })
   $('.xinji-modal .close').click(function () {
     $('.xinji-modal').hide()

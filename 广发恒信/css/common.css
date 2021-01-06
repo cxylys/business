@@ -155,11 +155,11 @@ body {
 
 .contents .item .hb:after {
   content: '';
-  width: 2.21rem;
+  width: 2.2rem;
 }
 
 .contents .item .hb li {
-  width: 2.21rem;
+  width: 2.2rem;
   height: 3rem;
   overflow: hidden;
   position: relative;
@@ -211,16 +211,16 @@ body {
 }
 .contents .item .news:after {
   content: '';
-  width: 2.21rem;
+  width: 2.2rem;
 }
 .contents .item .news li {
   margin-bottom: 0.3rem;
-  width: 2.21rem;
+  width: 2.2rem;
 }
 .contents .item .news li a {
   background: url(../images/btn_bg.png) no-repeat center top;
   background-size: 100% auto;
-  width: 2.21rem;
+  width: 2.2rem;
   line-height: 1rem;
   height: 0.93rem;
   color: #ffffff;

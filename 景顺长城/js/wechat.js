@@ -1,7 +1,7 @@
 var descText = '景顺长城竞争优势混合型基金（008131）'
 var titleText = '北大学霸带你投资'
-var picUrl = 'http://shyuming.com.cn/h5/jscc/images/share.png'
-var linkUrl = 'http://shyuming.com.cn/h5/jscc/'
+var picUrl = 'http://shyuming.com.cn/jscc/images/share.png'
+var linkUrl = 'http://shyuming.com.cn/jscc/'
 var $appId
 var $timestamp
 var $nonceStr
@@ -13,7 +13,7 @@ $(function () {
     type: 'GET',
     async: false,
     url:
-      'http://api.shyuming.com.cn:8001/rearend/weixin_basic/index.php?m=home&c=WeiXin&a=share_params',
+      'http://api.shyuming.com.cn/weixin_basic/index.php?m=home&c=WeiXin&a=share_params',
     data: {
       url: wxurl,
     },
