@@ -15,6 +15,19 @@
     <meta http-equiv="expires" content="0" />
     <link rel="stylesheet" href="./css/common.css?v=202011200016" />
     <!-- <script type="text/javascript" src="./js/resize.js"></script> -->
+    <style>
+      #download-video {
+        display: block;
+        color: #ffffff;
+        font-size: 16px;
+        background-color: #880523;
+        border-radius: 4px;
+        width: 100px;
+        line-height: 30px;
+        margin: 20px auto;
+        text-align: center;
+      }
+    </style>
   </head>
 
   <body>
@@ -40,6 +53,10 @@
         您的浏览器不支持 video 标签。
       </video>
       <!-- <div class="close"><img src="./images/close.png" /></div> -->
+      <a href="" id="download-video" download="">下载视频</a>
+      <div style="color: #880523; padding: 0 0.4rem">
+        温馨提示：若要下载视频到本地,请点击微信右上角菜单,选择浏览器打开,再点击下载按钮。
+      </div>
     </div>
     <script
       type="text/javascript"
@@ -76,6 +93,9 @@
             },
             false
           )
+          $('#download-video')
+            .attr('href', path)
+            .attr('download', name + '.mp4')
           $('.video-wrapper').show()
         } else if (type === 'pdf') {
           $('#hb-img').hide()
