@@ -1,6 +1,6 @@
 var descText = '发行期：1月20日-1月29日'
 var titleText = '广发价值核心营销材料包'
-var picUrl = 'http://shyuming.com.cn/gfjzhx/images/share.jpg'
+var picUrl = 'http://shyuming.com.cn/gfjzhx/images/share.jpg?v=20200110'
 var linkUrl = 'http://shyuming.com.cn/gfjzhx/'
 var $appId
 var $timestamp

@@ -1,6 +1,6 @@
 var descText = '发行日期：1月25日-1月29日'
 var titleText = '广发均衡增长营销材料包'
-var picUrl = 'http://shyuming.com.cn/gfjhzz/images/share.jpg'
+var picUrl = 'http://static.shyuming.com.cn/gfjhzz/images/share.jpg?v=202001112'
 var linkUrl = 'http://shyuming.com.cn/gfjhzz/'
 var $appId
 var $timestamp
