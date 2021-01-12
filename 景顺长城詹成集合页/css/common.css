@@ -226,7 +226,7 @@ body {
   background-size: 100% auto;
 }
 .content .item .title.title-5 {
-  background: url(http://static.shyuming.com.cn/cache/jscczc/images/title_bg_5.png)
+  background: url(http://static.shyuming.com.cn/cache/jscczc/images/title_bg_5.png?v=20200112)
     no-repeat center top;
   background-size: 100% auto;
 }
@@ -270,7 +270,7 @@ body {
 .content .item .article .tag-list {
   display: flex;
   justify-content: space-between;
-  padding: 0 0.3rem;
+  padding: 0 1rem;
   position: relative;
 }
 .content .item .article .line {
