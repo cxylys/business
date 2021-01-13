@@ -23,6 +23,7 @@ function initAuth() {
 function myListener(level1, level2, level3, type, url) {
   $.ajax({
     type: 'post',
+    // async: false,
     url: 'http://shyuming.com.cn/weixin/action/index.php/home/jsccV1/log',
     data: {
       column: level1,
@@ -35,9 +36,11 @@ function myListener(level1, level2, level3, type, url) {
     success: function (obj) {},
     error: function (XHR, textStatus, errorThrown) {},
   })
-  if (url) {
-    location.href = url
-  }
+  setTimeout(function () {
+    if (url) {
+      location.href = url
+    }
+  }, 300)
 }
 function getQueryString(name) {
   var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i')
