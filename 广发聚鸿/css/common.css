@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  border: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+button {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  border: none;
+  text-transform: none;
+  -webkit-appearance: button;
+}
+
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
+  -webkit-appearance: none;
+}
+
+textarea {
+  -webkit-appearance: none;
+}
+
+html {
+  font-size: 50px;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  /* max-width: 750px; */
+  margin: 0 auto;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  color: #373737;
+  background-color: #ffffff;
+  font-family: 'Microsoft Yahei', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans',
+    Arial, 'Hiragino Sans GB', STHeiti, PingFangSC-Regular, sans-serif;
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: auto !important;
+  font-size: 0.24rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.container {
+  display: block;
+}
+.message {
+  padding: 0.3rem 0.4rem;
+  font-size: 0.3rem;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0.15rem;
+  position: absolute;
+  top: 40%;
+  width: 4.6rem;
+  left: 50%;
+  margin-left: -2.3rem;
+  text-align: center;
+  display: none;
+  z-index: 400;
+  border-radius: 0.15rem;
+}
+.kv {
+  /* background: url()
+    no-repeat center top;
+  background-size: 100% auto;
+  width: 100%;
+  height: 5.18rem;
+  position: relative; */
+}
+.content {
+  width: 6.84rem;
+  margin: 0.7rem auto 0.2rem;
+}
+.content .header {
+  color: #bb0316;
+  font-size: 0.3rem;
+  background: url(../images/title_bg.png) no-repeat center top;
+  background-size: 100% auto;
+  height: 0.31rem;
+  line-height: 0.31rem;
+  /* width: 3.92rem; */
+  width: 2.47rem;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0.35rem;
+}
+.content .box {
+  background-color: #ffffff;
+  padding: 0.35rem 0.15rem 0;
+  border-radius: 0.15rem;
+  /* box-shadow: 0px 0px 10px #cccccc; */
+  position: relative;
+  margin-bottom: 0.4rem;
+}
+
+.content .box .hb {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.content .box .hb:after {
+  content: '';
+  width: 2rem;
+}
+
+.content .box .hb li {
+  width: 2rem;
+  height: 2.75rem;
+  overflow: hidden;
+  position: relative;
+  font-size: 0.2rem;
+  margin-bottom: 0.35rem;
+  border-radius: 0.1rem;
+  background-color: #bb0316;
+}
+.content .box .hb li a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+.content .box .hb li a .text {
+  width: 100%;
+  height: 0.5rem;
+  display: flex;
+  display: -webkit-flex;
+  font-size: 0.18rem;
+  color: #fff;
+  background-image: linear-gradient(to right, #bb0316, #bb0316);
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  line-height: 0.2rem;
+  align-content: center;
+  padding: 0 0.1rem;
+  text-align: center;
+  bottom: 0;
+  /* position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2rem;
+  height: 0.57rem;
+  background: url(../images/text_btn_bg.png) no-repeat center bottom;
+  background-size: 100% auto;
+  font-size: 0.2rem;
+  color: #fff;
+  padding: 0 0.1rem;
+  text-align: center;
+  line-height: 0.68rem; */
+}
+.video-wrapper {
+  display: none;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+.video-wrapper #video-play {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.video-wrapper .close {
+  width: 0.5rem;
+  position: absolute;
+  right: 0.38rem;
+  top: 0.22rem;
+  z-index: 500;
+  background-color: #ffffff;
+  border-radius: 0.25rem;
+}
+
+.footer {
+  /* background: url(../images/footer.png) no-repeat center top;
+  background-size: 100% auto; */
+  background-image: linear-gradient(to right, #bb0316, #bb0316);
+  width: 100%;
+  text-align: justify;
+  color: #f2f2f2;
+  font-size: 0.16rem;
+  padding: 0.3rem 0.2rem 0.4rem;
+}
