@@ -145,10 +145,10 @@ body {
   height: 2.75rem;
   overflow: hidden;
   position: relative;
-  font-size: 0.2rem;
+  font-size: 0.24rem;
   margin-bottom: 0.35rem;
   border-radius: 0.1rem;
-  background-color: #bb0316;
+  /* background-color: #bb0316; */
 }
 .content .box .hb li a {
   display: block;
@@ -161,7 +161,7 @@ body {
   height: 0.5rem;
   display: flex;
   display: -webkit-flex;
-  font-size: 0.18rem;
+  font-size: 0.24rem;
   color: #fff;
   background-image: linear-gradient(to right, #bb0316, #bb0316);
   position: absolute;
@@ -185,6 +185,33 @@ body {
   text-align: center;
   line-height: 0.68rem; */
 }
+
+.content .box .basic {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* padding: 0 0.2rem; */
+}
+.content .box .basic:after {
+  content: '';
+  width: 2rem;
+}
+.content .box .basic li {
+  margin-bottom: 0.3rem;
+  width: 2rem;
+}
+.content .box .basic li a {
+  /* background: url(../images/btn_bg.png) no-repeat center top; */
+  background-color: #bb0316;
+  line-height: 0.54rem;
+  /* height: 0.93rem; */
+  color: #ffffff;
+  text-align: center;
+  display: block;
+  font-size: 0.2rem;
+  border-radius: 0.05rem;
+}
+
 .video-wrapper {
   display: none;
   position: relative;
@@ -206,6 +233,20 @@ body {
   z-index: 500;
   background-color: #ffffff;
   border-radius: 0.25rem;
+}
+.weixin-modal {
+  background-color: #ffffff;
+  height: 100%;
+  padding: 0.8rem 0.4rem 0.4rem 0.4rem;
+  text-align: justify;
+  overflow-y: auto;
+}
+.weixin-modal h2,
+h3 {
+  margin-bottom: 0.3rem;
+}
+.weixin-modal p {
+  margin-bottom: 0.3rem;
 }
 
 .footer {
