@@ -102,86 +102,7 @@ body {
   height: 5.18rem;
   position: relative; */
 }
-.content {
-  width: 6.84rem;
-  margin: 0.7rem auto 0.2rem;
-}
-.content .header {
-  color: #1b4aac;
-  font-size: 0.36rem;
-  background: url(../images/title_bg.png) no-repeat center top;
-  background-size: 100% auto;
-  height: 0.45rem;
-  line-height: 0.45rem;
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 0.35rem;
-}
-.content .box {
-  background-color: #ffffff;
-  padding: 0.35rem 0.15rem 0;
-  border-radius: 0.15rem;
-  box-shadow: 0px 0px 10px #cccccc;
-  position: relative;
-  margin-bottom: 0.4rem;
-}
 
-.content .box .hb {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.content .box .hb:after {
-  content: '';
-  width: 2rem;
-}
-
-.content .box .hb li {
-  width: 2rem;
-  height: 2.75rem;
-  overflow: hidden;
-  position: relative;
-  font-size: 0.2rem;
-  margin-bottom: 0.35rem;
-  border-radius: 0.1rem;
-  background-color: #1b4aac;
-}
-.content .box .hb li a {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-}
-.content .box .hb li a .text {
-  /* width: 100%;
-  height: 0.5rem;
-  display: flex;
-  display: -webkit-flex;
-  font-size: 0.18rem;
-  color: #fff;
-  background-image: linear-gradient(to right, #1d449a, #1d449a);
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  line-height: 0.2rem;
-  align-content: center;
-  padding: 0 0.1rem;
-  text-align: center;
-  bottom: 0; */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 2rem;
-  height: 0.57rem;
-  background: url(../images/text_btn_bg.png) no-repeat center bottom;
-  background-size: 100% auto;
-  font-size: 0.2rem;
-  color: #fff;
-  padding: 0 0.1rem;
-  text-align: center;
-  line-height: 0.68rem;
-}
 .video-wrapper {
   display: none;
   position: relative;
@@ -206,7 +127,8 @@ body {
 }
 
 .footer {
-  background: url(../images/footer.png) no-repeat center top;
+  background: url(http://static.shyuming.com.cn/cache/gfcxhh/images/footer.png)
+    no-repeat center top;
   background-size: 100% auto;
   height: 2.01rem;
   width: 100%;
@@ -214,4 +136,137 @@ body {
   color: #f2f2f2;
   font-size: 0.16rem;
   padding: 0.65rem 0.2rem;
+}
+
+.content {
+  width: 6.84rem;
+  margin: 0.7rem auto 0.2rem;
+}
+.content .header {
+  color: #1b4aac;
+  font-size: 0.36rem;
+  background: url(http://static.shyuming.com.cn/cache/gfcxhh/images/title_bg.png)
+    no-repeat center top;
+  background-size: 100% auto;
+  height: 0.45rem;
+  line-height: 0.45rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0.35rem;
+}
+.content .box {
+  background-color: #ffffff;
+  padding: 0.35rem 0.15rem 0;
+  border-radius: 0.15rem;
+  /* box-shadow: 0px 0px 10px #cccccc; */
+  position: relative;
+  margin-bottom: 0.4rem;
+}
+
+.content .box .hb {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.content .box .hb:after {
+  content: '';
+  width: 2rem;
+}
+
+.content .box .hb li {
+  width: 2rem;
+  height: 2.75rem;
+  overflow: hidden;
+  position: relative;
+  font-size: 0.24rem;
+  margin-bottom: 0.35rem;
+  border-radius: 0.1rem;
+  /* background-color: #bb0316; */
+}
+.content .box .hb li a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+.content .box .hb li a .text {
+  /* width: 100%;
+  height: 0.5rem;
+  display: flex;
+  display: -webkit-flex;
+  font-size: 0.24rem;
+  color: #fff;
+  background-image: linear-gradient(to right, #1b4aac, #1b4aac);
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  line-height: 0.2rem;
+  align-content: center;
+  padding: 0 0.1rem;
+  text-align: center;
+  bottom: 0; */
+  position: absolute;
+  bottom: 0;
+  left: -0.02rem;
+  width: 2rem;
+  height: 0.57rem;
+  background: url(http://static.shyuming.com.cn/cache/gfcxhh/images/text_btn_bg.png)
+    no-repeat center bottom;
+  background-size: 100% auto;
+  font-size: 0.2rem;
+  color: #fff;
+  padding: 0 0.1rem;
+  text-align: center;
+  line-height: 0.68rem;
+}
+
+.content .box .basic {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* padding: 0 0.2rem; */
+}
+.content .box .basic:after {
+  content: '';
+  width: 2rem;
+}
+.content .box .basic li {
+  margin-bottom: 0.3rem;
+  width: 2rem;
+}
+.content .box .basic li a {
+  /* background: url(../images/btn_bg.png) no-repeat center top; */
+  background-color: #1b4aac;
+  line-height: 0.54rem;
+  /* height: 0.93rem; */
+  color: #ffffff;
+  text-align: center;
+  display: block;
+  font-size: 0.2rem;
+  border-radius: 0.05rem;
+}
+
+.content .box .article {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.content .box .article li {
+  width: 100%;
+  font-size: 0.2rem;
+  margin-bottom: 0.3rem;
+}
+.content .box .article li a {
+  border: 2px solid #1b4aac;
+  background: #ffffff
+    url(http://static.shyuming.com.cn/cache/gfcxhh/images/icon-article.png)
+    no-repeat 0.2rem center;
+  background-size: 0.22rem auto;
+  /* line-height: 0.6rem; */
+  line-height: normal;
+  color: #1b4aac;
+  padding: 0.1rem 0.2rem 0.1rem 0.6rem;
+  font-size: 0.28rem;
+  display: block;
 }

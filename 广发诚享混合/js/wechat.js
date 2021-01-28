@@ -1,7 +1,8 @@
-var descText = '发行日期：1月25日-1月29日'
-var titleText = '广发诚享混合营销材料包'
-var picUrl = 'http://static.shyuming.com.cn/gfjhzz/images/share.jpg?v=202001112'
-var linkUrl = 'http://shyuming.com.cn/gfjhzz/'
+var descText = '2月4日 重磅发售'
+var titleText = '广发诚享混合基金营销材料包'
+var picUrl =
+  'http://static.shyuming.com.cn/cache/gfcxhh/images/share.jpg?v=2021012824555'
+var linkUrl = 'http://shyuming.com.cn/gfcxhh/'
 var $appId
 var $timestamp
 var $nonceStr

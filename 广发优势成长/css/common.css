@@ -109,7 +109,8 @@ body {
 .content .header {
   color: #5b0213;
   font-size: 0.36rem;
-  background: url(../images/title_bg.png) no-repeat center top;
+  background: url(http://static.shyuming.com.cn/cache/gfyscz/images/title_bg.png)
+    no-repeat center top;
   background-size: 100% auto;
   height: 0.45rem;
   line-height: 0.45rem;
@@ -209,6 +210,29 @@ body {
   display: block;
   font-size: 0.2rem;
   border-radius: 0.05rem;
+}
+.content .box .article {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.content .box .article li {
+  width: 100%;
+  font-size: 0.2rem;
+  margin-bottom: 0.3rem;
+}
+.content .box .article li a {
+  border: 2px solid #5b0213;
+  background: #ffffff
+    url(http://static.shyuming.com.cn/cache/gfyscz/images/icon-article.png)
+    no-repeat 0.2rem center;
+  background-size: 0.22rem auto;
+  /* line-height: 0.6rem; */
+  line-height: normal;
+  color: #5b0213;
+  padding: 0.1rem 0.2rem 0.1rem 0.6rem;
+  font-size: 0.28rem;
+  display: block;
 }
 
 .video-wrapper {
