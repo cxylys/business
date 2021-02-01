@@ -1,5 +1,5 @@
-var descText = '景顺长城产业趋势混合型基金 010289'
-var titleText = '工学博士詹成 开年重磅新发'
+var descText = '探寻科技股投资之道'
+var titleText = '科基舵手杨锐文'
 var picUrl = 'http://static.shyuming.com.cn/cache/jscczc/images/share.png'
 var linkUrl = 'http://shyuming.com.cn/jscczc/'
 var $appId
