@@ -62,7 +62,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   color: #373737;
-  background-color: #eff2f9;
+  background-color: #ffffff;
   font-family: 'Microsoft Yahei', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans',
     Arial, 'Hiragino Sans GB', STHeiti, PingFangSC-Regular, sans-serif;
   cursor: default;
@@ -102,54 +102,20 @@ body {
   height: 5.18rem;
   position: relative; */
 }
-
-.video-wrapper {
-  display: none;
-  position: relative;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 200;
-}
-.video-wrapper #video-play {
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-}
-.video-wrapper .close {
-  width: 0.5rem;
-  position: absolute;
-  right: 0.38rem;
-  top: 0.22rem;
-  z-index: 500;
-  background-color: #ffffff;
-  border-radius: 0.25rem;
-}
-
-.footer {
-  background: url(http://static.shyuming.com.cn/cache/gfcxhh/images/footer.png)
-    no-repeat center top;
-  background-size: 100% auto;
-  height: 2.01rem;
-  width: 100%;
-  text-align: justify;
-  color: #f2f2f2;
-  font-size: 0.16rem;
-  padding: 0.65rem 0.2rem;
-}
-
 .content {
   width: 6.84rem;
   margin: 0.7rem auto 0.2rem;
 }
 .content .header {
-  color: #1b4aac;
-  font-size: 0.36rem;
-  background: url(http://static.shyuming.com.cn/cache/gfcxhh/images/title_bg.png)
+  color: #0e2f7b;
+  font-size: 0.38rem;
+  background: url(http://static.shyuming.com.cn/cache/gfqqkj/images/header_bg.png)
     no-repeat center top;
   background-size: 100% auto;
-  height: 0.45rem;
-  line-height: 0.45rem;
+  height: 0.53rem;
+  line-height: 0.53rem;
+  width: 2.52rem;
+  margin: 0 auto;
   text-align: center;
   font-weight: bold;
   margin-bottom: 0.35rem;
@@ -179,10 +145,10 @@ body {
   height: 2.75rem;
   overflow: hidden;
   position: relative;
-  font-size: 0.24rem;
+  font-size: 0.2rem;
   margin-bottom: 0.35rem;
   border-radius: 0.1rem;
-  /* background-color: #bb0316; */
+  /* background-color: #5b0213; */
 }
 .content .box .hb li a {
   display: block;
@@ -191,13 +157,13 @@ body {
   height: 100%;
 }
 .content .box .hb li a .text {
-  /* width: 100%;
+  width: 100%;
   height: 0.5rem;
   display: flex;
   display: -webkit-flex;
   font-size: 0.24rem;
   color: #fff;
-  background-image: linear-gradient(to right, #1b4aac, #1b4aac);
+  background-image: linear-gradient(to right, #0e2f7b, #0e2f7b);
   position: absolute;
   align-items: center;
   justify-content: center;
@@ -205,20 +171,19 @@ body {
   align-content: center;
   padding: 0 0.1rem;
   text-align: center;
-  bottom: 0; */
-  position: absolute;
   bottom: 0;
-  left: -0.02rem;
+  /* position: absolute;
+  bottom: 0;
+  left: 0;
   width: 2rem;
   height: 0.57rem;
-  background: url(http://static.shyuming.com.cn/cache/gfcxhh/images/text_btn_bg.png)
-    no-repeat center bottom;
+  background: url(../images/text_btn_bg.png) no-repeat center bottom;
   background-size: 100% auto;
-  font-size: 0.17rem;
+  font-size: 0.2rem;
   color: #fff;
   padding: 0 0.1rem;
   text-align: center;
-  line-height: 0.72rem;
+  line-height: 0.68rem; */
 }
 
 .content .box .basic {
@@ -237,16 +202,15 @@ body {
 }
 .content .box .basic li a {
   /* background: url(../images/btn_bg.png) no-repeat center top; */
-  background-color: #1b4aac;
+  background-color: #0e2f7b;
   line-height: 0.54rem;
   /* height: 0.93rem; */
   color: #ffffff;
   text-align: center;
   display: block;
-  font-size: 0.2rem;
+  font-size: 0.18rem;
   border-radius: 0.05rem;
 }
-
 .content .box .article {
   display: flex;
   justify-content: space-between;
@@ -258,15 +222,49 @@ body {
   margin-bottom: 0.3rem;
 }
 .content .box .article li a {
-  border: 2px solid #1b4aac;
+  border: 2px solid #0e2f7b;
   background: #ffffff
-    url(http://static.shyuming.com.cn/cache/gfcxhh/images/icon-article.png)
+    url(http://static.shyuming.com.cn/cache/gfqqkj/images/icon-article.png)
     no-repeat 0.2rem center;
   background-size: 0.22rem auto;
   /* line-height: 0.6rem; */
   line-height: normal;
-  color: #1b4aac;
+  color: #0e2f7b;
   padding: 0.1rem 0.2rem 0.1rem 0.6rem;
   font-size: 0.28rem;
   display: block;
+}
+
+.video-wrapper {
+  display: none;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+.video-wrapper #video-play {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.video-wrapper .close {
+  width: 0.5rem;
+  position: absolute;
+  right: 0.38rem;
+  top: 0.22rem;
+  z-index: 500;
+  background-color: #ffffff;
+  border-radius: 0.25rem;
+}
+
+.footer {
+  /* background: url(../images/footer.png) no-repeat center top;
+  background-size: 100% auto; */
+  background-image: linear-gradient(to right, #041737, #02102a);
+  width: 100%;
+  text-align: justify;
+  color: #f2f2f2;
+  font-size: 0.16rem;
+  padding: 0.3rem 0.2rem 0.4rem;
 }

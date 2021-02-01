@@ -12,7 +12,7 @@ function initAuth() {
       if (obj.state === 201) {
         // 请求授权
         location.href =
-          'http://shyuming.com.cn/weixin/action/index.php/auth/index/index?action_id=600&auth_status=2&url=http://shyuming.com.cn/jscczc/'
+          'http://shyuming.com.cn/weixin/action/index.php/auth/index/index?action_id=700&auth_status=2&url=http://shyuming.com.cn/gfqqkj/'
       } else {
       }
     },
@@ -30,8 +30,8 @@ function myListener(level1, level2, level3, type, url) {
       column_content: level2,
       content: level3,
       type: type,
-      action_id: 600,
-      action_name: '景顺长城杨锐文专区',
+      action_id: 700,
+      action_name: '广发全球科技营销资料包',
     },
     success: function (obj) {},
     error: function (XHR, textStatus, errorThrown) {},
@@ -59,7 +59,8 @@ function ipaddress() {
 }
 $(function () {
   initAuth()
-  setInterval(function () {
-    ipaddress()
-  }, 5000)
+  myListener('首页', '首页', '首页', '3')
+  // setInterval(function () {
+  //   ipaddress()
+  // }, 5000)
 })
