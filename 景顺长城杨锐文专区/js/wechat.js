@@ -1,7 +1,7 @@
 var descText = '探寻科技股投资之道'
 var titleText = '科基舵手杨锐文'
-var picUrl = 'http://static.shyuming.com.cn/cache/jscczc/images/share.png'
-var linkUrl = 'http://shyuming.com.cn/jscczc/'
+var picUrl = 'http://static.shyuming.com.cn/cache/jsccyrwpro/images/share.png'
+var linkUrl = 'http://shyuming.com.cn/jsccyrwpro/'
 var $appId
 var $timestamp
 var $nonceStr

@@ -12,7 +12,7 @@ function initAuth() {
       if (obj.state === 201) {
         // 请求授权
         location.href =
-          'http://shyuming.com.cn/weixin/action/index.php/auth/index/index?action_id=600&auth_status=2&url=http://shyuming.com.cn/jscczc/'
+          'http://shyuming.com.cn/weixin/action/index.php/auth/index/index?action_id=600&auth_status=2&url=http://shyuming.com.cn/jsccyrwpro/'
       } else {
       }
     },

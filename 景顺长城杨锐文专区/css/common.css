@@ -62,7 +62,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   color: #373737;
-  background-color: #ffffff;
+  background-color: #eff2f9;
   font-family: 'Microsoft Yahei', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans',
     Arial, 'Hiragino Sans GB', STHeiti, PingFangSC-Regular, sans-serif;
   cursor: default;
@@ -122,7 +122,8 @@ body {
 }
 
 .content {
-  background: url(../images/bg.jpg) repeat-y center top;
+  background: url(http://static.shyuming.com.cn/cache/jsccyrwpro/images/bg.jpg)
+    repeat-y center top;
   background-size: 100% auto;
   overflow: hidden;
   padding-bottom: 0.6rem;
@@ -131,12 +132,58 @@ body {
   width: 6.84rem;
   margin: 0 auto;
 }
+.business {
+  display: none;
+}
+.business h2 {
+  color: #09318d;
+  margin: 0.3rem 0;
+  text-align: center;
+}
+.container .hb {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container .hb:after {
+  content: '';
+  width: 2rem;
+}
+
+.container .hb li {
+  width: 2rem;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0.35rem;
+}
+.container .hb li a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+.container .hb li a .img {
+  width: 2rem;
+  height: 2.75rem;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.1rem;
+}
+.container .hb li a .text {
+  width: 100%;
+  font-size: 0.28rem;
+  color: #0e2f7b;
+  text-align: center;
+  line-height: 0.6rem;
+}
 .box {
   margin-top: 0.5rem;
   overflow: hidden;
 }
 .box .box-header {
-  background: url(../images/box_header.png) no-repeat center top;
+  background: url(http://static.shyuming.com.cn/cache/jsccyrwpro/images/box_header.png)
+    no-repeat center top;
   background-size: 100% auto;
   height: 0.68rem;
   font-size: 0.4rem;
@@ -144,12 +191,14 @@ body {
   text-align: center;
 }
 .box .box-content {
-  background: url(../images/box_content.png) repeat-y center top;
+  background: url(http://static.shyuming.com.cn/cache/jsccyrwpro/images/box_content.png)
+    repeat-y center top;
   background-size: 100% auto;
   overflow: hidden;
 }
 .box .box-footer {
-  background: url(../images/box_footer.png) no-repeat center top;
+  background: url(http://static.shyuming.com.cn/cache/jsccyrwpro/images/box_footer.png)
+    no-repeat center top;
   background-size: 100% auto;
   height: 0.38rem;
 }
@@ -165,7 +214,8 @@ body {
   margin-bottom: 0;
 }
 .box .video {
-  background: url(../images/video_bg.png) no-repeat center top;
+  background: url(http://static.shyuming.com.cn/cache/jsccyrwpro/images/video_bg.png)
+    no-repeat center top;
   background-size: 100% auto;
   width: 6.6rem;
   height: 2.86rem;
@@ -321,4 +371,9 @@ body {
   text-align: justify;
   color: #999999;
   font-size: 0.22rem;
+}
+.tips {
+  color: #ffffff;
+  text-align: justify;
+  margin-top: 0.5rem;
 }

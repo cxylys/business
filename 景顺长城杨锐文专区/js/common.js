@@ -123,15 +123,18 @@ $(function () {
   })
 
   //监测
-  $('.content .item .list li a').click(function () {
+  $('.content .hb-list li a').click(function () {
     var url = $(this).attr('data-url')
+    if (!url) {
+      return
+    }
     var l1 = $(this).attr('data-level1')
     var l2 = $(this).attr('data-level2')
     var l3 = $(this).attr('data-level3')
     myListener(l1, l2, l3, 1, url)
   })
 
-  $('.content .item .news li a').click(function () {
+  $('.business ul li a').click(function () {
     var url = $(this).attr('data-url')
     var l1 = $(this).attr('data-level1')
     var l2 = $(this).attr('data-level2')
