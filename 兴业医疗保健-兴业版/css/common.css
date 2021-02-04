@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  border: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+button {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  border: none;
+  text-transform: none;
+  -webkit-appearance: button;
+}
+
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
+  -webkit-appearance: none;
+}
+
+textarea {
+  -webkit-appearance: none;
+}
+
+html {
+  font-size: 50px;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  /* max-width: 750px; */
+  margin: 0 auto;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  color: #595757;
+  background-color: #f06438;
+  font-family: 'Microsoft Yahei', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans',
+    Arial, 'Hiragino Sans GB', STHeiti, PingFangSC-Regular, sans-serif;
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: auto !important;
+  font-size: 0.24rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.container {
+  display: block;
+}
+.message {
+  padding: 0.3rem 0.4rem;
+  font-size: 0.3rem;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0.15rem;
+  position: absolute;
+  top: 40%;
+  width: 4.6rem;
+  left: 50%;
+  margin-left: -2.3rem;
+  text-align: center;
+  display: none;
+  z-index: 400;
+  border-radius: 0.15rem;
+}
+.actions {
+  /* background: url(../images/bg.jpg) no-repeat center top;
+  background-size: 100% auto; */
+  height: 3.28rem;
+  width: 100%;
+  padding-top: 0.5rem;
+}
+.actions ul {
+  display: flex;
+  justify-content: space-between;
+  width: 6.06rem;
+  margin: 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.actions ul li {
+  background: url(../images/btn_bg.png) no-repeat center top;
+  background-size: 100% auto;
+  width: 2.5rem;
+  height: 0.64rem;
+  line-height: 0.6rem;
+  color: #d7311d;
+  font-size: 0.3rem;
+  margin-bottom: 0.4rem;
+  position: relative;
+}
+.actions ul li.on {
+  background: url(../images/btn_bg_on.png) no-repeat center top;
+  background-size: 100% auto;
+  color: #ffffff;
+}
+.actions ul li .small {
+  font-size: 0.18rem;
+  line-height: 0.4rem;
+  text-align: center;
+  color: #ffffff;
+}
+.actions ul li img {
+  position: absolute;
+  left: 0.3rem;
+  top: 50%;
+  margin-top: -0.15rem;
+  width: 0.26rem;
+}
+.actions ul li span {
+  padding-left: 0.72rem;
+}
+.tips {
+  background-color: #b02e17;
+  padding: 0.4rem;
+  text-align: justify;
+  color: #ffffff;
+  font-size: 0.2rem;
+}
+.content-swiper {
+  min-height: 1.5rem;
+  width: 7.2rem;
+  margin: 0.4rem auto;
+  background-color: #f38969;
+}
+.content-swiper .swiper-slide {
+  padding: 0.3rem 0.3rem 0;
+}
+.content-swiper .swiper-slide ul li {
+  margin-bottom: 0.3rem;
+}
+.content-swiper .swiper-slide ul li a {
+  display: block;
+  height: 100%;
+}
+.content-swiper .swiper-slide .rows {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.content-swiper .swiper-slide .rows:after {
+  content: '';
+  width: 2.1rem;
+}
+
+.content-swiper .swiper-slide .rows li {
+  width: 2.1rem;
+  height: 2.5rem;
+  overflow: hidden;
+  position: relative;
+  font-size: 0.2rem;
+  border-radius: 0.05rem;
+  border: 2px solid #d8331e;
+}
+.content-swiper .swiper-slide .rows li.ch {
+  height: auto;
+}
+.content-swiper .swiper-slide .rows li a .text-bg {
+  background-color: #d8331e;
+  height: 0.38rem;
+  width: 100%;
+  line-height: 0.38rem;
+  position: absolute;
+  bottom: -0.02rem;
+  left: 0;
+  color: #ffffff;
+  text-align: center;
+}
+.content-swiper .swiper-slide .news {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.content-swiper .swiper-slide .news li {
+  width: 100%;
+  font-size: 0.2rem;
+}
+.content-swiper .swiper-slide .news li a {
+  border: 2px solid #d8331e;
+  background: #ffecce url(../images/item_icon.png) no-repeat 0.2rem center;
+  background-size: 0.25rem auto;
+  /* line-height: 0.6rem; */
+  line-height: normal;
+  color: #d8331e;
+  padding: 0.1rem 0.2rem 0.1rem 0.6rem;
+  font-size: 0.28rem;
+}
+.not-data {
+  text-align: center;
+  line-height: 1rem;
+  color: #ffffff;
+  font-size: 0.28rem;
+}
+.video-wrapper {
+  display: none;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+.video-wrapper #video-play {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.video-wrapper .close {
+  width: 0.5rem;
+  position: absolute;
+  right: 0.38rem;
+  top: 0.22rem;
+  z-index: 500;
+  background-color: #ffffff;
+  border-radius: 0.25rem;
+}
