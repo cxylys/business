@@ -23,6 +23,8 @@
 4. 广发优势成长 2200 加监测
 5. 景顺长城杨瑞文 2500
 6. 兴业医疗保健兴业版&通用版 2500
+7. 广发睿鑫资料包 2000
+8. 广发全球科技 2200
 
 # 统计代码 code:
 
@@ -35,3 +37,5 @@
 500
 600
 700
+SELECT COUNT(distinct(openid)) FROM action.action_jscc_news_log where action_id = 600
+SELECT * FROM action.action_jscc_news_log where action_id = 600

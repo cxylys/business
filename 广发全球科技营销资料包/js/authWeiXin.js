@@ -6,13 +6,15 @@ function initAuth() {
     type: 'post',
     url: 'http://shyuming.com.cn/weixin/action/index.php/home/jsccV1/init',
     async: false,
-    data: {},
+    data: {
+      auth_status:1
+    },
     dataType: 'json',
     success: function (obj) {
       if (obj.state === 201) {
         // 请求授权
         location.href =
-          'http://shyuming.com.cn/weixin/action/index.php/auth/index/index?action_id=700&auth_status=2&url=http://shyuming.com.cn/gfqqkj/'
+          'http://shyuming.com.cn/weixin/action/index.php/auth/index/index?action_id=700&auth_status=1&url=http://shyuming.com.cn/gfqqkj/'
       } else {
       }
     },
@@ -32,6 +34,7 @@ function myListener(level1, level2, level3, type, url) {
       type: type,
       action_id: 700,
       action_name: '广发全球科技营销资料包',
+      auth_status:1
     },
     success: function (obj) {},
     error: function (XHR, textStatus, errorThrown) {},

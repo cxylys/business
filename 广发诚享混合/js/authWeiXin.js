@@ -6,13 +6,15 @@ function initAuth() {
     type: 'post',
     url: 'http://shyuming.com.cn/weixin/action/index.php/home/jsccV1/init',
     async: false,
-    data: {},
+    data: {
+      auth_status: 1,
+    },
     dataType: 'json',
     success: function (obj) {
       if (obj.state === 201) {
         // 请求授权
         location.href =
-          'http://shyuming.com.cn/weixin/action/index.php/auth/index/index?action_id=500&auth_status=2&url=http://shyuming.com.cn/gfcxhh/'
+          'http://shyuming.com.cn/weixin/action/index.php/auth/index/index?action_id=500&auth_status=1&url=http://shyuming.com.cn/gfcxhh/'
       } else {
       }
     },
@@ -32,6 +34,7 @@ function myListener(level1, level2, level3, type, url) {
       type: type,
       action_id: 500,
       action_name: '广发诚享混合',
+      auth_status: 1,
     },
     success: function (obj) {},
     error: function (XHR, textStatus, errorThrown) {},
@@ -59,7 +62,7 @@ function ipaddress() {
 }
 $(function () {
   initAuth()
-  myListener('首页','首页','首页','3')
+  myListener('首页', '首页', '首页', '3')
   // setInterval(function () {
   //   ipaddress()
   // }, 5000)
