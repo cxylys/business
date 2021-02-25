@@ -1,4 +1,4 @@
-var descText = '发行时间：3月3起重磅发售'
+var descText = '发行时间：3月3日-3月9日'
 var titleText = '广发睿鑫混合营销材料包'
 var picUrl =
   'http://static.shyuming.com.cn/cache/gfrxhh/images/share.png?v=20210210'
