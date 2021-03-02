@@ -1,4 +1,4 @@
-var descText = '发行时间：3月4日'
+var descText = '发行时间：3月4日至3月10日'
 var titleText = '广发创新医疗两年持有其混合'
 var picUrl =
   'http://static.shyuming.com.cn/cache/2021/gfcxyl/images/share.jpg?v=20210210'
