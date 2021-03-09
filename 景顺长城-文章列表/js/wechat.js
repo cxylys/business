@@ -1,5 +1,5 @@
 var descText = '基金经理倾情开讲，固收知识尽收囊中！'
-var titleText = '景顺长城｜一天一堂固收课'
+var titleText = '景鲤投资大学｜一天一堂固收课'
 var picUrl = 'http://shyuming.com.cn/h5/jsccgsk/images/share.jpg'
 var linkUrl = 'http://shyuming.com.cn/h5/jsccgsk/'
 var $appId

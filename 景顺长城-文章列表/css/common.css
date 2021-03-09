@@ -95,11 +95,12 @@ body {
   border-radius: 0.15rem;
 }
 .kv {
-  background: url(../images/kv.jpg?v=202008271056) no-repeat center top;
+  background: url(../images/kv.png?v=20210306) no-repeat center top;
   background-size: 100% auto;
   width: 100%;
-  height: 7.77rem;
+  height: 4.18rem;
   position: relative;
+  margin-bottom: 0.4rem;
 }
 .box {
   margin-bottom: 0.5rem;
