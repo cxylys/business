@@ -64,6 +64,18 @@ $(function () {
     $('body').css('overflow', '')
   })
 
+  // 创意视频系列
+  $('.idea-btn').click(function () {
+    $('.idea-modal').show()
+    $('body').scrollTop(0)
+    $('body').css('overflow', 'hidden')
+    myListener('首页', '视频集锦', '创意视频', 1)
+  })
+  $('.idea-modal .close').click(function () {
+    $('.idea-modal').hide()
+    $('body').css('overflow', '')
+  })
+
   //监测
   $('.content .hb-list li a').click(function () {
     var url = $(this).attr('data-url')
