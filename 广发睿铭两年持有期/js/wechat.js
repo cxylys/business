@@ -1,5 +1,5 @@
-var descText = '发行时间：4月7日起'
-var titleText = '广发睿铭两年持有期'
+var descText = '4月7日起正式发售'
+var titleText = '广发睿铭两年持有期混合基金营销材料包'
 var picUrl =
   'http://static.shyuming.com.cn/cache/2021/gfrm/images/share.jpg?v=20210210'
 var linkUrl = 'http://shyuming.com.cn/2021/gfrm/'
